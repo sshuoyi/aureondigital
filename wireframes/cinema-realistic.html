@@ -1,0 +1,117 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:1600px;background:#05121F;color:#F6F0E4;font-family:'Avenir Next','PingFang SC',sans-serif}
+.plate{position:relative;width:1600px;height:1000px;overflow:hidden;background:#05121F;margin-bottom:24px}
+.photo{position:absolute;inset:0;background-size:cover;background-position:center;filter:saturate(.88) contrast(1.06) brightness(.66)}
+.p1{background-image:url(diorama-meeting.jpg)}
+.p2{background-image:url(diorama-port.jpg);background-position:center 45%}
+.p3{background-image:url(diorama-tablet.jpg);background-position:center 45%}
+.p4{background-image:url(diorama-phone.jpg);background-position:center 40%}
+.shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,18,31,.94) 0%,rgba(5,18,31,.66) 36%,rgba(5,18,31,.12) 72%),linear-gradient(180deg,rgba(5,18,31,.55) 0%,transparent 32%,rgba(5,18,31,.88) 100%)}
+.grain{position:absolute;inset:0;opacity:.12;background-image:repeating-radial-gradient(circle at 30% 20%,#fff 0 1px,transparent 1px 3px);background-size:7px 7px;mix-blend-mode:overlay;pointer-events:none}
+.head{position:absolute;left:62px;top:52px;z-index:3;max-width:880px}
+.kicker{display:flex;align-items:center;gap:12px;font-size:9px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#C9A25E;margin-bottom:16px}
+.kicker::before{content:'';width:32px;height:1px;background:#C9A25E}
+h1{font-family:Didot,Georgia,serif;font-weight:400;font-size:62px;line-height:1;letter-spacing:-.025em}
+h1 span{color:#C9A25E}
+.lead{max-width:42ch;margin-top:18px;font-size:13px;line-height:1.6;color:rgba(246,240,228,.68)}
+.tag{position:absolute;left:62px;top:330px;z-index:3;display:inline-flex;align-items:center;gap:7px;border:1px solid rgba(201,162,94,.45);padding:5px 9px;font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:#C9A25E}
+.tag::before{content:'';width:5px;height:5px;background:#C9A25E;border-radius:50%}
+.seq{position:absolute;right:62px;top:54px;z-index:3;font-size:8px;line-height:1.9;letter-spacing:.14em;text-transform:uppercase;color:rgba(246,240,228,.4);text-align:right}
+.seq b{color:#C9A25E;font-weight:500}
+.flow{position:absolute;left:62px;right:62px;bottom:210px;height:58px;z-index:3}
+.rail{position:absolute;left:0;right:0;top:28px;height:1px;background:linear-gradient(90deg,rgba(201,162,94,.1),rgba(201,162,94,.7),rgba(201,162,94,.1))}
+.node{position:absolute;top:0;transform:translateX(-50%);text-align:center;font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:rgba(246,240,228,.6);white-space:nowrap}
+.node::before{content:'';display:block;width:7px;height:7px;border:1px solid #C9A25E;background:#05121F;transform:rotate(45deg);margin:0 auto 12px}
+.node b{display:block;font-size:9px;font-weight:600;color:#F6F0E4;margin-bottom:4px}
+.node.gold b{color:#E4C88E}
+.data{position:absolute;left:62px;bottom:38px;z-index:3;display:flex;gap:44px;align-items:flex-end}
+.metric b{display:block;font-family:Didot,Georgia,serif;font-size:31px;font-weight:400;line-height:1;color:#E4C88E}
+.metric span{display:block;margin-top:7px;max-width:135px;font-size:8px;letter-spacing:.1em;text-transform:uppercase;line-height:1.45;color:rgba(246,240,228,.5)}
+.sidecard{position:absolute;right:62px;bottom:38px;z-index:3;max-width:300px;border-left:1px solid rgba(201,162,94,.45);padding-left:14px;font-size:9px;line-height:1.55;color:rgba(246,240,228,.55)}
+.sidecard b{display:block;color:#C9A25E;font-weight:600;letter-spacing:.1em;text-transform:uppercase;font-size:8px;margin-bottom:4px}
+.phone{position:absolute;right:140px;top:250px;z-index:4;width:190px;height:390px;border-radius:26px;border:1px solid #C9A25E;background:#04101D;box-shadow:0 28px 70px rgba(0,0,0,.55),0 0 50px rgba(201,162,94,.12);padding:8px;transform:rotate(3deg)}
+.phone img{width:100%;height:100%;object-fit:cover;border-radius:19px;display:block}
+.phone::after{content:'';position:absolute;left:50%;top:10px;transform:translateX(-50%);width:46px;height:5px;border-radius:3px;background:#04101D}
+.pricetag{position:absolute;right:360px;top:330px;z-index:4;background:rgba(5,18,31,.8);border:1px solid rgba(201,162,94,.4);padding:9px 12px;font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:#C9A25E;backdrop-filter:blur(8px)}
+.pricetag b{display:block;color:#F6F0E4;font-size:10px;margin-bottom:3px}
+.coins{position:absolute;right:350px;top:430px;z-index:4;display:flex;gap:6px;align-items:center;color:#E4C88E;font-size:9px;letter-spacing:.08em}
+.coin{width:17px;height:17px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#F4D99C,#A9803D);border:1px solid #7C5F2B;box-shadow:0 0 12px rgba(201,162,94,.3)}
+.rev{position:absolute;right:70px;top:240px;z-index:4;width:310px;background:rgba(5,18,31,.78);border:1px solid rgba(201,162,94,.4);padding:18px;backdrop-filter:blur(10px)}
+.rev .k{font-size:8px;letter-spacing:.16em;text-transform:uppercase;color:#C9A25E;margin-bottom:14px}
+.rev .row{display:grid;grid-template-columns:1fr auto;gap:10px;padding:9px 0;border-top:1px solid rgba(246,240,228,.12);font-size:9px;color:rgba(246,240,228,.6)}
+.rev .row b{color:#F6F0E4;font-family:Didot,Georgia,serif;font-size:19px;font-weight:400}
+.rev .total{display:flex;justify-content:space-between;align-items:baseline;margin-top:10px;border-top:1px solid rgba(201,162,94,.5);padding-top:12px}
+.rev .total span{font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:#C9A25E}
+.rev .total b{font-family:Didot,Georgia,serif;font-size:25px;font-weight:400;color:#E4C88E}
+.note{position:absolute;right:62px;bottom:38px;z-index:4;font-size:7px;letter-spacing:.12em;text-transform:uppercase;color:rgba(246,240,228,.32);text-align:right;line-height:1.7}
+.filmstrip{position:absolute;left:62px;bottom:38px;z-index:4;font-size:7px;letter-spacing:.12em;text-transform:uppercase;color:rgba(246,240,228,.34)}
+</style></head><body>
+
+<section class="plate" id="real-1">
+ <div class="photo p1"></div><div class="shade"></div><div class="grain"></div>
+ <div class="head"><div class="kicker">03 · LE MODÈLE VIVANT · SÉQUENCE 01</div><h1>Le capital entre<br><span>dans le système.</span></h1><p class="lead">Des investisseurs aux projets, des projets aux emplois : la première boucle finance la capacité du pays.</p></div>
+ <div class="tag">CAPITAL</div>
+ <div class="seq"><b>VERSION CINEMATIQUE</b><br>LE MODÈLE VIVANT<br>4 SÉQUENCES · 40–45 S</div>
+ <div class="flow"><div class="rail"></div>
+  <div class="node gold" style="left:7%"><b>CHINE</b>Investisseurs</div>
+  <div class="node" style="left:32%"><b>PLATEFORME</b>Projets bancables</div>
+  <div class="node" style="left:58%"><b>MAURITANIE</b>Chantiers · emplois</div>
+  <div class="node" style="left:84%"><b>RETOUR</b>Capacité · réinvestissement</div>
+ </div>
+ <div class="data"><div class="metric"><b>800 M–1,2 Md</b><span>USD d'intentions d'investissement</span></div><div class="metric"><b>5–8</b><span>projets en phase substantielle</span></div><div class="metric"><b>30–40 k</b><span>emplois directs + écosystème · 5 ans</span></div></div>
+ <div class="sidecard"><b>La boucle</b>Le capital entre, les projets se montent, les emplois arrivent — puis la capacité revient financer la suite.</div>
+ <div class="note">PHOTO STILLS + OVERLAY INFOGRAPHIQUE<br>MAQUETTE · NON FINAL</div>
+</section>
+
+<section class="plate" id="real-2">
+ <div class="photo p2"></div><div class="shade"></div><div class="grain"></div>
+ <div class="head"><div class="kicker">03 · LE MODÈLE VIVANT · SÉQUENCE 02</div><h1>Du navire<br><span>au camion.</span></h1><p class="lead">Le port de Nouakchott devient le hub : conteneurs, douane, camions, circulation vers le showroom et la sous-région.</p></div>
+ <div class="tag">MARCHANDISES</div>
+ <div class="seq"><b>VERSION CINEMATIQUE</b><br>LE MODÈLE VIVANT<br>4 SÉQUENCES · 40–45 S</div>
+ <div class="flow"><div class="rail"></div>
+  <div class="node gold" style="left:7%"><b>CARGOS</b>Conteneurs</div>
+  <div class="node" style="left:32%"><b>PORT</b>Douane · déchargement</div>
+  <div class="node" style="left:58%"><b>CAMIONS</b>Hub Nouakchott</div>
+  <div class="node" style="left:84%"><b>AFRIQUE DE L'OUEST</b>Acheteurs</div>
+ </div>
+ <div class="data"><div class="metric"><b>800 M–2 Md</b><span>USD/an de biens transitent par le pays</span></div><div class="metric"><b>5 pays</b><span>marchés desservis depuis le hub</span></div><div class="metric"><b>1 hub</b><span>Nouakchott · stockage · répartition</span></div></div>
+ <div class="sidecard"><b>La boucle</b>Les biens arrivent, se stockent, se répartissent ; les paiements et les frais passent par RIMP.</div>
+ <div class="note">PHOTO STILLS + OVERLAY INFOGRAPHIQUE<br>MAQUETTE · NON FINAL</div>
+</section>
+
+<section class="plate" id="real-3">
+ <div class="photo p3"></div><div class="shade"></div><div class="grain"></div>
+ <div class="head"><div class="kicker">03 · LE MODÈLE VIVANT · SÉQUENCE 03</div><h1>On voit.<br><span>On commande.</span></h1><p class="lead">Un showroom physique et une boutique dans la poche : produits, prix, vendeurs, commande — le même parcours.</p></div>
+ <div class="tag">SHOWROOM · RIMU</div>
+ <div class="seq"><b>VERSION CINEMATIQUE</b><br>LE MODÈLE VIVANT<br>4 SÉQUENCES · 40–45 S</div>
+ <div class="pricetag"><b>PRODUITS</b>prix · stock · vendeur</div>
+ <div class="phone"><img src="../site/assets/img/rimu/02-marche.webp" alt=""></div>
+ <div class="coins"><span class="coin"></span><span>RIMP · paiement</span></div>
+ <div class="flow"><div class="rail"></div>
+  <div class="node gold" style="left:7%"><b>ACHETEUR</b>Voit · compare</div>
+  <div class="node" style="left:32%"><b>SHOWROOM</b>Vendeur · produits</div>
+  <div class="node" style="left:58%"><b>RIMU</b>Commande · mobile</div>
+  <div class="node" style="left:84%"><b>RIMP</b>Paiement</div>
+ </div>
+ <div class="data"><div class="metric"><b>15–60 s</b><span>vidéos courtes · formats légers</span></div><div class="metric"><b>FR · AR · EN</b><span>langues au lancement</span></div><div class="metric"><b>Live · Shop · Jobs</b><span>un seul compte</span></div></div>
+ <div class="note">PHOTO STILLS + UI RIMU<br>MAQUETTE · NON FINAL</div>
+</section>
+
+<section class="plate" id="real-4">
+ <div class="photo p4"></div><div class="shade"></div><div class="grain"></div>
+ <div class="head"><div class="kicker">03 · LE MODÈLE VIVANT · SÉQUENCE 04</div><h1>L'argent revient<br><span>dans le circuit.</span></h1><p class="lead">Chaque commande, contenu et paiement alimente un même registre : les revenus restent en ouguiyas et financent la suite.</p></div>
+ <div class="tag">PAIEMENTS · REVENUS</div>
+ <div class="seq"><b>VERSION CINEMATIQUE</b><br>LE MODÈLE VIVANT<br>4 SÉQUENCES · 40–45 S</div>
+ <div class="rev"><div class="k">REVENUS 2031 · CAISSE COMMUNE</div><div class="row"><span>RIMU · contenus</span><b>30–50 M</b></div><div class="row"><span>RIMP · paiements</span><b>90–140 M</b></div><div class="row"><span>Calcul · IA</span><b>30–40 M</b></div><div class="total"><span>TOTAL</span><b>150–220 M USD</b></div></div>
+ <div class="flow"><div class="rail"></div>
+  <div class="node gold" style="left:7%"><b>CRÉATEURS</b>Contenus · audience</div>
+  <div class="node" style="left:32%"><b>COMMERÇANTS</b>Ventes · commandes</div>
+  <div class="node" style="left:58%"><b>RIMP</b>Paiements</div>
+  <div class="node" style="left:84%"><b>CAISSE COMMUNE</b>Revenus · réinvestissement</div>
+ </div>
+ <div class="data"><div class="metric"><b>2,5 M</b><span>utilisateurs actifs mensuels · 2031</span></div><div class="metric"><b>2,8 M</b><span>comptes RIMP</span></div><div class="metric"><b>40 min/j</b><span>temps passé quotidien</span></div></div>
+ <div class="note">PHOTO STILLS + OVERLAY INFOGRAPHIQUE<br>MAQUETTE · NON FINAL</div>
+</section>
+
+</body></html>

@@ -1,0 +1,197 @@
+/* ============================================================
+   v3 integration overrides — Lead-owned
+   Loaded after visual-first.css. Only trims/visibility fixes.
+   ============================================================ */
+
+/* Pourquoi: visible one-line card summary (visual-first.css hides .problem-body) */
+.problem-summary {
+  margin: 10px 0 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: rgba(11, 31, 58, 0.72);
+  max-width: 24em;
+}
+
+/* Synthèse: remove residual long/secondary copy */
+html[data-mode="synthese"] .click-hint,
+html[data-mode="synthese"] .chip-note,
+html[data-mode="synthese"] .aa-note,
+html[data-mode="synthese"] .callout-body,
+html[data-mode="synthese"] .story-chip-sub,
+html[data-mode="synthese"] .ai-item-title,
+html[data-mode="synthese"] .sublead,
+html[data-mode="synthese"] #next-steps .next-list,
+html[data-mode="synthese"] .phone-demo-note,
+html[data-mode="synthese"] .viz-rev-note,
+html[data-mode="synthese"] .flow-panel .hint,
+html[data-mode="synthese"] .disclaimer {
+  display: none !important;
+}
+
+/* Decision tiles: keep title/status, quiet secondary line */
+html[data-mode="synthese"] .dt-unlock {
+  color: rgba(11, 31, 58, 0.66);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+/* System visual: avoid oversized labels */
+#system-visual .sv-name { line-height: 1.25; }
+#system-visual .sv-metric { white-space: nowrap; }
+
+/* Contact: compact intro but keep coordinates */
+html[data-mode="synthese"] .contact-body { max-width: 52em; }
+
+/* Print always uses the long/full layer */
+@media print {
+  .problem-summary { display: none !important; }
+  .click-hint, .chip-note, .aa-note, .callout-body, .story-chip-sub,
+  .ai-item-title, .sublead, #next-steps .next-list, .phone-demo-note,
+  .viz-rev-note, .flow-panel .hint, .disclaimer { display: revert !important; }
+}
+
+/* IA: three visual use-case cards replace the tab/list in Synthèse */
+.ai-short {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 10px;
+}
+.ai-short-card {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 15px 16px;
+  border: 1px solid rgba(11, 31, 58, 0.16);
+  background: rgba(255, 255, 255, 0.28);
+  min-height: 132px;
+}
+.ai-short-icon {
+  width: 24px;
+  height: 24px;
+  color: #7C5F2B;
+}
+.ai-short-icon .icon { width: 24px; height: 24px; }
+.ai-short-title {
+  font-size: 13px;
+  line-height: 1.3;
+  font-weight: 600;
+  color: #0B1F3A;
+}
+.ai-short-text {
+  font-size: 12px;
+  line-height: 1.5;
+  color: rgba(11, 31, 58, 0.68);
+}
+html[data-mode="synthese"] #ch-flux .hint { display: none !important; }
+@media (max-width: 900px) {
+  .ai-short { grid-template-columns: 1fr; }
+  .ai-short-card { min-height: 0; }
+}
+@media print {
+  .ai-short { display: none !important; }
+}
+
+/* IA: layer plates read as a stack, not empty rows */
+#layer-3d .layer-plate { position: relative; padding-left: 42px; }
+#layer-3d .layer-plate-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  color: #7C5F2B;
+}
+#layer-3d .layer-plate-icon .icon { width: 20px; height: 20px; }
+#layer-3d .layer-plate-keywords {
+  display: block;
+  margin-top: 3px;
+  font-size: 11px;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  color: rgba(11, 31, 58, 0.58);
+}
+html[data-mode="synthese"] #layer-3d .layer-plate { padding-top: 12px; padding-bottom: 12px; }
+@media (max-width: 640px) {
+  #layer-3d .layer-plate { padding-left: 38px; }
+  #layer-3d .layer-plate-icon { left: 12px; }
+}
+
+/* RIMU trust: three icon badges */
+#rimu-trust .trust-item { position: relative; padding-left: 36px; }
+#rimu-trust .trust-icon {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 22px;
+  height: 22px;
+  color: #C9A25E;
+}
+#rimu-trust .trust-icon .icon { width: 22px; height: 22px; }
+@media (max-width: 640px) {
+  #rimu-trust .trust-item { padding-left: 32px; }
+}
+
+/* Keep the system assembly quick: the whole map is readable < 650ms */
+@media (prefers-reduced-motion: no-preference) {
+  .system-visual.is-in .sv-node {
+    animation-duration: 420ms !important;
+  }
+  .system-visual.is-in .sv-pillars > * { animation-delay: 0ms !important; }
+  .system-visual.is-in .sv-businesses > * { animation-delay: 70ms !important; }
+  .system-visual.is-in .sv-layers > * { animation-delay: 140ms !important; }
+  .system-visual.is-in .sv-spine::before { animation-delay: 40ms !important; }
+}
+
+/* Win panel: one short line in Synthèse, full bullets in Complet */
+.win-short {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.55;
+  color: rgba(246, 240, 228, 0.86);
+  max-width: 56em;
+}
+
+/* Decision tiles: align unlock text regardless of title line count */
+#decision-tiles .dt-title {
+  min-height: 2.6em;
+}
+html[lang="zh"] #decision-tiles .dt-title {
+  min-height: 2.2em;
+}
+
+/* Risk gauges: no fake progress bars — status badge is the signal */
+html[data-mode="synthese"] #risk-gauges .risk-gauge .rg-bar {
+  display: none !important;
+}
+html[data-mode="synthese"] #risk-gauges .risk-gauge {
+  align-items: center;
+}
+@media print {
+  .win-short { display: none !important; }
+}
+
+/* Mobile decision cards: single column, no artificial title gap */
+@media (max-width: 640px) {
+  #decision-tiles .dt-title,
+  html[lang="zh"] #decision-tiles .dt-title {
+    min-height: 0 !important;
+  }
+}
+
+/* Display titles: no terminal punctuation, more air between lines */
+.hero-title { line-height: 1.06; }
+.hero-title span + span { margin-top: 0.02em; }
+
+/* Isolate button: pick-mode feedback on the graph */
+#flow-canvas svg[data-isolate-pick="true"],
+#flow-canvas svg[data-isolate-pick="true"] .viz-node {
+  cursor: crosshair;
+}
+#flow-controls [data-flow-action="isolate"].is-active,
+#flow-controls [data-action="isolate"].is-active {
+  border-color: var(--gold, #C9A25E);
+  color: var(--gold, #C9A25E);
+  background: rgba(201, 162, 94, 0.1);
+}

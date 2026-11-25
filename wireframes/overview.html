@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><title>RIMU · 动态网页方案 Storyboard</title>
+<style>
+  :root{ --navy:#071C36; --navy2:#0B1F3A; --ivory:#F6F0E4; --gold:#C9A25E; --gold2:#9C7A38; --green:#00A86B; --muted:rgba(246,240,228,.52); --line:rgba(201,162,94,.30); }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--navy);color:var(--ivory);font-family:'Avenir Next','PingFang SC','Helvetica Neue',sans-serif;-webkit-font-smoothing:antialiased}
+  body{padding:72px 76px 64px;width:1800px}
+  .top{display:flex;justify-content:space-between;align-items:flex-start;border-bottom:1px solid var(--line);padding-bottom:26px}
+  .kicker{font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+  h1{font-family:Didot,'Playfair Display',serif;font-weight:400;font-size:58px;line-height:1.04;letter-spacing:.01em}
+  h1 em{font-style:normal;color:var(--gold)}
+  .sub{margin-top:14px;font-size:16px;line-height:1.6;color:var(--muted);max-width:760px}
+  .meta{text-align:right;font-size:12px;line-height:1.9;color:var(--muted);letter-spacing:.06em}
+  .meta b{display:block;font-size:15px;letter-spacing:.12em;color:var(--gold);font-weight:600;margin-bottom:6px}
+  .legend{display:flex;gap:10px;margin-top:22px;flex-wrap:wrap}
+  .tag{font-size:11px;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--line);padding:7px 12px;border-radius:2px;color:var(--muted)}
+  .tag.gold{color:var(--gold);border-color:rgba(201,162,94,.55)}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:38px}
+  .card{border:1px solid var(--line);background:linear-gradient(180deg,rgba(11,31,58,.94),rgba(7,28,54,.94));padding:20px 20px 18px;position:relative;min-height:330px}
+  .card.light{background:linear-gradient(180deg,#F6F0E4,#EDE7DB);color:#0B1F3A}
+  .card.light .desc{color:#3E4C5E}
+  .card.light .no{color:#9C7A38}
+  .card.light .fr{color:#0B1F3A}
+  .no{font-family:Didot,'Playfair Display',serif;font-size:26px;color:var(--gold);line-height:1;float:left;margin-right:12px}
+  .head{overflow:hidden;margin-bottom:12px}
+  .zh{font-size:14px;letter-spacing:.06em;line-height:1.4;color:var(--ivory)}
+  .light .zh{color:#0B1F3A}
+  .fr{font-family:'Minion Pro',Georgia,serif;font-style:italic;font-size:12px;color:var(--muted);margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .screen{border:1px solid var(--line);background:rgba(4,15,30,.55);height:168px;position:relative;overflow:hidden;padding:12px}
+  .light .screen{background:rgba(255,255,255,.55);border-color:rgba(11,31,58,.18)}
+  .desc{font-size:11.5px;line-height:1.65;color:var(--muted);margin-top:12px}
+  .kv{position:absolute;right:10px;top:8px;font-size:9px;letter-spacing:.1em;color:var(--gold);border:1px solid rgba(201,162,94,.4);padding:2px 5px}
+  /* skeleton primitives */
+  .l{height:5px;background:rgba(246,240,228,.22);border-radius:1px;margin-bottom:6px}
+  .light .l{background:rgba(11,31,58,.18)}
+  .l.gold{background:var(--gold);opacity:.85}
+  .l.big{height:13px}
+  .l.med{height:8px}
+  .w20{width:20%}.w30{width:30%}.w40{width:40%}.w50{width:50%}.w60{width:60%}.w70{width:70%}.w80{width:80%}.w90{width:90%}
+  .row{display:flex;gap:6px;align-items:center}
+  .box{flex:1;border:1px solid rgba(246,240,228,.18);background:rgba(246,240,228,.05);border-radius:2px;padding:6px}
+  .light .box{border-color:rgba(11,31,58,.16);background:rgba(11,31,58,.04)}
+  .box .l{margin-bottom:4px}
+  .pill{height:14px;border:1px solid rgba(201,162,94,.5);border-radius:8px;flex:1}
+  .dot{width:7px;height:7px;border-radius:50%;background:var(--gold);margin:0 auto 4px}
+  .dots{position:absolute;inset:0;opacity:.5}
+  .node{position:absolute;width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 8px rgba(201,162,94,.7)}
+  .num{font-family:Didot,'Playfair Display',serif;font-size:26px;color:var(--gold);line-height:1}
+  .num.sm{font-size:18px}
+  .phone{width:74px;height:132px;border:1px solid rgba(246,240,228,.45);border-radius:9px;margin-left:auto;padding:5px;background:rgba(246,240,228,.04)}
+  .phone .bar{height:5px;background:rgba(246,240,228,.3);border-radius:2px;margin-bottom:4px}
+  .phone .tile{height:22px;background:rgba(201,162,94,.28);border:1px solid rgba(201,162,94,.25);border-radius:2px;margin-bottom:4px}
+  .layer{height:13px;border:1px solid rgba(201,162,94,.5);background:rgba(201,162,94,.12);border-radius:2px;margin-bottom:5px;display:flex;align-items:center;padding-left:6px;font-size:8px;color:var(--gold)}
+  .timeline{position:relative;height:46px;margin-top:10px}
+  .timeline .ln{position:absolute;left:0;right:0;top:16px;height:1px;background:rgba(201,162,94,.5)}
+  .timeline .mk{position:absolute;top:11px;width:9px;height:9px;border-radius:50%;background:var(--gold)}
+  .chart{display:flex;align-items:flex-end;gap:5px;height:58px;margin-top:8px}
+  .chart .b{flex:1;background:linear-gradient(180deg,rgba(201,162,94,.9),rgba(201,162,94,.25));border-radius:1px}
+  .map{margin-top:10px;border:1px dashed rgba(201,162,94,.35);height:48px;position:relative;border-radius:2px}
+  .flow{position:absolute;height:0;border-top:1px solid var(--green);opacity:.7;transform-origin:left center}
+  .tabs{display:flex;gap:4px;margin-bottom:8px}
+  .tabs .t{flex:1;height:12px;border:1px solid rgba(246,240,228,.2);font-size:7px;display:flex;align-items:center;justify-content:center;color:var(--muted)}
+  .tabs .t.on{border-color:var(--gold);color:var(--gold)}
+  .bottom{display:grid;grid-template-columns:1.15fr .95fr .9fr;gap:26px;margin-top:38px;border-top:1px solid var(--line);padding-top:30px}
+  .panel{border:1px solid var(--line);padding:20px 22px;background:rgba(11,31,58,.45)}
+  .panel h3{font-family:Didot,'Playfair Display',serif;font-weight:400;font-size:22px;color:var(--gold);margin-bottom:10px}
+  .panel p{font-size:11.5px;line-height:1.65;color:var(--muted);margin-bottom:8px}
+  .l2{display:grid;grid-template-columns:1.1fr .9fr;gap:16px}
+  .drawer{border:1px solid rgba(201,162,94,.55);background:rgba(7,28,54,.9);padding:10px;height:210px;position:relative}
+  .dtab{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin-top:8px}
+  .dtab div{height:18px;border:1px solid rgba(246,240,228,.18);font-size:7.5px;display:flex;align-items:center;justify-content:center;color:var(--muted)}
+  .dtab div.on{border-color:var(--gold);color:var(--gold)}
+  .footer{margin-top:34px;border-top:1px solid var(--line);padding-top:18px;display:flex;justify-content:space-between;font-size:10.5px;letter-spacing:.08em;color:var(--muted)}
+</style></head><body>
+<div class="top">
+  <div>
+    <div class="kicker">Plateforme de coopération numérique sino-mauritanienne · RIMU + Contenu IA + Calcul national</div>
+    <h1>动态网页方案 · <em>Storyboard</em></h1>
+    <div class="sub">9 章叙事 · 三层交互深度 · 五类业务流 · 数据可溯源 —— 让第一次打开的人在 3 分钟内明白「我们要做什么、怎么咬合、最后得到什么」。</div>
+    <div class="legend">
+      <span class="tag gold">v1 完整方案 · 14 区块</span><span class="tag">v2 优化 · 9 章 + 双层阅读</span><span class="tag">Mode Pitch 3 min</span><span class="tag">L2 业务抽屉 6 tab</span><span class="tag">A4 打印孪生</span>
+    </div>
+  </div>
+  <div class="meta"><b>2026-11-09 · v1.0 / v2.0</b>AUREON DIGITAL<br>Nouakchott · Mauritanie<br>FR 默认 / 中文切换 / AR 预留</div>
+</div>
+
+<div class="grid">
+  <!-- 00 hero -->
+  <div class="card">
+    <div class="head"><span class="no">00</span><div class="zh">Hero · 3 秒定位</div><div class="fr">Une plateforme. Trois souverainetés.</div></div>
+    <div class="screen">
+      <span class="kv">RÉSEAU · 120 PARTICULES</span>
+      <div class="l gold w30" style="margin-bottom:14px"></div>
+      <div class="l big w80" style="background:rgba(246,240,228,.85)"></div>
+      <div class="l big w60" style="margin-bottom:12px"></div>
+      <div class="l w70" style="background:rgba(246,240,228,.3)"></div>
+      <div class="row" style="margin-top:14px;width:72%"><div class="pill"></div><div class="pill"></div><div class="pill"></div></div>
+      <div class="row" style="margin-top:12px;width:90%"><div class="box" style="padding:4px"><div class="num sm">2,5 M</div></div><div class="box" style="padding:4px"><div class="num sm">2,8 M</div></div><div class="box" style="padding:4px"><div class="num sm">150–220</div></div></div>
+      <div class="node" style="left:14%;top:30%"></div><div class="node" style="left:24%;top:70%"></div><div class="node" style="left:62%;top:22%"></div><div class="node" style="left:78%;top:62%"></div><div class="node" style="left:88%;top:34%"></div>
+      <div style="position:absolute;right:14px;top:34px;font-size:8px;color:var(--gold);letter-spacing:.14em">MODE PITCH 3 MIN ↗</div>
+    </div>
+    <div class="desc">主标题 + 副标语 + 三支柱 chips + 4 个滚动 KPI；主 CTA「Visite guidée 3 min」，次 CTA「Explorer le système」。背景为两片大陆向努瓦克肖特汇聚的网络。</div>
+  </div>
+
+  <!-- 01 pourquoi -->
+  <div class="card light">
+    <div class="head"><span class="no">01</span><div class="zh">Pourquoi maintenant · 为什么是现在</div><div class="fr">Quatre problèmes, une réponse.</div></div>
+    <div class="screen">
+      <div class="tabs"><div class="t on">01 Attention</div><div class="t">02 Cash</div><div class="t">03 Données</div><div class="t">04 Minerai</div></div>
+      <div class="row" style="margin-bottom:6px"><div class="box" style="height:52px"><div class="dot"></div><div class="l w80"></div><div class="l w60"></div></div><div class="box" style="height:52px"><div class="dot"></div><div class="l w70"></div><div class="l w50"></div></div></div>
+      <div class="row"><div class="box" style="height:52px"><div class="dot"></div><div class="l w90"></div><div class="l w40"></div></div><div class="box" style="height:52px"><div class="dot"></div><div class="l w60"></div><div class="l w80"></div></div></div>
+      <div style="position:absolute;left:12px;right:12px;bottom:10px;height:1px;background:var(--gold);opacity:.7"></div>
+    </div>
+    <div class="desc">四张问题卡：注意力 / 现金 / 数据 / 单一矿产依赖，hover 翻出「我们改变什么」并跳到对应解法。每卡只留一句 + 一个数字。</div>
+  </div>
+
+  <!-- 02 système -->
+  <div class="card">
+    <div class="head"><span class="no">02</span><div class="zh">Le système · 一屏看懂全局</div><div class="fr">Un système, pas une collection de projets.</div></div>
+    <div class="screen">
+      <span class="kv">CLICK → 6 TAB</span>
+      <div class="row" style="margin-bottom:8px"><div class="box" style="height:34px"><div class="dot"></div><div class="l w70"></div></div><div class="box" style="height:34px"><div class="dot"></div><div class="l w60"></div></div><div class="box" style="height:34px"><div class="dot"></div><div class="l w80"></div></div></div>
+      <div class="row" style="margin-bottom:8px"><div class="box" style="height:26px"><div class="l w80"></div></div><div class="box" style="height:26px"><div class="l w70"></div></div><div class="box" style="height:26px"><div class="l w60"></div></div></div>
+      <div class="row" style="margin-bottom:8px"><div class="box" style="height:26px"><div class="l w70"></div></div><div class="box" style="height:26px"><div class="l w80"></div></div><div class="box" style="height:26px"><div class="l w60"></div></div></div>
+      <div class="row"><div class="layer" style="flex:1">Expérience</div><div class="layer" style="flex:1">Middleware</div><div class="layer" style="flex:1">Intelligence</div><div class="layer" style="flex:1">Infrastructure</div></div>
+    </div>
+    <div class="desc">三支柱 + 六业务 + 四层架构同屏；hover 高亮关联、点击打开支柱/业务/层抽屉。移动端变三组手风琴。</div>
+  </div>
+
+  <!-- 03 RIMU -->
+  <div class="card">
+    <div class="head"><span class="no">03</span><div class="zh">RIMU · 国民超级应用</div><div class="fr">Le système d'exploitation du quotidien.</div></div>
+    <div class="screen">
+      <div style="display:grid;grid-template-columns:1.25fr .75fr;gap:10px">
+        <div>
+          <div class="l gold w60" style="margin-bottom:8px"></div>
+          <div class="l w90"></div><div class="l w80"></div><div class="l w70"></div>
+          <div class="row" style="margin-top:10px;flex-wrap:wrap"><div class="pill" style="flex:0 0 46px"></div><div class="pill" style="flex:0 0 52px"></div><div class="pill" style="flex:0 0 40px"></div><div class="pill" style="flex:0 0 56px"></div></div>
+          <div class="l w60" style="margin-top:12px;background:rgba(0,168,107,.5)"></div>
+        </div>
+        <div class="phone">
+          <div class="bar"></div>
+          <div style="display:flex;gap:2px;margin-bottom:4px"><div class="bar" style="flex:1"></div><div class="bar" style="flex:1"></div><div class="bar" style="flex:1"></div><div class="bar" style="flex:1"></div></div>
+          <div class="tile"></div><div class="tile" style="height:16px"></div><div class="tile"></div>
+          <div style="display:flex;gap:2px;margin-top:3px"><div class="bar" style="flex:1"></div><div class="bar" style="flex:1"></div><div class="bar" style="flex:1"></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="desc">手机 mockup 可点 4 tab；模块芯片联动手机画面；8 秒自动演示（信息流 → Marché → Live → 支付成功）。v2 增加「一天生活线」7 个场景。</div>
+  </div>
+
+  <!-- 04 AI -->
+  <div class="card">
+    <div class="head"><span class="no">04</span><div class="zh">IA &amp; Calcul · 技术底座</div><div class="fr">La souveraineté se calcule.</div></div>
+    <div class="screen">
+      <div style="display:grid;grid-template-columns:1fr 1.1fr;gap:10px">
+        <div><div class="layer">Expérience</div><div class="layer">Middleware</div><div class="layer">Intelligence</div><div class="layer">Infrastructure</div></div>
+        <div>
+          <div class="tabs"><div class="t on">Contenu</div><div class="t">Quotidien</div><div class="t">Pro</div></div>
+          <div class="l w90"></div><div class="l w80"></div><div class="l w70"></div><div class="l w60"></div>
+          <div class="row" style="margin-top:8px"><div class="box" style="padding:3px"><div class="num sm">1 MW</div></div><div class="box" style="padding:3px"><div class="num sm">2–3 MW</div></div><div class="box" style="padding:3px"><div class="num sm">20–50 MW</div></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="desc">2.5D 四层（悬停抬升）、AI 三组用例、算力三期与绿电；数据/模型/账本留境 callout。滚动时四层逐层装配。</div>
+  </div>
+
+  <!-- 05 flux -->
+  <div class="card">
+    <div class="head"><span class="no">05</span><div class="zh">Les flux, en action · 咬合关系</div><div class="fr">Ce n'est pas six projets. C'est une machine.</div></div>
+    <div class="screen">
+      <div style="display:grid;grid-template-columns:74px 1fr;gap:8px;height:140px">
+        <div style="font-size:7.5px;line-height:1.9;color:var(--muted)">
+          <div style="color:var(--gold)">■ Capital</div><div style="color:var(--green)">■ Marchandises</div><div style="color:#9AB7D8">■ Paiements</div><div style="color:#9AD7C9">■ Données</div><div style="color:#C97B5A">■ Attention</div>
+        </div>
+        <div style="position:relative;border:1px dashed rgba(201,162,94,.25);overflow:hidden">
+          <div class="node" style="left:18%;top:14%"></div><div class="node" style="left:50%;top:8%"></div><div class="node" style="left:82%;top:16%"></div>
+          <div class="node" style="left:10%;top:62%"></div><div class="node" style="left:30%;top:74%"></div><div class="node" style="left:52%;top:66%"></div><div class="node" style="left:74%;top:76%"></div><div class="node" style="left:90%;top:58%"></div>
+          <div class="flow" style="left:18%;top:18%;width:34%;transform:rotate(-8deg)"></div>
+          <div class="flow" style="left:50%;top:10%;width:34%;transform:rotate(8deg);border-color:var(--gold)"></div>
+          <div class="flow" style="left:14%;top:60%;width:34%;transform:rotate(14deg)"></div>
+          <div class="flow" style="left:52%;top:64%;width:32%;transform:rotate(10deg);border-color:#C97B5A"></div>
+          <div class="flow" style="left:30%;top:72%;width:46%;transform:rotate(-4deg);border-color:#9AD7C9"></div>
+        </div>
+      </div>
+      <div class="row" style="margin-top:8px"><div class="pill"></div><div class="pill"></div><div class="pill"></div><div class="pill" style="flex:0 0 70px;border-color:rgba(246,240,228,.2)"></div></div>
+    </div>
+    <div class="desc">五类流（资本/货物/支付/数据/注意力）可筛选；v2 默认 3 段 15 秒「流故事」，沿路径点亮并落到结果数字，例如「1 个项目 → 300 就业 → 1,2 Md USD 意向」。</div>
+  </div>
+
+  <!-- 06 roadmap -->
+  <div class="card light">
+    <div class="head"><span class="no">06</span><div class="zh">La trajectoire · 时间可信度</div><div class="fr">2026 → 2031, trois pistes.</div></div>
+    <div class="screen">
+      <div class="tabs"><div class="t on">Bilatérale</div><div class="t">RIMU</div><div class="t">Calcul</div></div>
+      <div class="timeline">
+        <div class="ln"></div>
+        <div class="mk" style="left:0%"></div><div class="mk" style="left:20%"></div><div class="mk" style="left:40%"></div><div class="mk" style="left:60%"></div><div class="mk" style="left:80%"></div><div class="mk" style="left:98%"></div>
+        <div style="position:absolute;left:0;top:28px;font-size:7px;color:#3E4C5E">2026</div>
+        <div style="position:absolute;left:19%;top:28px;font-size:7px;color:#3E4C5E">2027</div>
+        <div style="position:absolute;left:39%;top:28px;font-size:7px;color:#3E4C5E">2028</div>
+        <div style="position:absolute;left:59%;top:28px;font-size:7px;color:#3E4C5E">2029</div>
+        <div style="position:absolute;left:79%;top:28px;font-size:7px;color:#3E4C5E">2030</div>
+        <div style="position:absolute;right:0;top:28px;font-size:7px;color:#3E4C5E">2031</div>
+      </div>
+      <div class="row" style="margin-top:6px"><div class="box" style="padding:5px"><div class="l w80"></div><div class="num sm" style="font-size:13px">250k</div></div><div class="box" style="padding:5px"><div class="l w80"></div><div class="num sm" style="font-size:13px">700k</div></div><div class="box" style="padding:5px"><div class="l w80"></div><div class="num sm" style="font-size:13px">1,2 M</div></div><div class="box" style="padding:5px"><div class="l w80"></div><div class="num sm" style="font-size:13px">1,8 M</div></div><div class="box" style="padding:5px"><div class="l w80"></div><div class="num sm" style="font-size:13px">2,5 M</div></div></div>
+    </div>
+    <div class="desc">三轨切换（双边三步 / RIMU 五年 / 算力三期）；里程碑可点开责任方与指标；2026 启动与「Y1 2027」对齐说明。</div>
+  </div>
+
+  <!-- 07 impact -->
+  <div class="card">
+    <div class="head"><span class="no">07</span><div class="zh">L'impact · 2031 数字与收益</div><div class="fr">Ce que cela représente.</div></div>
+    <div class="screen">
+      <div class="row" style="margin-bottom:8px"><div class="box" style="padding:5px"><div class="num sm">2,5 M</div><div class="l w80" style="margin-top:3px"></div></div><div class="box" style="padding:5px"><div class="num sm">800 k</div><div class="l w80" style="margin-top:3px"></div></div><div class="box" style="padding:5px"><div class="num sm">2,8 M</div><div class="l w80" style="margin-top:3px"></div></div><div class="box" style="padding:5px"><div class="num sm">150–220</div><div class="l w80" style="margin-top:3px"></div></div></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+        <div><div class="chart"><div class="b" style="height:20%"></div><div class="b" style="height:35%"></div><div class="b" style="height:52%"></div><div class="b" style="height:72%"></div><div class="b" style="height:100%"></div></div></div>
+        <div><div class="l w90" style="margin-top:6px"></div><div class="l w70"></div><div class="l w80"></div><div class="l w50"></div><div class="map"><div class="flow" style="left:16%;top:26%;width:36%;transform:rotate(8deg)"></div><div class="flow" style="left:18%;top:40%;width:40%;transform:rotate(22deg);border-color:var(--gold)"></div></div></div>
+      </div>
+      <span class="kv" style="top:auto;bottom:6px;right:8px">MÉTHODO ⓘ · SOURCE/DÉRIVÉ/HYPOTHÈSE</span>
+    </div>
+    <div class="desc">4 个计数器 + MAU 曲线 + 收入构成 + 三赢 tab（Mauritanie / Chine / Afrique de l'Ouest）+ 西非地图；所有数字带可信度徽章与方法学入口。</div>
+  </div>
+
+  <!-- 08 décision -->
+  <div class="card">
+    <div class="head"><span class="no">08</span><div class="zh">La décision · 五项请求与下一步</div><div class="fr">Cinq décisions ouvrent le canal.</div></div>
+    <div class="screen">
+      <div class="row" style="margin-bottom:6px"><div style="flex:1"><div style="border:1px solid rgba(246,240,228,.16);padding:5px;margin-bottom:5px"><div class="l w80"></div></div><div style="border:1px solid rgba(246,240,228,.16);padding:5px;margin-bottom:5px"><div class="l w70"></div></div><div style="border:1px solid rgba(246,240,228,.16);padding:5px"><div class="l w90"></div></div></div><div style="flex:1"><div class="l gold w40" style="margin-bottom:7px"></div><div class="l w80"></div><div class="l w70"></div><div class="l w90"></div><div class="l w60"></div></div></div>
+      <div class="row"><div class="box" style="padding:5px"><div class="l gold w60"></div><div class="l w80"></div></div><div class="box" style="padding:5px"><div class="l gold w60"></div><div class="l w80"></div></div><div class="box" style="padding:5px"><div class="l gold w60"></div><div class="l w80"></div></div></div>
+    </div>
+    <div class="desc">五项国家支持手风琴 + 风险摘要 + 三类 CTA（政府 / 投资方 / 西非买家）+ 30/90 天行动；打印为 A4 决策摘要与 14 张业务单页。</div>
+  </div>
+</div>
+
+<div class="bottom">
+  <div class="panel">
+    <h3>三层点击深度</h3>
+    <p><b>L1 总览</b>：9 章 / 一屏一个主信息，5 秒建立全局。</p>
+    <p><b>L2 业务抽屉</b>：右侧 560 px 滑出，固定 6 tab：Aperçu · Fonctionnement · Chiffres clés · Acteurs &amp; flux · Feuille de route · Risques；深链可分享，浏览器返回可关闭。</p>
+    <p><b>L3 抽屉内下钻</b>：子模块手风琴、图表 tooltip、里程碑展开；不再跳新页面。</p>
+    <div class="l2" style="margin-top:12px">
+      <div class="drawer"><div class="l gold w40"></div><div class="l w80"></div><div class="l w60"></div><div class="dtab"><div class="on">Aperçu</div><div>Fonction</div><div>Chiffres</div><div>Flux</div><div>Route</div><div>Risques</div></div><div class="l w90" style="margin-top:10px"></div><div class="l w70"></div><div class="l w80"></div></div>
+      <div><div style="font-size:9px;color:var(--gold);letter-spacing:.12em;margin-bottom:6px">MODE PITCH</div><div class="l w90"></div><div class="l w70"></div><div class="l w80"></div><div class="l w60"></div><div style="margin-top:10px;border:1px solid rgba(0,168,107,.4);padding:5px;font-size:8px;color:var(--green)">3 min · 7 scènes · sous-titres FR/ZH</div></div>
+    </div>
+  </div>
+  <div class="panel">
+    <h3>模式与路径</h3>
+    <p><b>Synthèse（默认）</b>：每屏一个结论 + 大数字 + 一图，适合政府/会议/首次访问。</p>
+    <p><b>Complet</b>：全部段落、图表、方法学、附件；适合投资方/技术尽调。</p>
+    <p><b>Pitch</b>：3 分钟自动引导，7 幕，可暂停/分享 <code>?tour=1</code>。</p>
+    <p><b>Print / PDF</b>：A4 横向提案册 + 14 张业务单页 + 一页决策摘要，二维码回网页。</p>
+    <div style="margin-top:12px;display:flex;gap:5px;flex-wrap:wrap"><span class="tag gold">Source</span><span class="tag">Dérivé</span><span class="tag">Hypothèse</span><span class="tag">Scénario ambitieux</span></div>
+  </div>
+  <div class="panel">
+    <h3>2031 · 关键数字</h3>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px 14px;margin-top:6px">
+      <div><div class="num">2,5 M</div><div style="font-size:10px;color:var(--muted)">MAU · RIMU</div></div>
+      <div><div class="num">800 k</div><div style="font-size:10px;color:var(--muted)">DAU · 40 min/j</div></div>
+      <div><div class="num">2,8 M</div><div style="font-size:10px;color:var(--muted)">portefeuilles RIMP</div></div>
+      <div><div class="num">150–220 M</div><div style="font-size:10px;color:var(--muted)">USD · 1,3–1,9 % PIB</div></div>
+      <div><div class="num">30–40 k</div><div style="font-size:10px;color:var(--muted)">emplois · 5 ans</div></div>
+      <div><div class="num">800 M–2 Md</div><div style="font-size:10px;color:var(--muted)">USD flux ouest-africains</div></div>
+    </div>
+    <p style="margin-top:10px">风险与保障：钱包互操作 / 宗教与未成年人 / 电力与沙尘 / 跨境数据 / 人才；每项有机制、指标、责任人。</p>
+  </div>
+</div>
+<div class="footer"><span>AUREON DIGITAL · 动态网页方案 v1.0 + v2.0 优化 · 2026-11-09</span><span>UNE PLATEFORME. TROIS SOUVERAINETÉS. · RELIER DEUX PAYS. ÉQUIPER UNE NATION.</span><span>web/PLAN_v1.md · web/PLAN_v2_optimisation.md</span></div>
+</body></html>

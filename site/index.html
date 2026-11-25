@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="fr" data-mode="synthese" data-lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plateforme de coopération — RIMU · RIMP · IA | AUREON DIGITAL</title>
+<meta name="description" content="Une plateforme. Trois souverainetés. Le point d'entrée officiel de la coopération sino-mauritanienne : plateforme bilatérale, super-application RIMU, paiement RIMP et centre national de calcul IA.">
+<meta property="og:title" content="Une plateforme. Trois souverainetés. — RIMU · RIMP · IA">
+<meta property="og:description" content="Coopération sino-mauritanienne : projets, commerce, finance, formation, santé — reliés à une super-application nationale et à un socle de calcul souverain.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="screenshots/og-cover.png">
+<meta name="theme-color" content="#071C36">
+<link rel="icon" href="assets/img/logo-mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/theme.css">
+<link rel="stylesheet" href="assets/css/layout.css">
+<link rel="stylesheet" href="assets/css/viz.css">
+<link rel="stylesheet" href="assets/css/visual-first.css">
+<link rel="stylesheet" href="assets/css/v3-integration.css">
+<link rel="stylesheet" href="assets/css/media.css">
+</head>
+<body>
+<a class="skip-link" href="#ch-hero">Aller au contenu</a>
+
+<header id="site-header" class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="#ch-hero" aria-label="Plateforme de coopération — retour en haut">
+      <img class="brand-mark" src="assets/img/logo-mark-reverse.svg" alt="" width="34" height="34">
+      <span class="brand-text">
+        <span class="brand-name" data-i18n="brand.name">Plateforme de coopération</span>
+        <span class="brand-sub" data-i18n="brand.sub">RIMU · RIMP · IA</span>
+      </span>
+    </a>
+    <div class="header-actions">
+      <button id="btn-mode" class="btn btn-ghost" type="button" aria-label="Niveau de détail">
+        <span class="btn-mode-label" data-i18n="ui.modeSynthese">Synthèse</span>
+      </button>
+      <button id="btn-lang" class="btn btn-ghost lang-btn" type="button" aria-label="Changer de langue">
+        <span class="lang-current">中文</span>
+      </button>
+      <button id="btn-pitch" class="btn btn-gold" type="button" data-i18n="ui.pitch">Visite guidée · 3 min</button>
+      <button id="btn-present" class="btn btn-ghost present-btn" type="button" data-i18n="ui.present">Présenter</button>
+      <a id="btn-pdf" class="btn btn-ghost pdf-btn" href="dossier.html" target="_blank" rel="noopener" data-i18n="ui.pdf">Dossier PDF</a>
+      <button id="btn-menu" class="btn btn-icon menu-btn" type="button" aria-label="Sommaire">
+        <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 4.5h14M2 9h14M2 13.5h14" stroke="currentColor" stroke-width="1.2" fill="none"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div id="scroll-progress" aria-hidden="true"><span class="bar"></span></div>
+<nav id="chapter-rail" class="chapter-rail" aria-label="Sommaire"></nav>
+
+<main id="app">
+  <!-- 00 HERO -->
+  <section id="ch-hero" class="chapter hero" data-tone="dark">
+    <canvas id="hero-canvas" class="hero-canvas" aria-hidden="true"></canvas>
+    <div class="chapter-inner hero-inner">
+      <div class="hero-copy">
+        <p class="kicker" data-i18n="hero.kicker"></p>
+        <h1 class="hero-title"><span data-i18n="hero.title1"></span><span data-i18n="hero.title2"></span></h1>
+        <p class="hero-lead lead-short" data-short-key="hero.lead"></p>
+        <p class="hero-lead lead-long" data-i18n="hero.lead"></p>
+        <p class="hero-sub lead" data-i18n="hero.subline"></p>
+        <div id="hero-pillar-chips" class="pillar-chips"></div>
+        <div class="hero-ctas">
+          <button id="btn-pitch-hero" class="btn btn-gold btn-lg" type="button" data-i18n="hero.ctaPitch"></button>
+          <a href="#ch-systeme" class="btn btn-ghost btn-lg" data-i18n="hero.ctaExplore"></a>
+          <a href="dossier.html" target="_blank" rel="noopener" class="btn-link" data-i18n="hero.ctaPdf"></a>
+          <a href="cinema.html" class="btn-link" data-i18n="hero.ctaCinema"></a>
+        </div>
+      </div>
+      <div class="hero-side" aria-hidden="true">
+        <span class="network-label label-china" data-i18n="hero.network.china"></span>
+        <span class="network-label label-mauritania" data-i18n="hero.network.mauritania"></span>
+        <span class="network-label label-hub" data-i18n="hero.network.hub"></span>
+        <span class="network-label label-africa" data-i18n="hero.network.westAfrica"></span>
+      </div>
+      <div id="hero-kpis" class="hero-kpis"></div>
+      <div class="scroll-hint"><span data-i18n="hero.scroll"></span><span class="scroll-arrow" aria-hidden="true">↓</span></div>
+    </div>
+  </section>
+
+  <!-- FILM & DEMO -->
+  <section id="ch-media" class="media-strip" data-tone="dark" aria-labelledby="media-title">
+    <div class="media-inner">
+      <div class="media-copy reveal">
+        <p class="media-kicker" data-i18n="media.kicker"></p>
+        <h2 id="media-title" class="media-title" data-i18n="media.title"></h2>
+        <p class="media-lead" data-i18n="media.lead"></p>
+        <div class="media-actions">
+          <button class="btn btn-gold btn-lg" type="button" data-media="video"><span data-i18n="media.videoCta"></span></button>
+          <button class="btn btn-ghost btn-lg" type="button" data-media="demo"><span data-i18n="media.demoCta"></span></button>
+        </div>
+        <p class="media-note" data-i18n="media.note"></p>
+      </div>
+      <div class="media-cards reveal">
+        <button class="media-poster" type="button" data-media="video">
+          <img src="assets/img/video-poster.jpg" alt="" width="1280" height="720" loading="lazy">
+          <span class="media-shade"></span>
+          <span class="media-play" aria-hidden="true"><svg width="18" height="20" viewBox="0 0 18 20"><path d="M1 1l16 9L1 19z" fill="currentColor"/></svg></span>
+          <span class="media-duration" data-i18n="media.duration"></span>
+          <span class="media-poster-label" data-i18n="media.filmLabel"></span>
+        </button>
+        <button class="media-demo-card" type="button" data-media="demo">
+          <img src="assets/img/demo-preview.jpg" alt="" loading="lazy">
+          <span class="media-demo-copy"><span class="media-demo-kicker">v0.app</span><span class="media-demo-title" data-i18n="media.demoCta"></span></span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 01 POURQUOI -->
+  <section id="ch-pourquoi" class="chapter" data-tone="light">
+    <div class="chapter-inner">
+      <header class="chapter-head">
+        <p class="chapter-kicker" data-i18n="chapters.pourquoi.kicker"></p>
+        <h2 class="chapter-title" data-i18n="chapters.pourquoi.title"></h2>
+        <p class="chapter-lead lead-short" data-short-key="chapters.pourquoi.lead"></p>
+        <p class="chapter-lead lead-long" data-i18n="chapters.pourquoi.lead"></p>
+      </header>
+      <div id="problems-grid" class="problems-grid"></div>
+      <div id="avant-apres" class="avant-apres"></div>
+      <p class="transition" data-i18n="chapters.pourquoi.transition"></p>
+    </div>
+  </section>
+
+  <!-- 02 SYSTEME -->
+  <section id="ch-systeme" class="chapter" data-tone="dark">
+    <div class="chapter-inner">
+      <header class="chapter-head">
+        <p class="chapter-kicker" data-i18n="chapters.systeme.kicker"></p>
+        <h2 class="chapter-title" data-i18n="chapters.systeme.title"></h2>
+        <p class="chapter-lead lead-short" data-short-key="chapters.systeme.lead"></p>
+        <p class="chapter-lead lead-long" data-i18n="chapters.systeme.lead"></p>
+      </header>
+      <div id="system-visual" class="system-visual reveal"></div>
+      <div class="system-groups complet-only">
+        <div class="system-group">
+          <div class="group-head"><span class="group-no">01</span><h3 data-i18n="chapters.systeme.pillarsLabel"></h3></div>
+          <div id="pillar-grid" class="pillar-grid"></div>
+        </div>
+        <div class="system-group">
+          <div class="group-head"><span class="group-no">02</span><h3 data-i18n="chapters.systeme.businessesLabel"></h3><div id="stage-legend" class="stage-legend"></div></div>
+          <div id="business-grid" class="business-grid"></div>
+        </div>
+        <div class="system-group">
+          <div class="group-head"><span class="group-no">03</span><h3 data-i18n="chapters.systeme.layersLabel"></h3></div>
+          <div id="layer-stack" class="layer-stack"></div>
+        </div>
+      </div>
+      <p class="click-hint complet-only" data-i18n="chapters.systeme.hint"></p>
+    </div>
+  </section>
+
+  <!-- 03 RIMU -->
+  <section id="ch-rimu" class="chapter" data-tone="dark">
+    <div class="chapter-inner">
+      <header class="chapter-head">
+        <p class="chapter-kicker" data-i18n="chapters.rimu.kicker"></p>
+        <h2 class="chapter-title" data-i18n="chapters.rimu.title"></h2>
+        <p class="chapter-lead lead-short" data-short-key="chapters.rimu.lead"></p>
+        <p class="chapter-lead lead-long" data-i18n="chapters.rimu.lead"></p>
+      </header>
+      <div class="rimu-layout">
+        <div class="rimu-copy">
+          <h3 class="subhead" data-i18n="chapters.rimu.modulesLabel"></h3>
+          <div id="module-chips" class="module-chips"></div>
+          <div id="rimu-trust" class="rimu-trust"></div>
+          <div id="rimu-facts" class="rimu-facts"></div>
+        </div>
+        <div class="phone-wrap">
+          <p id="phone-eyebrow" class="phone-eyebrow"></p>
+          <div id="phone" class="phone">
+            <div class="phone-notch"></div>
+            <div id="phone-status" class="phone-status"><span>RIMU</span><span>9:41</span></div>
+            <div id="phone-screen" class="phone-screen phone-carousel" tabindex="0" role="group" aria-roledescription="carrousel" aria-label="Aperçu de l'interface RIMU">
+              <div id="phone-track" class="phone-track"></div>
+            </div>
+          </div>
+          <div class="phone-controls">
+            <button id="phone-prev" class="phone-arrow" type="button" aria-label="Écran précédent">←</button>
+            <div id="phone-dots" class="phone-dots" role="tablist" aria-label="Écrans de l'application"></div>
+            <button id="phone-next" class="phone-arrow" type="button" aria-label="Écran suivant">→</button>
+            <button id="phone-toggle" class="btn btn-ghost btn-sm" type="button">Pause</button>
+          </div>
+          <div class="phone-caption-row"><p id="phone-caption" class="phone-caption" aria-live="polite"></p><span id="phone-count" class="phone-count">01 / 06</span></div>
+          <p id="phone-demo-note" class="phone-demo-note"></p>
+        </div>
+      </div>
+      <div class="day-block">
+        <div class="day-head"><h3 class="subhead" data-i18n="chapters.rimu.dayLabel"></h3><p class="day-hint" data-i18n="chapters.rimu.dayHint"></p></div>
+        <div id="day-timeline" class="day-timeline"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 IA & CALCUL -->
+  <section id="ch-ia" class="chapter" data-tone="light">
+    <div class="chapter-inner">
+      <header class="chapter-head">
+        <p class="chapter-kicker" data-i18n="chapters.ia.kicker"></p>
+        <h2 class="chapter-title" data-i18n="chapters.ia.title"></h2>
+        <p class="chapter-lead lead-short" data-short-key="chapters.ia.lead"></p>
+        <p class="chapter-lead lead-long" data-i18n="chapters.ia.lead"></p>
+      </header>
+      <div class="ia-layout">
+        <div id="layer-3d" class="layer-3d"></div>
+        <div class="ai-main">
+          <h3 class="subhead" data-i18n="chapters.ia.groupsLabel"></h3>
+          <div id="ai-short" class="ai-short synthese-only"></div>
+          <div id="ai-tabs" class="ai-tabs complet-only"></div>
+          <div id="ai-panel" class="ai-panel complet-only"></div>
+        </div>
+      </div>
+      <div class="phases-block">
+        <h3 class="subhead" data-i18n="chapters.ia.phasesLabel"></h3>
+        <div id="compute-phases" class="phases"></div>
+      </div>
+      <div id="sovereignty" class="callout sovereignty"></div>
+    </div>
+  </section>
+
+  <!-- 05 FLUX -->
+  <section id="ch-flux" class="chapter" data-tone="dark" data-view="graph">
+    <div class="chapter-inner">
+      <header class="chapter-head">
+        <p class="chapter-kicker" data-i18n="chapters.flux.kicker"></p>
+        <h2 class="chapter-title" data-i18n="chapters.flux.title"></h2>
+        <p class="chapter-lead lead-short" data-short-key="chapters.flux.lead"></p>
+        <p class="chapter-lead lead-long" data-i18n="chapters.flux.lead"></p>
+      </header>
+      <div class="flow-layout">
+        <aside class="flow-side">
+          <h3 class="subhead" data-i18n="chapters.flux.legendLabel"></h3>
+          <div id="flow-legend" class="flow-legend"></div>
+          <div id="flow-controls" class="flow-controls"></div>
+          <div id="story-chips" class="story-chips"></div>
+          <p id="story-caption" class="story-caption"></p>
+          <div id="story-progress" class="story-progress" aria-hidden="true"></div>
+        </aside>
+        <div class="flow-main">
+          <div id="flow-story-hud" class="flow-story-hud" hidden>
+            <div class="hud-top">
+              <span class="hud-kicker"></span>
+              <div class="hud-actions">
+                <button type="button" class="btn btn-ghost btn-sm" data-hud="pause"></button>
+                <button type="button" class="btn btn-ghost btn-sm" data-hud="replay"></button>
+                <button type="button" class="btn btn-icon hud-close" data-hud="close" aria-label="Fermer">✕</button>
+              </div>
+            </div>
+            <div id="flow-story-hud-caption" class="hud-caption" aria-live="polite"></div>
+            <div id="flow-story-hud-progress" class="hud-progress" aria-hidden="true"></div>
+          </div>
+          <div id="flow-canvas" class="flow-canvas"></div>
+          <p id="flow-drag-hint" class="flow-drag-hint"></p>
+          <p id="flow-matrix-note" class="flow-matrix-note"></p>
+          <div id="flow-matrix" class="flow-matrix"></div>
+          <p class="hint" data-i18n="chapters.flux.hint"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 TRAJECTOIRE -->
+  <section id="ch-trajectoire" class="chapter" data-tone="light">
+    <div class="chapter-inner">
+      <header class="chapter-head">
+        <p class="chapter-kicker" data-i18n="chapters.trajectoire.kicker"></p>
+        <h2 class="chapter-title" data-i18n="chapters.trajectoire.title"></h2>
+        <p class="chapter-lead lead-short" data-short-key="chapters.trajectoire.lead"></p>
+        <p class="chapter-lead lead-long" data-i18n="chapters.trajectoire.lead"></p>
+      </header>
+      <div class="roadmap">
+        <div id="track-tabs" class="track-tabs"></div>
+        <div class="timeline-wrap">
+          <div id="timeline-axis" class="timeline-axis"></div>
+          <div id="timeline" class="timeline"></div>
+        </div>
+        <div id="timeline-detail" class="timeline-detail"></div>
+        <p class="note" data-i18n="chapters.trajectoire.note"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 IMPACT -->
+  <section id="ch-impact" class="chapter" data-tone="dark">
+    <div class="chapter-inner">
+      <header class="chapter-head">
+        <p class="chapter-kicker" data-i18n="chapters.impact.kicker"></p>
+        <h2 class="chapter-title" data-i18n="chapters.impact.title"></h2>
+        <p class="chapter-lead lead-short" data-short-key="chapters.impact.lead"></p>
+        <p class="chapter-lead lead-long" data-i18n="chapters.impact.lead"></p>
+        <div class="head-actions"><span id="scenario-badge" class="badge badge-scenario"></span><button class="btn-link methodo-link" type="button" data-methodo="1" data-i18n="ui.methodology"></button></div>
+      </header>
+      <div id="impact-kpis" class="impact-kpis"></div>
+      <div class="charts">
+        <div class="chart-card"><h3 class="subhead" data-i18n="chapters.impact.chartMauTitle"></h3><div id="chart-mau" class="chart"></div></div>
+        <div class="chart-card"><h3 class="subhead" data-i18n="chapters.impact.chartRevenueTitle"></h3><div id="chart-revenue" class="chart"></div><div id="revenue-legend" class="revenue-legend"></div></div>
+      </div>
+      <div class="win-block">
+        <h3 class="subhead" data-i18n="chapters.impact.winLabel"></h3>
+        <div id="win-tabs" class="win-tabs"></div>
+        <div id="win-panel" class="win-panel"></div>
+      </div>
+      <div class="map-block">
+        <div class="map-copy"><h3 class="subhead" data-i18n="chapters.impact.mapLabel"></h3><p data-i18n="chapters.impact.mapLead"></p></div>
+        <div id="map-canvas" class="map-canvas"></div>
+      </div>
+      <div class="transformation">
+        <h3 class="subhead" data-i18n="chapters.impact.transformationLabel"></h3>
+        <div id="transformation" class="transformation-grid"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 08 DECISION -->
+  <section id="ch-decision" class="chapter" data-tone="light">
+    <div class="chapter-inner">
+      <header class="chapter-head">
+        <p class="chapter-kicker" data-i18n="chapters.decision.kicker"></p>
+        <h2 class="chapter-title" data-i18n="chapters.decision.title"></h2>
+        <p class="chapter-lead lead-short" data-short-key="chapters.decision.lead"></p>
+        <p class="chapter-lead lead-long" data-i18n="chapters.decision.lead"></p>
+      </header>
+      <div class="decision-layout">
+        <div class="supports-block">
+          <h3 class="subhead" data-i18n="chapters.decision.supportsLabel"></h3>
+          <p class="sublead" data-i18n="chapters.decision.supportsLead"></p>
+          <div id="decision-tiles" class="decision-tiles synthese-only"></div>
+          <div id="supports" class="supports complet-only"></div>
+        </div>
+        <div class="risks-block">
+          <h3 class="subhead" data-i18n="chapters.decision.risksLabel"></h3>
+          <p class="sublead" data-i18n="chapters.decision.risksLead"></p>
+          <div id="risk-gauges" class="risk-gauges synthese-only"></div>
+          <div id="risks" class="risks complet-only"></div>
+        </div>
+      </div>
+      <div class="cta-block">
+        <h3 class="subhead" data-i18n="chapters.decision.ctaLabel"></h3>
+        <div id="cta-cards" class="ctas"></div>
+      </div>
+      <div class="next-block">
+        <h3 class="subhead" data-i18n="chapters.decision.nextLabel"></h3>
+        <div id="next-steps" class="next-steps"></div>
+      </div>
+      <div id="contact" class="contact"></div>
+      <p class="disclaimer" data-i18n="chapters.decision.disclaimer"></p>
+    </div>
+  </section>
+</main>
+
+<footer id="site-footer" class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="footer-name" data-i18n="brand.name">Plateforme de coopération</span>
+      <span class="footer-sub" data-i18n="brand.sub">RIMU · RIMP · IA</span>
+      <span class="footer-sign" data-i18n="brand.signature">AUREON DIGITAL · Bâtisseur de la souveraineté numérique</span>
+    </div>
+    <nav id="footer-nav" class="footer-nav" aria-label="Sommaire"></nav>
+    <div class="footer-meta">
+      <p data-i18n="footer.sources"></p>
+      <p data-i18n="footer.legal"></p>
+      <p class="footer-version" data-i18n="footer.version"></p>
+      <button class="btn-link" type="button" data-methodo="1" data-i18n="ui.methodology"></button>
+    </div>
+  </div>
+</footer>
+
+<!-- DRAWER -->
+<div id="drawer-root" class="drawer-root" aria-hidden="true">
+  <div id="drawer-overlay" class="drawer-overlay"></div>
+  <aside id="drawer" class="drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
+    <header class="drawer-head">
+      <div class="drawer-head-copy">
+        <p id="drawer-kicker" class="drawer-kicker"></p>
+        <h2 id="drawer-title" class="drawer-title"></h2>
+        <p id="drawer-tagline" class="drawer-tagline"></p>
+      </div>
+      <button id="drawer-close" class="btn btn-icon drawer-close" type="button" aria-label="Fermer la fiche">
+        <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M3 3l12 12M15 3L3 15" stroke="currentColor" stroke-width="1.3" fill="none"/></svg>
+      </button>
+    </header>
+    <div class="drawer-meta"><span id="drawer-stage" class="stage-badge"></span><span id="drawer-type" class="drawer-type"></span></div>
+    <div id="drawer-kpis" class="drawer-kpis"></div>
+    <div id="drawer-tabs" class="drawer-tabs" role="tablist"></div>
+    <div id="drawer-body" class="drawer-body" role="tabpanel" tabindex="0"></div>
+    <footer class="drawer-foot">
+      <button id="drawer-connections" class="btn btn-ghost btn-sm" type="button" data-i18n="ui.seeConnections">Voir les connexions</button>
+      <button id="drawer-roadmap" class="btn btn-ghost btn-sm" type="button" data-i18n="ui.seeRoadmap">Feuille de route</button>
+      <button id="drawer-share" class="btn btn-ghost btn-sm" type="button" data-i18n="ui.share">Partager</button>
+    </footer>
+  </aside>
+</div>
+
+<!-- METHODOLOGIE -->
+<div id="methodo-root" class="modal-root" aria-hidden="true">
+  <div class="modal-overlay" data-close-modal="methodo"></div>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="methodo-title">
+    <header class="modal-head"><h2 id="methodo-title" data-i18n="ui.methodology">Méthodologie</h2><button class="btn btn-icon" type="button" data-close-modal="methodo" aria-label="Fermer">✕</button></header>
+    <div id="methodo-body" class="modal-body"></div>
+  </div>
+</div>
+
+<!-- PITCH -->
+<div id="pitch-root" class="pitch-root" aria-hidden="true">
+  <div class="pitch-overlay"></div>
+  <div class="pitch-panel" role="dialog" aria-modal="false" aria-labelledby="pitch-title">
+    <div class="pitch-top">
+      <div class="pitch-head"><span id="pitch-scene-no" class="pitch-no"></span><h2 id="pitch-title" class="pitch-title"></h2></div>
+      <button id="pitch-close" class="btn btn-icon" type="button" aria-label="Quitter la visite">✕</button>
+    </div>
+    <div id="pitch-progress" class="pitch-progress"></div>
+    <p id="pitch-caption" class="pitch-caption"></p>
+    <div id="pitch-controls" class="pitch-controls"></div>
+  </div>
+</div>
+
+<!-- PRESENTER -->
+<div id="presenter-bar" class="presenter-bar" aria-hidden="true">
+  <span id="presenter-timer" class="presenter-timer">00:00</span>
+  <span id="presenter-chapter" class="presenter-chapter"></span>
+  <div class="presenter-nav">
+    <button id="presenter-prev" class="btn btn-ghost btn-sm" type="button">←</button>
+    <button id="presenter-next" class="btn btn-ghost btn-sm" type="button">→</button>
+    <button id="presenter-black" class="btn btn-ghost btn-sm" type="button">B</button>
+    <button id="presenter-exit" class="btn btn-ghost btn-sm" type="button" data-i18n="ui.exit">Quitter</button>
+  </div>
+</div>
+
+
+<!-- FILM / DEMO MODAL -->
+<div id="media-root" class="media-root" aria-hidden="true">
+  <div class="media-overlay" data-media-close></div>
+  <div class="media-dialog" role="dialog" aria-modal="true" aria-labelledby="media-modal-title">
+    <header class="media-modal-head">
+      <div><p class="media-modal-kicker" data-i18n="media.kicker"></p><h2 id="media-modal-title"></h2></div>
+      <button class="btn btn-icon media-modal-close" type="button" data-media-close aria-label="Fermer">✕</button>
+    </header>
+    <div id="media-modal-body" class="media-modal-body"></div>
+  </div>
+</div>
+
+<script src="assets/js/content.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/icons.js"></script>
+<script src="assets/js/short-copy.js"></script>
+<script src="assets/js/viz.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,1100 @@
+/* ==========================================================================
+   visual-first.css — V3 "Visual-first" components (owner: visual-builder)
+   Contract: web/site/V3_CONTRACT.md §3. Single file, UTF-8, no external
+   fonts/images/CDN. Load AFTER theme.css + layout.css (Lead integrates the
+   <link>); all colours/sizes come from theme.css custom properties.
+
+   SCOPE
+   - Mode utility classes .......... .lead-short/.lead-long, .short-only/
+                                      .long-only, .synthese-only/.complet-only
+                                      + Synthese fallback hide list + print restore
+   - Problem cards ................. #problems-grid > .problem-card.vf-problem
+                                      (.vf-problem-icon/.vf-stat/.vf-stat-label/
+                                       .vf-arrow), 4/2/1 columns
+   - System assembly diagram ....... #system-visual.system-visual
+                                      (.sv-row/.sv-pillars/.sv-businesses/
+                                       .sv-layers/.sv-node/.sv-pillar/
+                                       .sv-business/.sv-layer/.sv-icon/
+                                       .sv-name/.sv-metric/.sv-spine/.sv-hint)
+   - Decision tiles ................ #decision-tiles.decision-tiles >
+                                      .decision-tile (.dt-icon/.dt-no/.dt-title/
+                                      .dt-unlock/.dt-status)
+   - Risk gauges ................... #risk-gauges.risk-gauges > .risk-gauge
+                                      (.rg-icon/.rg-label/.rg-status/
+                                       .rg-bar > i)
+   - Motion, 1280/1080/640/390 responsive, reduced-motion/lite, print.
+
+   ASSUMPTIONS (DOM produced by Lead)
+   - Icons: inline SVG injected inside .vf-problem-icon/.sv-icon/.dt-icon/
+     .rg-icon; sizing is done here (20–24px), stroke/fill attributes are set
+     by the icon shell in icons.js.
+   - .system-visual carries .reveal; app.js adds .is-in → assembly animation.
+   - Decision tiles / risk gauges are expected to receive .is-in (reveal) too;
+     if they never do, they simply stay statically visible (no blank state).
+   - Status variants (no fake data): .dt-status/.rg-status support
+     [data-status="ready"|"clarify"|"warn"], .is-ready/.is-clarify/.is-warn,
+     .status-ready/.status-clarify/.status-warn; default = neutral gold.
+   - Risk level (3 segments, never a fake %): [data-level="1|2|3"] on
+     .risk-gauge sets --rg-fill (1/3, 2/3, 3/3). Default = 1/3.
+   ========================================================================== */
+
+/* ==========================================================================
+   1. MODE UTILITIES — Synthèse (default) vs Complet
+   ========================================================================== */
+html[data-mode="synthese"] .long-only,
+html[data-mode="synthese"] .complet-only,
+html[data-mode="synthese"] .lead-long {
+  display: none !important;
+}
+html[data-mode="complet"] .short-only,
+html[data-mode="complet"] .synthese-only,
+html[data-mode="complet"] .lead-short {
+  display: none !important;
+}
+
+/* Synthese fallback hide list (V3_CONTRACT §3.5) — in case Lead's .long-only
+   markup is not applied to every node. Elements that also carry a short variant
+   (.synthese-only / .short-only, e.g. p.problem-body.vf-short) are preserved.
+   Complet keeps everything visible. */
+html[data-mode="synthese"] .chapter-lead.lead-long:not(.synthese-only):not(.short-only),
+html[data-mode="synthese"] .hero-lead.lead-long:not(.synthese-only):not(.short-only),
+html[data-mode="synthese"] .pillar-tagline:not(.synthese-only):not(.short-only),
+html[data-mode="synthese"] .business-tagline:not(.synthese-only):not(.short-only),
+html[data-mode="synthese"] .layer-comp:not(.synthese-only):not(.short-only),
+html[data-mode="synthese"] .problem-body:not(.synthese-only):not(.short-only):not(.vf-short),
+html[data-mode="synthese"] .problem-change:not(.synthese-only):not(.short-only),
+html[data-mode="synthese"] .trust-body:not(.synthese-only):not(.short-only),
+html[data-mode="synthese"] .rimu-fact-label:not(.synthese-only):not(.short-only),
+html[data-mode="synthese"] .day-hint:not(.synthese-only):not(.short-only),
+html[data-mode="synthese"] .layer-plate-comp:not(.synthese-only):not(.short-only),
+html[data-mode="synthese"] .ai-item-desc:not(.synthese-only):not(.short-only),
+html[data-mode="synthese"] .phase-body:not(.synthese-only):not(.short-only),
+html[data-mode="synthese"] .milestone-body:not(.synthese-only):not(.short-only),
+html[data-mode="synthese"] .milestone-list:not(.synthese-only):not(.short-only),
+html[data-mode="synthese"] .roadmap .note:not(.synthese-only):not(.short-only),
+html[data-mode="synthese"] #transformation:not(.synthese-only):not(.short-only),
+html[data-mode="synthese"] .map-copy p:not(.synthese-only):not(.short-only),
+html[data-mode="synthese"] #win-panel .benefit-item:nth-child(n+3):not(.synthese-only):not(.short-only),
+html[data-mode="synthese"] .support-ask:not(.synthese-only):not(.short-only),
+html[data-mode="synthese"] .support-body:not(.synthese-only):not(.short-only),
+html[data-mode="synthese"] .risk-desc:not(.synthese-only):not(.short-only),
+html[data-mode="synthese"] .risk-guarantees:not(.synthese-only):not(.short-only),
+html[data-mode="synthese"] .cta-body:not(.synthese-only):not(.short-only),
+html[data-mode="synthese"] .next-list:not(.synthese-only):not(.short-only) {
+  display: none !important;
+}
+
+/* container-level mode switches (contract §3.3 / §3.4) */
+html[data-mode="synthese"] #ch-systeme .system-groups { display: none !important; }
+html[data-mode="complet"] .system-visual { display: none !important; }
+html[data-mode="complet"] #decision-tiles,
+html[data-mode="complet"] #risk-gauges { display: none !important; }
+
+/* mode-specific copy is normal inline/block content, never a visual break */
+.lead-short,
+.lead-long { display: block; }
+
+/* ==========================================================================
+   2. PROBLEM CARDS — #problems-grid > .problem-card.vf-problem
+   ========================================================================== */
+#problems-grid.problems-grid,
+.vf-problems.problems-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  align-items: stretch;
+  grid-auto-rows: 1fr;
+}
+
+.vf-problem {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  min-width: 0;
+  min-height: 100%;
+  padding: 22px;
+  cursor: pointer;
+  transition: transform var(--dur-fast, 160ms) var(--ease-out, cubic-bezier(.16,1,.3,1)),
+              border-color var(--dur-fast, 160ms) var(--ease-standard, cubic-bezier(.2,0,0,1)),
+              background-color var(--dur-fast, 160ms) var(--ease-standard, cubic-bezier(.2,0,0,1));
+}
+.vf-problem .problem-no {
+  font-size: 13px;
+  font-family: var(--ff-num, system-ui, sans-serif);
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  color: var(--gold-text, #7C5F2B);
+}
+.vf-problem .problem-title {
+  margin: 0;
+  font-family: var(--ff-display, Georgia, serif);
+  font-size: clamp(1.125rem, 1.35vw, 1.375rem);
+  font-weight: 400;
+  line-height: 1.22;
+  color: var(--text, #16273F);
+  text-wrap: balance;
+}
+
+/* icon in a thin gold ring (no raster assets) */
+.vf-problem-icon {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 42px;
+  height: 42px;
+  margin-block: 2px 4px;
+  border: 1px solid var(--line-gold-soft, rgba(156,122,56,.28));
+  border-radius: 50%;
+  background: var(--gold-fill, rgba(201,162,94,.08));
+  color: var(--gold-text, #7C5F2B);
+  transition: color var(--dur-fast, 160ms) var(--ease-standard, cubic-bezier(.2,0,0,1)),
+              border-color var(--dur-fast, 160ms) var(--ease-standard, cubic-bezier(.2,0,0,1)),
+              transform var(--dur-base, 240ms) var(--ease-out, cubic-bezier(.16,1,.3,1));
+}
+.vf-problem-icon::before {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border: 1px solid var(--gold, #9C7A38);
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(0.92);
+  transition: opacity var(--dur-base, 240ms) var(--ease-out, cubic-bezier(.16,1,.3,1)),
+              transform var(--dur-base, 240ms) var(--ease-out, cubic-bezier(.16,1,.3,1));
+  pointer-events: none;
+}
+.vf-problem-icon svg {
+  display: block;
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+}
+
+/* big short stat */
+.vf-stat {
+  display: block;
+  margin-top: 2px;
+  font-family: var(--ff-display, Georgia, serif);
+  font-size: clamp(1.75rem, 2.2vw, 2.125rem);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  color: var(--gold-text, #7C5F2B);
+  font-variant-numeric: tabular-nums lining-nums;
+  white-space: nowrap;
+}
+.vf-stat-label {
+  display: block;
+  margin-top: -2px;
+  font-family: var(--ff-body, system-ui, sans-serif);
+  font-size: 9.5px;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted, #5E6B7E);
+}
+html[lang="zh"] .vf-stat-label {
+  letter-spacing: 0.04em;
+  text-transform: none;
+}
+.vf-problem .problem-body,
+.vf-problem .problem-body.vf-short {
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--text-secondary, #33415A);
+  text-wrap: pretty;
+}
+.vf-problem .problem-body.vf-short {
+  display: block;
+  margin: 0;
+  font-family: var(--ff-body, system-ui, sans-serif);
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--text-muted, #5E6B7E);
+  text-wrap: pretty;
+}
+/* .problem-summary is also styled by Lead's v3-integration.css (loaded after
+   this file). Keep this rule at the same single-class specificity so the
+   integration file stays authoritative for its margin/measure. */
+.problem-summary {
+  display: block;
+  text-wrap: pretty;
+}
+.problem-summary::before {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 1px;
+  margin-bottom: 6px;
+  background: var(--line-gold-soft, rgba(156,122,56,.28));
+}
+.vf-problem .problem-change {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--text-secondary, #33415A);
+  text-wrap: pretty;
+}
+.vf-problem .problem-change {
+  padding-top: 9px;
+  border-top: 1px solid var(--line-soft, rgba(11,31,58,.10));
+}
+.vf-arrow {
+  display: block;
+  align-self: flex-end;
+  margin-top: auto;
+  padding-top: 4px;
+  font-family: var(--ff-body, system-ui, sans-serif);
+  font-size: 15px;
+  line-height: 1;
+  color: var(--gold, #9C7A38);
+  opacity: 0.55;
+  transition: transform var(--dur-base, 240ms) var(--ease-out, cubic-bezier(.16,1,.3,1)),
+              opacity var(--dur-base, 240ms) var(--ease-out, cubic-bezier(.16,1,.3,1));
+}
+@media (hover: hover) and (pointer: fine) {
+  .vf-problem:hover {
+    transform: translateY(-3px);
+    border-color: var(--line-gold-soft, rgba(156,122,56,.28));
+    background: var(--surface-hover, #FFFDF8);
+  }
+  .vf-problem:hover .vf-problem-icon {
+    color: var(--gold, #9C7A38);
+    border-color: var(--gold, #9C7A38);
+    transform: translateY(-1px);
+  }
+  .vf-problem:hover .vf-problem-icon::before { opacity: 1; transform: scale(1); }
+  .vf-problem:hover .vf-arrow { opacity: 1; transform: translateX(4px); }
+}
+.vf-problem:focus-visible {
+  outline: 2px solid var(--focus-ring, #9C7A38);
+  outline-offset: 3px;
+}
+
+/* ==========================================================================
+   3. SYSTEM ASSEMBLY — #system-visual.system-visual
+   ========================================================================== */
+.system-visual {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin-top: 4px;
+}
+.sv-row {
+  position: relative;
+  display: grid;
+  gap: 12px;
+  align-items: stretch;
+  min-width: 0;
+  z-index: 1;
+}
+.sv-pillars { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.sv-businesses { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 10px; }
+.sv-layers { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+
+/* thin feeder line under pillars/businesses rows */
+.sv-pillars::after,
+.sv-businesses::after {
+  content: "";
+  position: absolute;
+  inset-inline: 7%;
+  inset-block-end: -7px;
+  height: 1px;
+  background: linear-gradient(90deg,
+    transparent,
+    var(--line-gold-soft, rgba(156,122,56,.28)) 14%,
+    var(--line-gold-soft, rgba(156,122,56,.28)) 86%,
+    transparent);
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+/* vertical spine + diamond junction */
+.sv-spine {
+  position: relative;
+  flex: 0 0 auto;
+  height: 42px;
+}
+.sv-spine::before {
+  content: "";
+  position: absolute;
+  inset-block: 0;
+  inset-inline-start: 50%;
+  width: 1px;
+  margin-inline-start: -0.5px;
+  background: linear-gradient(180deg,
+    var(--line-gold-soft, rgba(156,122,56,.28)),
+    var(--gold-soft, rgba(156,122,56,.22)));
+  transform: scaleY(1);
+  transform-origin: 50% 0;
+  pointer-events: none;
+}
+.sv-spine::after {
+  content: "";
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-start: 50%;
+  width: 7px;
+  height: 7px;
+  margin: -3.5px 0 0 -3.5px;
+  border: 1px solid var(--gold, #9C7A38);
+  background: var(--bg, #F6F0E4);
+  transform: rotate(45deg);
+  pointer-events: none;
+}
+
+/* nodes */
+.sv-node {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  min-width: 0;
+  min-height: 100%;
+  padding: 14px;
+  border: 1px solid var(--line, rgba(246,240,228,.16));
+  background: var(--surface, rgba(246,240,228,.045));
+  color: var(--text, #F6F0E4);
+  text-align: left;
+  cursor: pointer;
+  transition: transform var(--dur-fast, 160ms) var(--ease-out, cubic-bezier(.16,1,.3,1)),
+              border-color var(--dur-fast, 160ms) var(--ease-standard, cubic-bezier(.2,0,0,1)),
+              background-color var(--dur-fast, 160ms) var(--ease-standard, cubic-bezier(.2,0,0,1));
+}
+.sv-node::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid var(--gold, #C9A25E);
+  opacity: 0;
+  transition: opacity var(--dur-base, 240ms) var(--ease-out, cubic-bezier(.16,1,.3,1));
+  pointer-events: none;
+}
+.sv-node:hover::before { opacity: 0.65; }
+.sv-node:hover {
+  border-color: var(--line-gold-soft, rgba(201,162,94,.30));
+  background: var(--surface-hover, rgba(246,240,228,.075));
+  transform: translateY(-2px);
+}
+.sv-node:focus-visible {
+  outline: 2px solid var(--focus-ring, #C9A25E);
+  outline-offset: 2px;
+}
+.sv-node .sv-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 24px;
+  height: 24px;
+  color: var(--gold, #C9A25E);
+}
+.sv-node .sv-icon svg {
+  display: block;
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+}
+.sv-node .sv-name {
+  display: block;
+  max-width: 100%;
+  font-family: var(--ff-body, system-ui, sans-serif);
+  font-size: 12.5px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--text, #F6F0E4);
+  overflow-wrap: anywhere;
+}
+.sv-node .sv-metric {
+  display: block;
+  margin-top: auto;
+  font-family: var(--ff-num, system-ui, sans-serif);
+  font-size: 10px;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+  color: var(--text-muted, rgba(246,240,228,.58));
+  font-variant-numeric: tabular-nums;
+}
+.sv-pillar {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  grid-template-rows: auto auto;
+  column-gap: 12px;
+  row-gap: 3px;
+  align-content: center;
+  align-items: center;
+  min-height: 104px;
+  padding: 16px;
+}
+.sv-pillar .sv-icon { grid-row: 1 / span 2; grid-column: 1; width: 32px; height: 32px; }
+.sv-pillar .sv-icon svg { width: 32px; height: 32px; }
+.sv-pillar .sv-name { grid-row: 1; grid-column: 2; align-self: end; }
+.sv-pillar .sv-metric { grid-row: 2; grid-column: 2; align-self: start; margin-top: 0; }
+.sv-pillar .sv-icon { width: 28px; height: 28px; }
+.sv-pillar .sv-icon svg { width: 28px; height: 28px; }
+.sv-pillar .sv-name {
+  font-family: var(--ff-display, Georgia, serif);
+  font-size: clamp(1.0625rem, 1.35vw, 1.3125rem);
+  font-weight: 400;
+  line-height: 1.18;
+}
+.sv-business { min-height: 106px; }
+.sv-layer {
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  min-height: 54px;
+  padding: 11px 13px;
+}
+.sv-layer .sv-icon { width: 20px; height: 20px; }
+.sv-layer .sv-icon svg { width: 20px; height: 20px; }
+.sv-layer .sv-name { flex: 1 1 auto; font-size: 12px; }
+
+.sv-hint {
+  display: block;
+  margin: 16px 0 0;
+  font-family: var(--ff-body, system-ui, sans-serif);
+  font-size: 11px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--text-muted, rgba(246,240,228,.58));
+}
+.sv-hint::before {
+  content: "↳";
+  margin-inline-end: 0.55em;
+  color: var(--gold, #C9A25E);
+}
+
+/* entrance: assembly draws itself when .is-in is added by app.js */
+.system-visual.is-in .sv-row > * {
+  animation: vfNodeIn 560ms var(--ease-out, cubic-bezier(.16,1,.3,1)) both;
+}
+.system-visual.is-in .sv-pillars > *:nth-child(1) { animation-delay: 80ms; }
+.system-visual.is-in .sv-pillars > *:nth-child(2) { animation-delay: 150ms; }
+.system-visual.is-in .sv-pillars > *:nth-child(3) { animation-delay: 220ms; }
+.system-visual.is-in .sv-businesses > *:nth-child(1) { animation-delay: 320ms; }
+.system-visual.is-in .sv-businesses > *:nth-child(2) { animation-delay: 380ms; }
+.system-visual.is-in .sv-businesses > *:nth-child(3) { animation-delay: 440ms; }
+.system-visual.is-in .sv-businesses > *:nth-child(4) { animation-delay: 500ms; }
+.system-visual.is-in .sv-businesses > *:nth-child(5) { animation-delay: 560ms; }
+.system-visual.is-in .sv-businesses > *:nth-child(6) { animation-delay: 620ms; }
+.system-visual.is-in .sv-layers > *:nth-child(1) { animation-delay: 600ms; }
+.system-visual.is-in .sv-layers > *:nth-child(2) { animation-delay: 660ms; }
+.system-visual.is-in .sv-layers > *:nth-child(3) { animation-delay: 720ms; }
+.system-visual.is-in .sv-layers > *:nth-child(4) { animation-delay: 780ms; }
+.system-visual.is-in .sv-spine::before {
+  animation: vfSpineIn 620ms var(--ease-out, cubic-bezier(.16,1,.3,1)) both;
+}
+.system-visual.is-in .sv-pillars + .sv-spine::before { animation-delay: 180ms; }
+.system-visual.is-in .sv-businesses + .sv-spine::before { animation-delay: 440ms; }
+
+/* ==========================================================================
+   4. DECISION TILES — #decision-tiles.decision-tiles
+   ========================================================================== */
+.decision-tiles {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+  align-items: stretch;
+  grid-auto-rows: 1fr;
+  margin-top: 6px;
+}
+.decision-tile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 0;
+  min-height: 100%;
+  padding: 16px;
+  border: 1px solid var(--line, rgba(11,31,58,.16));
+  background: var(--surface, #FBF6EC);
+  color: var(--text, #16273F);
+  transition: transform var(--dur-fast, 160ms) var(--ease-out, cubic-bezier(.16,1,.3,1)),
+              border-color var(--dur-fast, 160ms) var(--ease-standard, cubic-bezier(.2,0,0,1)),
+              background-color var(--dur-fast, 160ms) var(--ease-standard, cubic-bezier(.2,0,0,1));
+}
+.decision-tile::before {
+  content: "";
+  position: absolute;
+  inset-block-start: -1px;
+  inset-inline: -1px;
+  height: 2px;
+  background: var(--gold, #9C7A38);
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  transition: transform var(--dur-base, 240ms) var(--ease-out, cubic-bezier(.16,1,.3,1));
+  pointer-events: none;
+}
+.decision-tile:hover {
+  border-color: var(--line-gold-soft, rgba(156,122,56,.28));
+  background: var(--surface-hover, #FFFDF8);
+  transform: translateY(-2px);
+}
+.decision-tile:hover::before { transform: scaleX(1); }
+.decision-tile:focus-visible {
+  outline: 2px solid var(--focus-ring, #9C7A38);
+  outline-offset: 2px;
+}
+.decision-tile .dt-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  color: var(--gold-text, #7C5F2B);
+}
+.decision-tile .dt-icon svg {
+  display: block;
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+}
+.decision-tile .dt-no {
+  font-family: var(--ff-num, system-ui, sans-serif);
+  font-size: 9.5px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.16em;
+  color: var(--text-muted, #5E6B7E);
+  font-variant-numeric: tabular-nums;
+}
+.decision-tile .dt-title {
+  margin: 0;
+  font-family: var(--ff-display, Georgia, serif);
+  font-size: clamp(1rem, 1.15vw, 1.125rem);
+  font-weight: 400;
+  line-height: 1.22;
+  color: var(--text, #16273F);
+  text-wrap: balance;
+}
+.decision-tile .dt-unlock {
+  flex: 1 1 auto;
+  margin: 0;
+  font-family: var(--ff-body, system-ui, sans-serif);
+  font-size: 11.5px;
+  line-height: 1.5;
+  color: var(--text-secondary, #33415A);
+  text-wrap: pretty;
+}
+.dt-status,
+.rg-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  align-self: flex-start;
+  height: 21px;
+  max-width: 100%;
+  padding: 0 8px;
+  border: 1px solid var(--line, rgba(11,31,58,.16));
+  background: transparent;
+  color: var(--text-muted, #5E6B7E);
+  font-family: var(--ff-body, system-ui, sans-serif);
+  font-size: 9px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+html[lang="zh"] .dt-status,
+html[lang="zh"] .rg-status { letter-spacing: 0.03em; text-transform: none; }
+.dt-status::before,
+.rg-status::before {
+  content: "";
+  flex: 0 0 auto;
+  width: 5px;
+  height: 5px;
+  background: var(--gold-text, #7C5F2B);
+  transform: rotate(45deg);
+}
+/* default status colours (real app.js markup has no variant attributes):
+   decision tiles = "À clarifier" (gold), risk gauges = "Mécanisme prévu" (green).
+   Explicit data-status / .is-* classes below still override these defaults. */
+.decision-tile .dt-status {
+  border-color: var(--line-gold-soft, rgba(156,122,56,.28));
+  color: var(--gold-text, #7C5F2B);
+}
+.decision-tile .dt-status::before { background: var(--gold-text, #7C5F2B); }
+.risk-gauge .rg-status {
+  border-color: rgba(0, 122, 79, 0.38);
+  color: var(--positive, #00794D);
+}
+.risk-gauge .rg-status::before { background: var(--positive, #00794D); }
+/* status variants: gold = to be clarified, green = mechanism planned */
+.dt-status[data-status="clarify"],
+.dt-status.is-clarify,
+.dt-status.status-clarify,
+.rg-status[data-status="clarify"],
+.rg-status.is-clarify,
+.rg-status.status-clarify {
+  border-color: var(--line-gold-soft, rgba(156,122,56,.28));
+  color: var(--gold-text, #7C5F2B);
+}
+.dt-status[data-status="ready"],
+.dt-status.is-ready,
+.dt-status.status-ready,
+.rg-status[data-status="ready"],
+.rg-status.is-ready,
+.rg-status.status-ready {
+  border-color: rgba(0, 122, 79, 0.38);
+  color: var(--positive, #00794D);
+}
+.dt-status[data-status="ready"]::before,
+.dt-status.is-ready::before,
+.dt-status.status-ready::before,
+.rg-status[data-status="ready"]::before,
+.rg-status.is-ready::before,
+.rg-status.status-ready::before {
+  background: var(--positive, #00794D);
+}
+.dt-status[data-status="warn"],
+.dt-status.is-warn,
+.dt-status.status-warn,
+.rg-status[data-status="warn"],
+.rg-status.is-warn,
+.rg-status.status-warn {
+  border-color: rgba(154, 82, 48, 0.42);
+  color: var(--c-copper-600, #9A5230);
+}
+.dt-status[data-status="warn"]::before,
+.dt-status.is-warn::before,
+.dt-status.status-warn::before,
+.rg-status[data-status="warn"]::before,
+.rg-status.is-warn::before,
+.rg-status.status-warn::before {
+  background: var(--c-copper-400, #D08A5C);
+}
+
+/* ==========================================================================
+   5. RISK GAUGES — #risk-gauges.risk-gauges
+   ========================================================================== */
+.risk-gauges {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 6px;
+}
+.risk-gauge {
+  --rg-fill: 0.34;
+  display: grid;
+  grid-template-columns: 24px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 4px 10px;
+  padding: 11px 13px;
+  border: 1px solid var(--line, rgba(11,31,58,.16));
+  background: var(--surface, #FBF6EC);
+  min-width: 0;
+  transition: border-color var(--dur-fast, 160ms) var(--ease-standard, cubic-bezier(.2,0,0,1)),
+              background-color var(--dur-fast, 160ms) var(--ease-standard, cubic-bezier(.2,0,0,1));
+}
+.risk-gauge:hover {
+  border-color: var(--line-gold-soft, rgba(156,122,56,.28));
+  background: var(--surface-hover, #FFFDF8);
+}
+.risk-gauge .rg-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  color: var(--gold-text, #7C5F2B);
+}
+.risk-gauge .rg-icon svg {
+  display: block;
+  width: 21px;
+  height: 21px;
+  fill: none;
+  stroke: currentColor;
+}
+.risk-gauge .rg-label {
+  min-width: 0;
+  font-family: var(--ff-body, system-ui, sans-serif);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--text, #16273F);
+  overflow-wrap: anywhere;
+}
+.risk-gauge .rg-status { align-self: center; }
+/* 3-state bar: never a fake percentage, only 1/3, 2/3, 3/3 */
+.risk-gauge[data-level="2"] { --rg-fill: 0.67; }
+.risk-gauge[data-level="3"] { --rg-fill: 1; }
+.risk-gauge .rg-bar {
+  position: relative;
+  grid-column: 1 / -1;
+  height: 4px;
+  margin-top: 5px;
+  background:
+    linear-gradient(90deg,
+      var(--a-12, rgba(11,31,58,.12)) 0 32%,
+      transparent 32% 34%,
+      var(--a-12, rgba(11,31,58,.12)) 34% 65.5%,
+      transparent 65.5% 67.5%,
+      var(--a-12, rgba(11,31,58,.12)) 67.5% 100%);
+  overflow: hidden;
+}
+.risk-gauge .rg-bar > i {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--gold, #9C7A38);
+  transform: scaleX(var(--rg-fill, 0.34));
+  transform-origin: 0 50%;
+  transition: transform var(--dur-slow, 360ms) var(--ease-out, cubic-bezier(.16,1,.3,1));
+}
+.risk-gauge.is-ready .rg-bar > i,
+.risk-gauge[data-status="ready"] .rg-bar > i { background: var(--positive, #00794D); }
+.risk-gauge.is-warn .rg-bar > i,
+.risk-gauge[data-status="warn"] .rg-bar > i { background: var(--c-copper-400, #D08A5C); }
+
+/* entrance for tiles + gauges (triggered by .is-in from the reveal observer) */
+.decision-tiles.is-in > .decision-tile {
+  animation: vfTileIn 520ms var(--ease-out, cubic-bezier(.16,1,.3,1)) both;
+}
+.decision-tiles.is-in > .decision-tile:nth-child(1) { animation-delay: 40ms; }
+.decision-tiles.is-in > .decision-tile:nth-child(2) { animation-delay: 110ms; }
+.decision-tiles.is-in > .decision-tile:nth-child(3) { animation-delay: 180ms; }
+.decision-tiles.is-in > .decision-tile:nth-child(4) { animation-delay: 250ms; }
+.decision-tiles.is-in > .decision-tile:nth-child(5) { animation-delay: 320ms; }
+.decision-tiles.is-in .dt-status { animation: vfFadeIn 420ms var(--ease-out, cubic-bezier(.16,1,.3,1)) 380ms both; }
+.risk-gauges.is-in > .risk-gauge {
+  animation: vfGaugeIn 480ms var(--ease-out, cubic-bezier(.16,1,.3,1)) both;
+}
+.risk-gauges.is-in > .risk-gauge:nth-child(1) { animation-delay: 40ms; }
+.risk-gauges.is-in > .risk-gauge:nth-child(2) { animation-delay: 100ms; }
+.risk-gauges.is-in > .risk-gauge:nth-child(3) { animation-delay: 160ms; }
+.risk-gauges.is-in > .risk-gauge:nth-child(4) { animation-delay: 220ms; }
+.risk-gauges.is-in > .risk-gauge:nth-child(5) { animation-delay: 280ms; }
+.risk-gauges.is-in .rg-bar > i { animation: vfBarIn 720ms var(--ease-out, cubic-bezier(.16,1,.3,1)) 220ms both; }
+.risk-gauges.is-in .rg-status { animation: vfFadeIn 420ms var(--ease-out, cubic-bezier(.16,1,.3,1)) 340ms both; }
+
+/* Synthese : the two complete accordion blocks are hidden, so the summary
+   tiles/gauges take the full width (5 tiles across instead of a narrow column). */
+html[data-mode="synthese"] #ch-decision .decision-layout {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 28px;
+}
+
+/* Progressive enhancement: if app.js never marks tiles/gauges with .is-in,
+   Chrome's scroll-driven animations still give them a light entrance.
+   Browsers without support simply show them statically. */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .decision-tiles:not(.is-in) > .decision-tile {
+      animation: vfTileIn linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 28%;
+    }
+    .risk-gauges:not(.is-in) > .risk-gauge {
+      animation: vfGaugeIn linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 26%;
+    }
+    .risk-gauges:not(.is-in) .rg-bar > i {
+      animation: vfBarIn linear both;
+      animation-timeline: view();
+      animation-range: entry 5% cover 34%;
+    }
+  }
+}
+
+/* .lite / manual reduced: the scroll-driven entrance is decoration only */
+html.lite .decision-tiles:not(.is-in) > .decision-tile,
+html.lite .risk-gauges:not(.is-in) > .risk-gauge,
+html.lite .risk-gauges:not(.is-in) .rg-bar > i,
+body.lite .decision-tiles:not(.is-in) > .decision-tile,
+body.lite .risk-gauges:not(.is-in) > .risk-gauge,
+body.lite .risk-gauges:not(.is-in) .rg-bar > i {
+  animation: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+}
+html.lite .risk-gauges:not(.is-in) .rg-bar > i,
+body.lite .risk-gauges:not(.is-in) .rg-bar > i {
+  transform: scaleX(var(--rg-fill, 0.34)) !important;
+}
+
+/* ==========================================================================
+   6. KEYFRAMES (transform/opacity only)
+   ========================================================================== */
+@keyframes vfNodeIn {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes vfSpineIn {
+  from { transform: scaleY(0); }
+  to { transform: scaleY(1); }
+}
+@keyframes vfTileIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes vfGaugeIn {
+  from { opacity: 0; transform: translateX(-6px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes vfFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes vfBarIn {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(var(--rg-fill, 0.34)); }
+}
+
+/* ==========================================================================
+   7. RESPONSIVE — 1280 / 1080 / 640 / 390 (component level)
+   ========================================================================== */
+@media (max-width: 1280px) {
+  #problems-grid.problems-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .sv-businesses { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+  .sv-pillar { min-height: 96px; }
+  .decision-tiles { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .decision-tile .dt-title { font-size: 1.0625rem; }
+}
+
+@media (max-width: 1080px) {
+  .sv-businesses { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .sv-layers { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .sv-pillars { gap: 12px; }
+  .system-visual { margin-top: 0; }
+  .decision-tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .decision-tile { padding: 14px; }
+  .risk-gauges { gap: 7px; }
+  .risk-gauge { padding: 10px 12px; }
+}
+
+@media (max-width: 640px) {
+  /* problem cards: single column */
+  html[data-mode] #problems-grid.problems-grid { grid-template-columns: 1fr; gap: 12px; }
+  .vf-problem { padding: 20px; }
+  .vf-problem .problem-title { font-size: 1.125rem; }
+  .vf-stat { font-size: 1.75rem; }
+
+  /* system diagram: vertical stack, compact rows */
+  .sv-pillars,
+  .sv-businesses,
+  .sv-layers { grid-template-columns: 1fr; gap: 8px; }
+  .sv-pillars::after,
+  .sv-businesses::after { display: none; }
+  .sv-spine { height: 26px; }
+  .sv-node,
+  .sv-business,
+  .sv-layer,
+  .sv-pillar {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    min-height: 0;
+    padding: 11px 13px;
+  }
+  .sv-node .sv-name,
+  .sv-pillar .sv-name {
+    flex: 1 1 auto;
+    font-family: var(--ff-body, system-ui, sans-serif);
+    font-size: 12.5px;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+  .sv-node .sv-metric {
+    margin-top: 0;
+    margin-inline-start: auto;
+    flex: 0 0 auto;
+    text-align: right;
+    white-space: nowrap;
+  }
+  .sv-pillar .sv-icon,
+  .sv-business .sv-icon { width: 22px; height: 22px; }
+  .sv-layer .sv-name { flex: 1 1 auto; }
+  .sv-hint { margin-top: 12px; font-size: 10.5px; }
+
+  /* decision tiles: single column */
+  .decision-tiles { grid-template-columns: 1fr; gap: 8px; }
+  .decision-tile { padding: 14px; }
+  .decision-tile .dt-unlock { font-size: 12px; }
+
+  /* risk gauges: keep one column, tighten */
+  .risk-gauge {
+    grid-template-columns: 22px minmax(0, 1fr);
+    gap: 4px 8px;
+    padding: 10px 11px;
+  }
+  .risk-gauge .rg-status {
+    grid-column: 1 / -1;
+    justify-self: start;
+    margin-top: 2px;
+  }
+  .risk-gauge .rg-bar { margin-top: 3px; }
+  .risk-gauge .rg-label { font-size: 11.5px; }
+  .risk-gauge .rg-status { font-size: 8.5px; height: 20px; }
+}
+
+@media (max-width: 390px) {
+  .vf-problem { padding: 18px; }
+  .vf-problem-icon { width: 38px; height: 38px; }
+  .vf-problem-icon svg { width: 20px; height: 20px; }
+  .vf-stat { font-size: 1.625rem; }
+  .sv-node .sv-icon,
+  .sv-node .sv-icon svg { width: 20px; height: 20px; }
+  .decision-tile { padding: 13px; }
+  .decision-tile .dt-title { font-size: 1rem; }
+  .decision-tile .dt-unlock { font-size: 11.5px; }
+  .rg-label { font-size: 11px; }
+}
+
+/* ==========================================================================
+   8. REDUCED MOTION / LOW BANDWIDTH (.lite, data-motion=reduced)
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  .vf-problem,
+  .vf-problem-icon,
+  .vf-problem-icon::before,
+  .vf-arrow,
+  .sv-node,
+  .sv-spine::before,
+  .decision-tile,
+  .decision-tile::before,
+  .risk-gauge,
+  .risk-gauge .rg-bar > i,
+  .dt-status,
+  .rg-status {
+    animation: none !important;
+    transition: none !important;
+  }
+  .system-visual.is-in .sv-row > *,
+  .decision-tiles.is-in > .decision-tile,
+  .risk-gauges.is-in > .risk-gauge,
+  .decision-tiles.is-in .dt-status,
+  .risk-gauges.is-in .rg-status {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .system-visual.is-in .sv-spine::before { animation: none !important; transform: scaleY(1) !important; }
+  .risk-gauges.is-in .rg-bar > i { animation: none !important; transform: scaleX(var(--rg-fill, 0.34)) !important; }
+  .vf-problem:hover,
+  .sv-node:hover,
+  .decision-tile:hover { transform: none !important; }
+  .vf-problem:hover .vf-problem-icon { transform: none !important; }
+}
+
+html[data-motion="reduced"] .vf-problem,
+html[data-motion="reduced"] .vf-problem-icon,
+html[data-motion="reduced"] .vf-arrow,
+html[data-motion="reduced"] .sv-node,
+html[data-motion="reduced"] .decision-tile,
+html[data-motion="reduced"] .risk-gauge,
+html[data-motion="reduced"] .risk-gauge .rg-bar > i {
+  animation: none !important;
+  transition: none !important;
+}
+html[data-motion="reduced"] .system-visual.is-in .sv-row > *,
+html[data-motion="reduced"] .decision-tiles.is-in > .decision-tile,
+html[data-motion="reduced"] .risk-gauges.is-in > .risk-gauge {
+  animation: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+}
+html[data-motion="reduced"] .system-visual.is-in .sv-spine::before { animation: none !important; transform: scaleY(1) !important; }
+html[data-motion="reduced"] .risk-gauges.is-in .rg-bar > i { animation: none !important; transform: scaleX(var(--rg-fill, 0.34)) !important; }
+
+html.lite .vf-problem,
+html.lite .vf-problem-icon,
+html.lite .vf-problem-icon::before,
+html.lite .vf-arrow,
+html.lite .sv-node,
+html.lite .sv-spine::before,
+html.lite .decision-tile,
+html.lite .decision-tile::before,
+html.lite .risk-gauge,
+html.lite .risk-gauge .rg-bar > i,
+html.lite .dt-status,
+html.lite .rg-status {
+  animation: none !important;
+  transition: none !important;
+}
+html.lite .system-visual.is-in .sv-row > *,
+html.lite .decision-tiles.is-in > .decision-tile,
+html.lite .risk-gauges.is-in > .risk-gauge {
+  animation: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+}
+html.lite .system-visual.is-in .sv-spine::before { animation: none !important; transform: scaleY(1) !important; }
+html.lite .risk-gauges.is-in .rg-bar > i { animation: none !important; transform: scaleX(var(--rg-fill, 0.34)) !important; }
+html.lite .vf-problem:hover,
+html.lite .sv-node:hover,
+html.lite .decision-tile:hover { transform: none !important; }
+
+/* ==========================================================================
+   9. PRINT — long copy restored, short copy removed (V3_CONTRACT §3.5)
+   ========================================================================== */
+@media print {
+  /* print uses the complete version, whatever the on-screen mode */
+  html[data-mode] .long-only,
+  html[data-mode] .complet-only,
+  html[data-mode] .lead-long { display: revert !important; }
+  html[data-mode] .short-only,
+  html[data-mode] .synthese-only,
+  html[data-mode] .lead-short { display: none !important; }
+
+  /* restore copy hidden by the Synthese fallback list */
+  html[data-mode] .chapter-lead.lead-long:not(.synthese-only):not(.short-only),
+  html[data-mode] .hero-lead.lead-long:not(.synthese-only):not(.short-only),
+  html[data-mode] .pillar-tagline:not(.synthese-only):not(.short-only),
+  html[data-mode] .business-tagline:not(.synthese-only):not(.short-only),
+  html[data-mode] .layer-comp:not(.synthese-only):not(.short-only),
+  html[data-mode] .problem-body:not(.synthese-only):not(.short-only):not(.vf-short),
+  html[data-mode] .problem-change:not(.synthese-only):not(.short-only),
+  html[data-mode] .trust-body:not(.synthese-only):not(.short-only),
+  html[data-mode] .rimu-fact-label:not(.synthese-only):not(.short-only),
+  html[data-mode] .day-hint:not(.synthese-only):not(.short-only),
+  html[data-mode] .layer-plate-comp:not(.synthese-only):not(.short-only),
+  html[data-mode] .ai-item-desc:not(.synthese-only):not(.short-only),
+  html[data-mode] .phase-body:not(.synthese-only):not(.short-only),
+  html[data-mode] .milestone-body:not(.synthese-only):not(.short-only),
+  html[data-mode] .milestone-list:not(.synthese-only):not(.short-only),
+  html[data-mode] .roadmap .note:not(.synthese-only):not(.short-only),
+  html[data-mode] #transformation:not(.synthese-only):not(.short-only),
+  html[data-mode] .map-copy p:not(.synthese-only):not(.short-only),
+  html[data-mode] #win-panel .benefit-item:nth-child(n+3):not(.synthese-only):not(.short-only),
+  html[data-mode] .support-ask:not(.synthese-only):not(.short-only),
+  html[data-mode] .support-body:not(.synthese-only):not(.short-only),
+  html[data-mode] .risk-desc:not(.synthese-only):not(.short-only),
+  html[data-mode] .risk-guarantees:not(.synthese-only):not(.short-only),
+  html[data-mode] .cta-body:not(.synthese-only):not(.short-only),
+  html[data-mode] .next-list:not(.synthese-only):not(.short-only) { display: revert !important; }
+
+  /* print the complete system/decision blocks, not the screen summaries */
+  .system-visual,
+  #decision-tiles,
+  #risk-gauges,
+  .sv-hint,
+  .vf-arrow { display: none !important; }
+  html[data-mode] #ch-systeme .system-groups { display: flex !important; }
+
+  /* no motion, no hover lift, no decorative nodes */
+  .vf-problem,
+  .sv-node,
+  .decision-tile,
+  .risk-gauge { transform: none !important; animation: none !important; transition: none !important; }
+  .vf-problem,
+  .decision-tile,
+  .risk-gauge { break-inside: avoid; page-break-inside: avoid; }
+  .vf-problem-icon::before { display: none !important; }
+  .vf-problem-icon { background: transparent !important; }
+  .risk-gauge .rg-bar > i { transform: scaleX(var(--rg-fill, 0.34)) !important; }
+}

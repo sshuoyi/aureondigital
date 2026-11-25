@@ -1,0 +1,6024 @@
+{
+  "meta": {
+    "schemaVersion": "1.0.0",
+    "generatedAt": "2026-11-09",
+    "status": "draft-for-plan-v1",
+    "project": {
+      "nameFR": "Plateforme de coopération numérique sino-mauritanienne — RIMU + Contenu IA + Calcul national",
+      "nameZH": "中毛数字合作平台——RIMU + 内容 AI + 国家算力",
+      "subtitleFR": "Une plateforme. Trois souverainetés.",
+      "subtitleZH": "一个平台，三重主权。"
+    },
+    "client": {
+      "name": "AUREON DIGITAL SARL",
+      "taglineFR": "Bâtisseur de la souveraineté numérique",
+      "taglineZH": "数字主权建设者",
+      "location": "Nouakchott, Mauritanie"
+    },
+    "locales": [
+      "fr",
+      "zh"
+    ],
+    "defaultLocale": "fr",
+    "rtlReserved": [
+      "ar"
+    ],
+    "heroKpis": [
+      "kpi.mau_2031",
+      "kpi.revenue_total_2031",
+      "kpi.wallets_2031",
+      "kpi.jobs_5y"
+    ],
+    "blockIds": [
+      "00-hero",
+      "01-constat",
+      "02-vue-systeme",
+      "03-piliers",
+      "04-business-lines",
+      "05-rimu",
+      "06-contenu-calcul",
+      "07-relations",
+      "08-roadmap",
+      "09-chiffres-2031",
+      "10-benefices",
+      "11-soutiens-etat",
+      "12-risques",
+      "13-next-steps"
+    ],
+    "routes": {
+      "system": "#/system",
+      "business": "#/business/{id}",
+      "pillar": "#/pillar/{id}",
+      "rimuModule": "#/rimu/{id}",
+      "tour": "?tour=1",
+      "track": "?track={id}"
+    },
+    "numberFormat": {
+      "fr": {
+        "decimal": ",",
+        "thousands": "U+202F",
+        "bigUnits": {
+          "M": "million",
+          "Md": "milliard"
+        },
+        "percentSpace": "U+00A0"
+      },
+      "zh": {
+        "decimal": ".",
+        "bigUnits": {
+          "wan": "万",
+          "yi": "亿"
+        }
+      }
+    },
+    "typeLegend": {
+      "Source": {
+        "labelFR": "Source",
+        "labelZH": "来源",
+        "colorToken": "gold",
+        "descriptionFR": "Chiffre explicite du document de référence.",
+        "descriptionZH": "源文件明示数字。"
+      },
+      "Dérivé": {
+        "labelFR": "Dérivé",
+        "labelZH": "派生",
+        "colorToken": "signal-green",
+        "descriptionFR": "Calculé à partir des chiffres source ; formule affichée.",
+        "descriptionZH": "由源数字按公式换算；公式可见。"
+      },
+      "Hypothèse": {
+        "labelFR": "Hypothèse",
+        "labelZH": "假设",
+        "colorToken": "ivory-outline",
+        "descriptionFR": "Paramètre de travail à valider.",
+        "descriptionZH": "待验证的工作参数。"
+      }
+    },
+    "animationPresets": {
+      "countUp": {
+        "durationMs": 1200,
+        "easing": "power2.out",
+        "staggerMs": 80,
+        "reducedMotion": "static-final-value"
+      },
+      "countUpRange": {
+        "durationMs": 1400,
+        "easing": "power2.out",
+        "reducedMotion": "static-final-value"
+      },
+      "drawLine": {
+        "durationMs": 1600,
+        "easing": "power3.inOut",
+        "reducedMotion": "static-final-value"
+      },
+      "donutDraw": {
+        "durationMs": 1200,
+        "easing": "power2.out",
+        "reducedMotion": "static-final-value"
+      },
+      "barGrow": {
+        "durationMs": 900,
+        "easing": "power2.out",
+        "staggerMs": 60,
+        "reducedMotion": "static-final-value"
+      },
+      "mapFlow": {
+        "durationMs": 2400,
+        "loop": true,
+        "reducedMotion": "static-arrows"
+      },
+      "timelineReveal": {
+        "durationMs": 800,
+        "easing": "power2.out",
+        "staggerMs": 120,
+        "reducedMotion": "static-final-value"
+      },
+      "staticReveal": {
+        "durationMs": 0,
+        "reducedMotion": "static-final-value"
+      }
+    },
+    "methodology": {
+      "titleFR": "Méthodologie",
+      "titleZH": "方法学",
+      "bodyFR": "Source : document de référence (novembre 2026). Dérivé : calcul à partir des chiffres source, formule affichée. Hypothèse : paramètre de travail à valider. Les fourchettes ne sont pas strictement additives.",
+      "bodyZH": "来源：参考文件（2026 年 11 月）。派生：由源数字按公式计算，公式可见。假设：待验证的工作参数。区间不可严格相加。",
+      "lastUpdate": "2026-11-09"
+    },
+    "disclaimerFR": "Chiffres du scénario ambitieux, présentés avec leur méthode ; ils ne constituent pas une prévision officielle.",
+    "disclaimerZH": "雄心情景数据，附算法说明；不构成官方预测。",
+    "contact": {
+      "name": "Benjamin LIU",
+      "role": "Vice-président",
+      "phoneMR": "+222 22 66 51 08",
+      "phoneCN": "+86 134 5413 3191",
+      "wechat": "liuxd6",
+      "email": "ccliuxd@gmail.com",
+      "web": "www.aureondigital.mr",
+      "noteFR": "Coordonnées à confirmer avant publication (données personnelles).",
+      "noteZH": "上线前确认联系方式（涉及个人信息）。"
+    },
+    "brandReference": {
+      "colors": {
+        "navy": "#071C36",
+        "navyDeep": "#0B1F3A",
+        "ivory": "#F6F0E4",
+        "gold": "#C9A25E",
+        "goldDeep": "#9C7A38",
+        "signalGreen": "#00A86B"
+      },
+      "fonts": {
+        "displayFR": "Didot → Playfair Display / Cormorant",
+        "bodyFR": "Avenir Next → Nunito Sans / Inter",
+        "displayZH": "Noto Serif SC",
+        "bodyZH": "Noto Sans SC",
+        "data": "tabular numerals"
+      },
+      "source": "BRIEF §6 ; presentation/index.html CSS"
+    }
+  },
+  "kpis": [
+    {
+      "id": "kpi.mau_2031",
+      "nameFR": "Utilisateurs actifs mensuels (MAU) — 2031",
+      "nameZH": "2031 年月活用户（MAU）",
+      "valueType": "number",
+      "value": 2500000,
+      "range": null,
+      "series": null,
+      "unitFR": "utilisateurs",
+      "unitZH": "用户",
+      "year": "2031",
+      "type": "Source",
+      "confidence": "élevée",
+      "formula": null,
+      "assumption": null,
+      "displayFR": "2,5 M",
+      "displayZH": "250 万",
+      "displayLongFR": "2 500 000 utilisateurs actifs mensuels",
+      "displayLongZH": "250 万月活用户",
+      "chart": "counter",
+      "component": "KpiCounter",
+      "animation": {
+        "trigger": "viewport",
+        "preset": "countUp",
+        "delayMs": 0
+      },
+      "surfaces": [
+        "00-hero",
+        "03-piliers",
+        "05-rimu",
+        "09-chiffres-2031"
+      ],
+      "sourceLines": [
+        58,
+        72
+      ],
+      "sourceRef": "src.rimu.objectifs",
+      "notes": null
+    },
+    {
+      "id": "kpi.dau_2031",
+      "nameFR": "Utilisateurs actifs quotidiens (DAU) — 2031",
+      "nameZH": "2031 年日活用户（DAU）",
+      "valueType": "number",
+      "value": 800000,
+      "range": null,
+      "series": null,
+      "unitFR": "utilisateurs",
+      "unitZH": "用户",
+      "year": "2031",
+      "type": "Source",
+      "confidence": "élevée",
+      "formula": null,
+      "assumption": null,
+      "displayFR": "800 k",
+      "displayZH": "80 万",
+      "displayLongFR": "800 000 utilisateurs actifs quotidiens",
+      "displayLongZH": "80 万日活用户",
+      "chart": "counter",
+      "component": "KpiCounter",
+      "animation": {
+        "trigger": "viewport",
+        "preset": "countUp",
+        "delayMs": 0
+      },
+      "surfaces": [
+        "00-hero",
+        "05-rimu",
+        "09-chiffres-2031"
+      ],
+      "sourceLines": [
+        58
+      ],
+      "sourceRef": "src.rimu.objectifs",
+      "notes": null
+    },
+    {
+      "id": "kpi.daily_minutes_2031",
+      "nameFR": "Temps passé quotidien — 2031",
+      "nameZH": "2031 年日均使用时长",
+      "valueType": "number",
+      "value": 40,
+      "range": null,
+      "series": null,
+      "unitFR": "min/jour",
+      "unitZH": "分钟/日",
+      "year": "2031",
+      "type": "Source",
+      "confidence": "élevée",
+      "formula": null,
+      "assumption": null,
+      "displayFR": "40 min/jour",
+      "displayZH": "40 分钟/日",
+      "displayLongFR": "40 minutes par jour et par utilisateur actif",
+      "displayLongZH": "每位活跃用户日均 40 分钟",
+      "chart": "counter",
+      "component": "KpiCounter",
+      "animation": {
+        "trigger": "viewport",
+        "preset": "countUp",
+        "delayMs": 0
+      },
+      "surfaces": [
+        "00-hero",
+        "05-rimu",
+        "09-chiffres-2031"
+      ],
+      "sourceLines": [
+        58
+      ],
+      "sourceRef": "src.rimu.objectifs",
+      "notes": null
+    },
+    {
+      "id": "kpi.wallets_2031",
+      "nameFR": "Comptes portefeuille RIMP — 2031",
+      "nameZH": "2031 年 RIMP 钱包账户",
+      "valueType": "number",
+      "value": 2800000,
+      "range": null,
+      "series": null,
+      "unitFR": "comptes",
+      "unitZH": "账户",
+      "year": "2031",
+      "type": "Source",
+      "confidence": "élevée",
+      "formula": null,
+      "assumption": null,
+      "displayFR": "2,8 M comptes",
+      "displayZH": "280 万账户",
+      "displayLongFR": "2 800 000 comptes portefeuille RIMP (comptes cumulés)",
+      "displayLongZH": "280 万个 RIMP 钱包账户（累计账户）",
+      "chart": "counter",
+      "component": "KpiCounter",
+      "animation": {
+        "trigger": "viewport",
+        "preset": "countUp",
+        "delayMs": 0
+      },
+      "surfaces": [
+        "00-hero",
+        "03-piliers",
+        "04-business-lines",
+        "09-chiffres-2031",
+        "10-benefices"
+      ],
+      "sourceLines": [
+        73
+      ],
+      "sourceRef": "src.rimu.objectifs",
+      "notes": "Comptes cumulés incluant multi-comptes et comptes inactifs ; ne pas convertir en % de la population adulte (QA-2)."
+    },
+    {
+      "id": "kpi.revenue_total_2031",
+      "nameFR": "Revenus annuels totaux — 2031",
+      "nameZH": "2031 年收入合计",
+      "valueType": "range",
+      "value": null,
+      "range": [
+        150000000,
+        220000000
+      ],
+      "series": null,
+      "unitFR": "USD/an",
+      "unitZH": "美元/年",
+      "year": "2031",
+      "type": "Source",
+      "confidence": "élevée",
+      "formula": null,
+      "assumption": null,
+      "displayFR": "150–220 M USD",
+      "displayZH": "1.5–2.2 亿美元",
+      "displayLongFR": "150 à 220 millions USD de revenus annuels",
+      "displayLongZH": "年收入 1.5–2.2 亿美元",
+      "chart": "counter-range",
+      "component": "KpiCounterRange",
+      "animation": {
+        "trigger": "viewport",
+        "preset": "countUpRange",
+        "delayMs": 0
+      },
+      "surfaces": [
+        "00-hero",
+        "09-chiffres-2031"
+      ],
+      "sourceLines": [
+        82
+      ],
+      "sourceRef": "src.rimu.revenus",
+      "notes": "Scénario ambitieux. Le total Source prime sur la somme des composantes (QA-6)."
+    },
+    {
+      "id": "kpi.revenue_rimu_2031",
+      "nameFR": "Revenus RIMU — 2031",
+      "nameZH": "2031 年 RIMU 收入",
+      "valueType": "range",
+      "value": null,
+      "range": [
+        30000000,
+        50000000
+      ],
+      "series": null,
+      "unitFR": "USD/an",
+      "unitZH": "美元/年",
+      "year": "2031",
+      "type": "Source",
+      "confidence": "élevée",
+      "formula": null,
+      "assumption": null,
+      "displayFR": "30–50 M USD",
+      "displayZH": "0.3–0.5 亿美元",
+      "displayLongFR": null,
+      "displayLongZH": null,
+      "chart": "donut-slice",
+      "component": "DonutSlice",
+      "animation": {
+        "trigger": "viewport",
+        "preset": "donutDraw",
+        "delayMs": 0
+      },
+      "surfaces": [
+        "09-chiffres-2031"
+      ],
+      "sourceLines": [
+        79
+      ],
+      "sourceRef": "src.rimu.revenus",
+      "notes": null
+    },
+    {
+      "id": "kpi.revenue_rimp_2031",
+      "nameFR": "Revenus RIMP — 2031",
+      "nameZH": "2031 年 RIMP 收入",
+      "valueType": "range",
+      "value": null,
+      "range": [
+        90000000,
+        140000000
+      ],
+      "series": null,
+      "unitFR": "USD/an",
+      "unitZH": "美元/年",
+      "year": "2031",
+      "type": "Source",
+      "confidence": "élevée",
+      "formula": null,
+      "assumption": null,
+      "displayFR": "90–140 M USD",
+      "displayZH": "0.9–1.4 亿美元",
+      "displayLongFR": null,
+      "displayLongZH": null,
+      "chart": "donut-slice",
+      "component": "DonutSlice",
+      "animation": {
+        "trigger": "viewport",
+        "preset": "donutDraw",
+        "delayMs": 0
+      },
+      "surfaces": [
+        "04-business-lines",
+        "09-chiffres-2031"
+      ],
+      "sourceLines": [
+        80
+      ],
+      "sourceRef": "src.rimu.revenus",
+      "notes": null
+    },
+    {
+      "id": "kpi.revenue_compute_2031",
+      "nameFR": "Revenus centre de calcul IA — 2031",
+      "nameZH": "2031 年 AI 算力收入",
+      "valueType": "range",
+      "value": null,
+      "range": [
+        30000000,
+        40000000
+      ],
+      "series": null,
+      "unitFR": "USD/an",
+      "unitZH": "美元/年",
+      "year": "2031",
+      "type": "Source",
+      "confidence": "élevée",
+      "formula": null,
+      "assumption": null,
+      "displayFR": "30–40 M USD",
+      "displayZH": "0.3–0.4 亿美元",
+      "displayLongFR": null,
+      "displayLongZH": null,
+      "chart": "donut-slice",
+      "component": "DonutSlice",
+      "animation": {
+        "trigger": "viewport",
+        "preset": "donutDraw",
+        "delayMs": 0
+      },
+      "surfaces": [
+        "03-piliers",
+        "06-contenu-calcul",
+        "09-chiffres-2031"
+      ],
+      "sourceLines": [
+        81
+      ],
+      "sourceRef": "src.rimu.revenus",
+      "notes": null
+    },
+    {
+      "id": "kpi.revenue_gdp_share_2031",
+      "nameFR": "Part du PIB actuel — 2031",
+      "nameZH": "2031 年收入占当前 GDP 比重",
+      "valueType": "range",
+      "value": null,
+      "range": [
+        1.3,
+        1.9
+      ],
+      "series": null,
+      "unitFR": "%",
+      "unitZH": "%",
+      "year": "2031",
+      "type": "Source",
+      "confidence": "élevée",
+      "formula": null,
+      "assumption": null,
+      "displayFR": "1,3–1,9 % du PIB (actuel)",
+      "displayZH": "占当前 GDP 的 1.3–1.9%",
+      "displayLongFR": "1,3 à 1,9 % du PIB actuel",
+      "displayLongZH": "占当前 GDP 的 1.3–1.9%",
+      "chart": "counter-range",
+      "component": "KpiCounterRange",
+      "animation": {
+        "trigger": "viewport",
+        "preset": "countUpRange",
+        "delayMs": 0
+      },
+      "surfaces": [
+        "09-chiffres-2031"
+      ],
+      "sourceLines": [
+        82
+      ],
+      "sourceRef": "src.rimu.revenus",
+      "notes": "Source wording = « PIB actuel » ; ne pas requalifier en % du PIB 2031."
+    },
+    {
+      "id": "kpi.jobs_5y",
+      "nameFR": "Emplois directs + écosystème sur 5 ans",
+      "nameZH": "五年直接与生态就业",
+      "valueType": "range",
+      "value": null,
+      "range": [
+        30000,
+        40000
+      ],
+      "series": null,
+      "unitFR": "emplois",
+      "unitZH": "就业",
+      "year": "2031",
+      "type": "Source",
+      "confidence": "élevée",
+      "formula": null,
+      "assumption": null,
+      "displayFR": "30–40 k",
+      "displayZH": "3–4 万",
+      "displayLongFR": "30 000 à 40 000 emplois directs et écosystème sur cinq ans",
+      "displayLongZH": "五年 3–4 万直接与生态就业",
+      "chart": "counter-range",
+      "component": "KpiCounterRange",
+      "animation": {
+        "trigger": "viewport",
+        "preset": "countUpRange",
+        "delayMs": 0
+      },
+      "surfaces": [
+        "00-hero",
+        "09-chiffres-2031",
+        "10-benefices"
+      ],
+      "sourceLines": [
+        97
+      ],
+      "sourceRef": "src.rimu.benefices",
+      "notes": "Cumul direct + écosystème ; ne pas additionner aux 8–15 k connexes (QA-3)."
+    },
+    {
+      "id": "kpi.stickiness_dau_mau_2031",
+      "nameFR": "Ratio DAU/MAU — 2031",
+      "nameZH": "2031 年 DAU/MAU 粘性",
+      "valueType": "number",
+      "value": 32,
+      "range": null,
+      "series": null,
+      "unitFR": "%",
+      "unitZH": "%",
+      "year": "2031",
+      "type": "Dérivé",
+      "confidence": "moyenne",
+      "formula": "DAU ÷ MAU = 800 000 ÷ 2 500 000 = 0,32",
+      "assumption": null,
+      "displayFR": "32 %",
+      "displayZH": "32%",
+      "displayLongFR": null,
+      "displayLongZH": null,
+      "chart": "gauge",
+      "component": "Gauge",
+      "animation": {
+        "trigger": "viewport",
+        "preset": "staticReveal",
+        "delayMs": 0
+      },
+      "surfaces": [
+        "09-chiffres-2031"
+      ],
+      "sourceLines": [
+        58
+      ],
+      "sourceRef": "src.rimu.objectifs",
+      "notes": null
+    },
+    {
+      "id": "kpi.internet_users_2031",
+      "nameFR": "Internautes estimés — 2031",
+      "nameZH": "2031 年估算网民数",
+      "valueType": "number",
+      "value": 4166667,
+      "range": null,
+      "series": null,
+      "unitFR": "internautes",
+      "unitZH": "网民",
+      "year": "2031",
+      "type": "Dérivé",
+      "confidence": "moyenne",
+      "formula": "MAU ÷ 60 % = 2 500 000 ÷ 0,60 = 4 166 667",
+      "assumption": null,
+      "displayFR": "≈ 4,2 M",
+      "displayZH": "约 420 万",
+      "displayLongFR": null,
+      "displayLongZH": null,
+      "chart": "table",
+      "component": "MethodologyTable",
+      "animation": {
+        "trigger": "viewport",
+        "preset": "staticReveal",
+        "delayMs": 0
+      },
+      "surfaces": [
+        "methodology"
+      ],
+      "sourceLines": [
+        58
+      ],
+      "sourceRef": "src.rimu.objectifs",
+      "notes": "Base circulaire (QA-4) ; ne pas afficher en grand chiffre sur la page."
+    },
+    {
+      "id": "kpi.netizen_share_2031",
+      "nameFR": "Part des internautes — 2031",
+      "nameZH": "2031 年占网民比例",
+      "valueType": "number",
+      "value": 60,
+      "range": null,
+      "series": null,
+      "unitFR": "%",
+      "unitZH": "%",
+      "year": "2031",
+      "type": "Source",
+      "confidence": "élevée",
+      "formula": null,
+      "assumption": null,
+      "displayFR": "60 %+",
+      "displayZH": "60%+",
+      "displayLongFR": "≈ 60 %+ des internautes de l'époque",
+      "displayLongZH": "约占当年网民 60%+",
+      "chart": "badge",
+      "component": "TypeBadge",
+      "animation": {
+        "trigger": "viewport",
+        "preset": "staticReveal",
+        "delayMs": 0
+      },
+      "surfaces": [
+        "09-chiffres-2031"
+      ],
+      "sourceLines": [
+        58
+      ],
+      "sourceRef": "src.rimu.objectifs",
+      "notes": null
+    },
+    {
+      "id": "kpi.adult_accounts_2031",
+      "nameFR": "Comptes numériques adultes — 2031",
+      "nameZH": "2031 年成年人数字账户",
+      "valueType": "number",
+      "value": 50,
+      "range": null,
+      "series": null,
+      "unitFR": "%",
+      "unitZH": "%",
+      "year": "2031",
+      "type": "Source",
+      "confidence": "élevée",
+      "formula": null,
+      "assumption": null,
+      "displayFR": "≈ 50 %",
+      "displayZH": "约 50%",
+      "displayLongFR": "Comptes numériques adultes : environ la moitié",
+      "displayLongZH": "成年人数字账户约一半",
+      "chart": "gauge",
+      "component": "Gauge",
+      "animation": {
+        "trigger": "viewport",
+        "preset": "staticReveal",
+        "delayMs": 0
+      },
+      "surfaces": [
+        "01-constat",
+        "10-benefices"
+      ],
+      "sourceLines": [
+        98
+      ],
+      "sourceRef": "src.rimu.benefices",
+      "notes": "Indicateur distinct des comptes RIMP cumulés (QA-2)."
+    },
+    {
+      "id": "kpi.adult_accounts_before",
+      "nameFR": "Comptes numériques adultes — situation actuelle",
+      "nameZH": "成年人数字账户（基线）",
+      "valueType": "number",
+      "value": 20,
+      "range": null,
+      "series": null,
+      "unitFR": "%",
+      "unitZH": "%",
+      "year": "2026",
+      "type": "Source",
+      "confidence": "élevée",
+      "formula": null,
+      "assumption": null,
+      "displayFR": "< 20 %",
+      "displayZH": "< 20%",
+      "displayLongFR": "Moins de 20 % des adultes disposent d'un compte numérique",
+      "displayLongZH": "成年人数字账户不足 20%",
+      "chart": "gauge-baseline",
+      "component": "GaugeBaseline",
+      "animation": {
+        "trigger": "viewport",
+        "preset": "staticReveal",
+        "delayMs": 0
+      },
+      "surfaces": [
+        "01-constat"
+      ],
+      "sourceLines": [
+        98
+      ],
+      "sourceRef": "src.rimu.benefices",
+      "notes": "Valeur affichée = borne haute de « moins de 20 % »."
+    },
+    {
+      "id": "kpi.revenue_mix_midpoint",
+      "nameFR": "Répartition des revenus — milieux de fourchette",
+      "nameZH": "收入构成（区间中点）",
+      "valueType": "object",
+      "value": {
+        "rimu": 40000000,
+        "rimp": 115000000,
+        "compute": 35000000,
+        "total": 190000000
+      },
+      "range": null,
+      "series": null,
+      "unitFR": "USD/an",
+      "unitZH": "美元/年",
+      "year": "2031",
+      "type": "Dérivé",
+      "confidence": "moyenne",
+      "formula": "RIMU (30+50)/2=40 ; RIMP (90+140)/2=115 ; Calcul (30+40)/2=35 ; total 190",
+      "assumption": null,
+      "displayFR": "40 / 115 / 35 M USD",
+      "displayZH": "0.4 / 1.15 / 0.35 亿美元",
+      "displayLongFR": null,
+      "displayLongZH": null,
+      "chart": "donut",
+      "component": "RevenueDonut",
+      "animation": {
+        "trigger": "viewport",
+        "preset": "donutDraw",
+        "delayMs": 0
+      },
+      "surfaces": [
+        "09-chiffres-2031"
+      ],
+      "sourceLines": [
+        79,
+        80,
+        81,
+        82
+      ],
+      "sourceRef": "src.rimu.revenus",
+      "notes": "Surface uniquement ; le total officiel affiché reste 150–220 M USD (QA-6)."
+    },
+    {
+      "id": "kpi.gdp_current_implied",
+      "nameFR": "PIB actuel implicite",
+      "nameZH": "隐含当前 GDP",
+      "valueType": "range",
+      "value": null,
+      "range": [
+        11540000000,
+        11580000000
+      ],
+      "series": null,
+      "unitFR": "USD",
+      "unitZH": "美元",
+      "year": "2026",
+      "type": "Dérivé",
+      "confidence": "moyenne",
+      "formula": "150 M ÷ 1,3 % = 11,54 Md ; 220 M ÷ 1,9 % = 11,58 Md → ≈ 11,5–11,6 Md USD",
+      "assumption": null,
+      "displayFR": "≈ 11,5 Md USD (implicite)",
+      "displayZH": "约 115 亿美元（隐含）",
+      "displayLongFR": null,
+      "displayLongZH": null,
+      "chart": "table",
+      "component": "MethodologyTable",
+      "animation": {
+        "trigger": "viewport",
+        "preset": "staticReveal",
+        "delayMs": 0
+      },
+      "surfaces": [
+        "methodology"
+      ],
+      "sourceLines": [
+        82
+      ],
+      "sourceRef": "src.rimu.revenus",
+      "notes": "Calcul de cohérence interne, non destiné au grand public."
+    },
+    {
+      "id": "kpi.series.mau",
+      "nameFR": "MAU 2027–2031 (série)",
+      "nameZH": "2027–2031 年月活曲线",
+      "valueType": "series",
+      "value": null,
+      "range": null,
+      "series": [
+        {
+          "year": 2027,
+          "value": 250000
+        },
+        {
+          "year": 2028,
+          "value": 700000
+        },
+        {
+          "year": 2029,
+          "value": 1200000
+        },
+        {
+          "year": 2030,
+          "value": 1800000
+        },
+        {
+          "year": 2031,
+          "value": 2500000
+        }
+      ],
+      "unitFR": "utilisateurs",
+      "unitZH": "用户",
+      "year": "2027–2031",
+      "type": "Source",
+      "confidence": "élevée",
+      "formula": null,
+      "assumption": null,
+      "displayFR": "2,5 M (2031)",
+      "displayZH": "250 万（2031）",
+      "displayLongFR": "250 000 → 2 500 000 utilisateurs actifs mensuels",
+      "displayLongZH": "月活从 25 万增至 250 万",
+      "chart": "line",
+      "component": "LineChart",
+      "animation": {
+        "trigger": "viewport",
+        "preset": "drawLine",
+        "delayMs": 0
+      },
+      "surfaces": [
+        "05-rimu",
+        "08-roadmap"
+      ],
+      "sourceLines": [
+        54,
+        55,
+        56,
+        57,
+        58
+      ],
+      "sourceRef": "src.rimu.roadmap",
+      "notes": null
+    },
+    {
+      "id": "kpi.series.dau",
+      "nameFR": "DAU 2027–2031 (série)",
+      "nameZH": "2027–2031 年日活曲线",
+      "valueType": "series",
+      "value": null,
+      "range": null,
+      "series": [
+        {
+          "year": 2027,
+          "value": 80000
+        },
+        {
+          "year": 2028,
+          "value": 200000
+        },
+        {
+          "year": 2029,
+          "value": 360000
+        },
+        {
+          "year": 2030,
+          "value": 550000
+        },
+        {
+          "year": 2031,
+          "value": 800000
+        }
+      ],
+      "unitFR": "utilisateurs",
+      "unitZH": "用户",
+      "year": "2027–2031",
+      "type": "Source",
+      "confidence": "élevée",
+      "formula": null,
+      "assumption": null,
+      "displayFR": "800 k (2031)",
+      "displayZH": "80 万（2031）",
+      "displayLongFR": null,
+      "displayLongZH": null,
+      "chart": "line",
+      "component": "LineChart",
+      "animation": {
+        "trigger": "viewport",
+        "preset": "drawLine",
+        "delayMs": 0
+      },
+      "surfaces": [
+        "05-rimu",
+        "08-roadmap"
+      ],
+      "sourceLines": [
+        54,
+        55,
+        56,
+        57,
+        58
+      ],
+      "sourceRef": "src.rimu.roadmap",
+      "notes": null
+    },
+    {
+      "id": "kpi.series.minutes",
+      "nameFR": "Temps passé 2027–2031 (série)",
+      "nameZH": "2027–2031 年日均时长曲线",
+      "valueType": "series",
+      "value": null,
+      "range": null,
+      "series": [
+        {
+          "year": 2027,
+          "value": 28
+        },
+        {
+          "year": 2028,
+          "value": 32
+        },
+        {
+          "year": 2029,
+          "value": 36
+        },
+        {
+          "year": 2030,
+          "value": 38
+        },
+        {
+          "year": 2031,
+          "value": 40
+        }
+      ],
+      "unitFR": "min/jour",
+      "unitZH": "分钟/日",
+      "year": "2027–2031",
+      "type": "Source",
+      "confidence": "élevée",
+      "formula": null,
+      "assumption": null,
+      "displayFR": "40 min/jour (2031)",
+      "displayZH": "40 分钟/日（2031）",
+      "displayLongFR": null,
+      "displayLongZH": null,
+      "chart": "line",
+      "component": "LineChart",
+      "animation": {
+        "trigger": "viewport",
+        "preset": "drawLine",
+        "delayMs": 0
+      },
+      "surfaces": [
+        "05-rimu",
+        "08-roadmap"
+      ],
+      "sourceLines": [
+        54,
+        55,
+        56,
+        57,
+        58
+      ],
+      "sourceRef": "src.rimu.roadmap",
+      "notes": null
+    },
+    {
+      "id": "kpi.series.stickiness",
+      "nameFR": "DAU/MAU 2027–2031 (série dérivée)",
+      "nameZH": "2027–2031 年粘性曲线",
+      "valueType": "series",
+      "value": null,
+      "range": null,
+      "series": [
+        {
+          "year": 2027,
+          "value": 32
+        },
+        {
+          "year": 2028,
+          "value": 28.6
+        },
+        {
+          "year": 2029,
+          "value": 30
+        },
+        {
+          "year": 2030,
+          "value": 30.6
+        },
+        {
+          "year": 2031,
+          "value": 32
+        }
+      ],
+      "unitFR": "%",
+      "unitZH": "%",
+      "year": "2027–2031",
+      "type": "Dérivé",
+      "confidence": "moyenne",
+      "formula": "DAU_y ÷ MAU_y (80/250=32 % ; 200/700=28,6 % ; 360/1 200=30 % ; 550/1 800=30,6 % ; 800/2 500=32 %)",
+      "assumption": null,
+      "displayFR": "32 % (2031)",
+      "displayZH": "32%（2031）",
+      "displayLongFR": null,
+      "displayLongZH": null,
+      "chart": "sparkline",
+      "component": "Sparkline",
+      "animation": {
+        "trigger": "viewport",
+        "preset": "drawLine",
+        "delayMs": 0
+      },
+      "surfaces": [
+        "08-roadmap"
+      ],
+      "sourceLines": [
+        54,
+        55,
+        56,
+        57,
+        58
+      ],
+      "sourceRef": "src.rimu.roadmap",
+      "notes": null
+    },
+    {
+      "id": "kpi.series.mau_yoy",
+      "nameFR": "Croissance MAU annuelle 2028–2031",
+      "nameZH": "2028–2031 年月活同比增速",
+      "valueType": "series",
+      "value": null,
+      "range": null,
+      "series": [
+        {
+          "year": 2027,
+          "value": null
+        },
+        {
+          "year": 2028,
+          "value": 180
+        },
+        {
+          "year": 2029,
+          "value": 71.4
+        },
+        {
+          "year": 2030,
+          "value": 50
+        },
+        {
+          "year": 2031,
+          "value": 38.9
+        }
+      ],
+      "unitFR": "%",
+      "unitZH": "%",
+      "year": "2028–2031",
+      "type": "Dérivé",
+      "confidence": "moyenne",
+      "formula": "MAU_y ÷ MAU_(y−1) − 1",
+      "assumption": null,
+      "displayFR": "+180 % → +39 %",
+      "displayZH": "+180% → +39%",
+      "displayLongFR": null,
+      "displayLongZH": null,
+      "chart": "bar",
+      "component": "BarChart",
+      "animation": {
+        "trigger": "viewport",
+        "preset": "barGrow",
+        "delayMs": 0
+      },
+      "surfaces": [
+        "08-roadmap"
+      ],
+      "sourceLines": [
+        54,
+        55,
+        56,
+        57,
+        58
+      ],
+      "sourceRef": "src.rimu.roadmap",
+      "notes": null
+    },
+    {
+      "id": "kpi.projects_first_wave",
+      "nameFR": "Première vague de projets",
+      "nameZH": "首批项目数",
+      "valueType": "range",
+      "value": null,
+      "range": [
+        5,
+        8
+      ],
+      "series": null,
+      "unitFR": "projets",
+      "unitZH": "项目",
+      "year": "0–24 mois",
+      "type": "Source",
+      "confidence": "élevée",
+      "formula": null,
+      "assumption": null,
+      "displayFR": "5–8 projets",
+      "displayZH": "5–8 个项目",
+      "displayLongFR": null,
+      "displayLongZH": null,
+      "chart": "counter-range",
+      "component": "KpiCounterRange",
+      "animation": {
+        "trigger": "viewport",
+        "preset": "countUpRange",
+        "delayMs": 0
+      },
+      "surfaces": [
+        "04-business-lines",
+        "08-roadmap",
+        "10-benefices"
+      ],
+      "sourceLines": [
+        86
+      ],
+      "sourceRef": "src.rimu.benefices",
+      "notes": null
+    },
+    {
+      "id": "kpi.investment_intentions",
+      "nameFR": "Intentions d'investissement",
+      "nameZH": "投资意向",
+      "valueType": "range",
+      "value": null,
+      "range": [
+        800000000,
+        1200000000
+      ],
+      "series": null,
+      "unitFR": "USD",
+      "unitZH": "美元",
+      "year": "0–24 mois",
+      "type": "Source",
+      "confidence": "élevée",
+      "formula": null,
+      "assumption": null,
+      "displayFR": "800 M–1,2 Md USD",
+      "displayZH": "8–12 亿美元",
+      "displayLongFR": "800 millions à 1,2 milliard USD d'intentions d'investissement",
+      "displayLongZH": "8–12 亿美元投资意向",
+      "chart": "counter-range",
+      "component": "KpiCounterRange",
+      "animation": {
+        "trigger": "viewport",
+        "preset": "countUpRange",
+        "delayMs": 0
+      },
+      "surfaces": [
+        "03-piliers",
+        "04-business-lines",
+        "08-roadmap",
+        "10-benefices"
+      ],
+      "sourceLines": [
+        86
+      ],
+      "sourceRef": "src.rimu.benefices",
+      "notes": null
+    },
+    {
+      "id": "kpi.wholesale_matching",
+      "nameFR": "Mises en relation commerce de gros",
+      "nameZH": "批发撮合额",
+      "valueType": "range",
+      "value": null,
+      "range": [
+        300000000,
+        800000000
+      ],
+      "series": null,
+      "unitFR": "USD",
+      "unitZH": "美元",
+      "year": "0–24 mois",
+      "type": "Source",
+      "confidence": "élevée",
+      "formula": null,
+      "assumption": null,
+      "displayFR": "300–800 M USD",
+      "displayZH": "3–8 亿美元",
+      "displayLongFR": null,
+      "displayLongZH": null,
+      "chart": "counter-range",
+      "component": "KpiCounterRange",
+      "animation": {
+        "trigger": "viewport",
+        "preset": "countUpRange",
+        "delayMs": 0
+      },
+      "surfaces": [
+        "03-piliers",
+        "04-business-lines",
+        "10-benefices"
+      ],
+      "sourceLines": [
+        87
+      ],
+      "sourceRef": "src.rimu.benefices",
+      "notes": null
+    },
+    {
+      "id": "kpi.consumer_trial_orders_y1",
+      "nameFR": "Commandes d'essai biens de consommation (Y1)",
+      "nameZH": "消费品首年试单",
+      "valueType": "range",
+      "value": null,
+      "range": [
+        80000000,
+        150000000
+      ],
+      "series": null,
+      "unitFR": "USD",
+      "unitZH": "美元",
+      "year": "Y1 · 2027–2028",
+      "type": "Source",
+      "confidence": "élevée",
+      "formula": null,
+      "assumption": null,
+      "displayFR": "80–150 M USD",
+      "displayZH": "0.8–1.5 亿美元",
+      "displayLongFR": null,
+      "displayLongZH": null,
+      "chart": "counter-range",
+      "component": "KpiCounterRange",
+      "animation": {
+        "trigger": "viewport",
+        "preset": "countUpRange",
+        "delayMs": 0
+      },
+      "surfaces": [
+        "04-business-lines",
+        "08-roadmap",
+        "10-benefices"
+      ],
+      "sourceLines": [
+        87
+      ],
+      "sourceRef": "src.rimu.benefices",
+      "notes": null
+    },
+    {
+      "id": "kpi.training_people",
+      "nameFR": "Personnes formées",
+      "nameZH": "受训人数",
+      "valueType": "range",
+      "value": null,
+      "range": [
+        1000,
+        3000
+      ],
+      "series": null,
+      "unitFR": "personnes",
+      "unitZH": "人",
+      "year": "0–24 mois",
+      "type": "Source",
+      "confidence": "élevée",
+      "formula": null,
+      "assumption": null,
+      "displayFR": "1 000–3 000",
+      "displayZH": "1000–3000 人",
+      "displayLongFR": null,
+      "displayLongZH": null,
+      "chart": "counter-range",
+      "component": "KpiCounterRange",
+      "animation": {
+        "trigger": "viewport",
+        "preset": "countUpRange",
+        "delayMs": 0
+      },
+      "surfaces": [
+        "04-business-lines",
+        "10-benefices"
+      ],
+      "sourceLines": [
+        88
+      ],
+      "sourceRef": "src.rimu.benefices",
+      "notes": null
+    },
+    {
+      "id": "kpi.telemedicine_points",
+      "nameFR": "Points de télémédecine",
+      "nameZH": "远程医疗点",
+      "valueType": "range",
+      "value": null,
+      "range": [
+        8,
+        15
+      ],
+      "series": null,
+      "unitFR": "points",
+      "unitZH": "个",
+      "year": "0–24 mois",
+      "type": "Source",
+      "confidence": "élevée",
+      "formula": null,
+      "assumption": null,
+      "displayFR": "8–15 points",
+      "displayZH": "8–15 个点",
+      "displayLongFR": null,
+      "displayLongZH": null,
+      "chart": "counter-range",
+      "component": "KpiCounterRange",
+      "animation": {
+        "trigger": "viewport",
+        "preset": "countUpRange",
+        "delayMs": 0
+      },
+      "surfaces": [
+        "04-business-lines",
+        "10-benefices"
+      ],
+      "sourceLines": [
+        88
+      ],
+      "sourceRef": "src.rimu.benefices",
+      "notes": null
+    },
+    {
+      "id": "kpi.direct_jobs_short_term",
+      "nameFR": "Emplois directs et connexes — vague 1",
+      "nameZH": "首波直接与关联就业",
+      "valueType": "range",
+      "value": null,
+      "range": [
+        2000,
+        4000
+      ],
+      "series": null,
+      "unitFR": "emplois",
+      "unitZH": "就业",
+      "year": "0–24 mois",
+      "type": "Source",
+      "confidence": "élevée",
+      "formula": null,
+      "assumption": null,
+      "displayFR": "2–4 k",
+      "displayZH": "2000–4000",
+      "displayLongFR": "2 000 à 4 000 emplois directs et connexes (première vague)",
+      "displayLongZH": "首波 2000–4000 直接与关联就业",
+      "chart": "counter-range",
+      "component": "KpiCounterRange",
+      "animation": {
+        "trigger": "viewport",
+        "preset": "countUpRange",
+        "delayMs": 0
+      },
+      "surfaces": [
+        "04-business-lines",
+        "09-chiffres-2031",
+        "10-benefices"
+      ],
+      "sourceLines": [
+        88
+      ],
+      "sourceRef": "src.rimu.benefices",
+      "notes": "Couche 1 sur 3 ; ne pas additionner aux 8–15 k et 30–40 k (QA-3)."
+    },
+    {
+      "id": "kpi.showroom_count",
+      "nameFR": "Showroom / site d'exposition",
+      "nameZH": "展贸中心",
+      "valueType": "number",
+      "value": 1,
+      "range": null,
+      "series": null,
+      "unitFR": "site",
+      "unitZH": "个",
+      "year": "2026–2027",
+      "type": "Dérivé",
+      "confidence": "moyenne",
+      "formula": "« showroom permanent ou semaines d'exposition » (L66) compté comme 1载体",
+      "assumption": null,
+      "displayFR": "1 showroom",
+      "displayZH": "1 个展贸中心",
+      "displayLongFR": null,
+      "displayLongZH": null,
+      "chart": "badge",
+      "component": "TypeBadge",
+      "animation": {
+        "trigger": "viewport",
+        "preset": "staticReveal",
+        "delayMs": 0
+      },
+      "surfaces": [
+        "04-business-lines",
+        "10-benefices"
+      ],
+      "sourceLines": [
+        66
+      ],
+      "sourceRef": "src.rimu.conso",
+      "notes": null
+    },
+    {
+      "id": "kpi.wa_goods_transit",
+      "nameFR": "Biens transitant via la Mauritanie",
+      "nameZH": "经毛过境西非货值",
+      "valueType": "range",
+      "value": null,
+      "range": [
+        800000000,
+        2000000000
+      ],
+      "series": null,
+      "unitFR": "USD/an",
+      "unitZH": "美元/年",
+      "year": "中長期",
+      "type": "Source",
+      "confidence": "élevée",
+      "formula": null,
+      "assumption": null,
+      "displayFR": "800 M–2 Md USD/an",
+      "displayZH": "8–20 亿美元/年",
+      "displayLongFR": "800 millions à 2 milliards USD par an",
+      "displayLongZH": "每年 8–20 亿美元",
+      "chart": "counter-range",
+      "component": "KpiCounterRange",
+      "animation": {
+        "trigger": "viewport",
+        "preset": "countUpRange",
+        "delayMs": 0
+      },
+      "surfaces": [
+        "04-business-lines",
+        "07-relations",
+        "10-benefices"
+      ],
+      "sourceLines": [
+        90
+      ],
+      "sourceRef": "src.rimu.benefices",
+      "notes": null
+    },
+    {
+      "id": "kpi.related_jobs_mlt",
+      "nameFR": "Emplois connexes moyen-long terme",
+      "nameZH": "中长期关联就业",
+      "valueType": "range",
+      "value": null,
+      "range": [
+        8000,
+        15000
+      ],
+      "series": null,
+      "unitFR": "emplois",
+      "unitZH": "就业",
+      "year": "3–5 ans",
+      "type": "Source",
+      "confidence": "élevée",
+      "formula": null,
+      "assumption": null,
+      "displayFR": "8–15 k",
+      "displayZH": "0.8–1.5 万",
+      "displayLongFR": "8 000 à 15 000 emplois connexes (logistique incluse)",
+      "displayLongZH": "中长期 0.8–1.5 万关联就业（含物流）",
+      "chart": "counter-range",
+      "component": "KpiCounterRange",
+      "animation": {
+        "trigger": "viewport",
+        "preset": "countUpRange",
+        "delayMs": 0
+      },
+      "surfaces": [
+        "04-business-lines",
+        "09-chiffres-2031",
+        "10-benefices"
+      ],
+      "sourceLines": [
+        91
+      ],
+      "sourceRef": "src.rimu.benefices",
+      "notes": "Couche 2 sur 3 ; ne pas additionner (QA-3)."
+    },
+    {
+      "id": "kpi.compute_green_program_mw",
+      "nameFR": "Programme d'électricité verte — phase 1",
+      "nameZH": "绿电算力一期规模",
+      "valueType": "range",
+      "value": null,
+      "range": [
+        20,
+        50
+      ],
+      "series": null,
+      "unitFR": "MW",
+      "unitZH": "兆瓦",
+      "year": "中長期",
+      "type": "Source",
+      "confidence": "élevée",
+      "formula": null,
+      "assumption": null,
+      "displayFR": "20–50 MW",
+      "displayZH": "20–50 兆瓦",
+      "displayLongFR": "Première phase de calcul vert : 20–50 MW",
+      "displayLongZH": "绿电算力一期 20–50 兆瓦",
+      "chart": "gauge-bar",
+      "component": "GaugeBar",
+      "animation": {
+        "trigger": "viewport",
+        "preset": "barGrow",
+        "delayMs": 0
+      },
+      "surfaces": [
+        "06-contenu-calcul",
+        "10-benefices"
+      ],
+      "sourceLines": [
+        91
+      ],
+      "sourceRef": "src.rimu.benefices",
+      "notes": "Capacité électrique du programme ; distinct de la charge IT ≈1 MW de la phase 1 (QA-5)."
+    },
+    {
+      "id": "kpi.compute_services_revenue_lt",
+      "nameFR": "Revenus de service — calcul vert (long terme)",
+      "nameZH": "绿电算力年服务收入（长期）",
+      "valueType": "range",
+      "value": null,
+      "range": [
+        30000000,
+        100000000
+      ],
+      "series": null,
+      "unitFR": "USD/an",
+      "unitZH": "美元/年",
+      "year": "长期 (horizon non daté)",
+      "type": "Source",
+      "confidence": "élevée",
+      "formula": null,
+      "assumption": null,
+      "displayFR": "plusieurs dizaines à ~100 M USD/an",
+      "displayZH": "数千万至约 1 亿美元/年",
+      "displayLongFR": "de plusieurs dizaines à une centaine de millions USD par an",
+      "displayLongZH": "每年数千万至约 1 亿美元",
+      "chart": "counter-range",
+      "component": "KpiCounterRange",
+      "animation": {
+        "trigger": "viewport",
+        "preset": "countUpRange",
+        "delayMs": 0
+      },
+      "surfaces": [
+        "06-contenu-calcul",
+        "10-benefices"
+      ],
+      "sourceLines": [
+        91
+      ],
+      "sourceRef": "src.rimu.benefices",
+      "notes": "Horizon non daté ; ne pas additionner aux 30–40 M USD de 2031 (QA-7)."
+    },
+    {
+      "id": "kpi.gdp_growth_baseline",
+      "nameFR": "Croissance de base",
+      "nameZH": "基线增速",
+      "valueType": "number",
+      "value": 4.5,
+      "range": null,
+      "series": null,
+      "unitFR": "%",
+      "unitZH": "%",
+      "year": "基线",
+      "type": "Source",
+      "confidence": "élevée",
+      "formula": null,
+      "assumption": null,
+      "displayFR": "4,5 %",
+      "displayZH": "4.5%",
+      "displayLongFR": "Croissance de base d'environ 4,5 %",
+      "displayLongZH": "基线增速约 4.5%",
+      "chart": "counter",
+      "component": "KpiCounter",
+      "animation": {
+        "trigger": "viewport",
+        "preset": "countUp",
+        "delayMs": 0
+      },
+      "surfaces": [
+        "01-constat",
+        "10-benefices"
+      ],
+      "sourceLines": [
+        92
+      ],
+      "sourceRef": "src.rimu.benefices",
+      "notes": null
+    },
+    {
+      "id": "kpi.gdp_growth_uplift",
+      "nameFR": "Gain de croissance",
+      "nameZH": "增长拉动",
+      "valueType": "range",
+      "value": null,
+      "range": [
+        0.8,
+        1.5
+      ],
+      "series": null,
+      "unitFR": "pt",
+      "unitZH": "百分点",
+      "year": "2031+",
+      "type": "Source",
+      "confidence": "élevée",
+      "formula": null,
+      "assumption": null,
+      "displayFR": "+0,8–1,5 pt",
+      "displayZH": "+0.8–1.5 个百分点",
+      "displayLongFR": "+0,8 à +1,5 point de pourcentage",
+      "displayLongZH": "+0.8–1.5 个百分点",
+      "chart": "counter-range",
+      "component": "KpiCounterRange",
+      "animation": {
+        "trigger": "viewport",
+        "preset": "countUpRange",
+        "delayMs": 0
+      },
+      "surfaces": [
+        "01-constat",
+        "10-benefices"
+      ],
+      "sourceLines": [
+        92
+      ],
+      "sourceRef": "src.rimu.benefices",
+      "notes": null
+    },
+    {
+      "id": "kpi.gdp_growth_projected",
+      "nameFR": "Croissance projetée",
+      "nameZH": "预计增速",
+      "valueType": "range",
+      "value": null,
+      "range": [
+        5.3,
+        6
+      ],
+      "series": null,
+      "unitFR": "%",
+      "unitZH": "%",
+      "year": "2031+",
+      "type": "Dérivé",
+      "confidence": "moyenne",
+      "formula": "4,5 % + 0,8–1,5 pt = 5,3–6,0 %",
+      "assumption": null,
+      "displayFR": "5,3–6,0 %",
+      "displayZH": "5.3–6.0%",
+      "displayLongFR": null,
+      "displayLongZH": null,
+      "chart": "counter-range",
+      "component": "KpiCounterRange",
+      "animation": {
+        "trigger": "viewport",
+        "preset": "countUpRange",
+        "delayMs": 0
+      },
+      "surfaces": [
+        "10-benefices"
+      ],
+      "sourceLines": [
+        92
+      ],
+      "sourceRef": "src.rimu.benefices",
+      "notes": null
+    },
+    {
+      "id": "kpi.wa_countries",
+      "nameFR": "Pays acheteurs ciblés",
+      "nameZH": "目标买家国",
+      "valueType": "number",
+      "value": 5,
+      "range": null,
+      "series": null,
+      "unitFR": "pays",
+      "unitZH": "国",
+      "year": "2026–2031",
+      "type": "Dérivé",
+      "confidence": "moyenne",
+      "formula": "Sénégal, Mali, Guinée, Côte d'Ivoire, Gambie (L66)",
+      "assumption": null,
+      "displayFR": "5 pays",
+      "displayZH": "5 国",
+      "displayLongFR": null,
+      "displayLongZH": null,
+      "chart": "map-labels",
+      "component": "MapLabels",
+      "animation": {
+        "trigger": "viewport",
+        "preset": "mapFlow",
+        "delayMs": 0
+      },
+      "surfaces": [
+        "04-business-lines",
+        "10-benefices"
+      ],
+      "sourceLines": [
+        66
+      ],
+      "sourceRef": "src.rimu.conso",
+      "notes": null
+    },
+    {
+      "id": "kpi.compute_phase1_duration_months",
+      "nameFR": "Durée phase 1",
+      "nameZH": "一期时长",
+      "valueType": "number",
+      "value": 18,
+      "range": null,
+      "series": null,
+      "unitFR": "mois",
+      "unitZH": "个月",
+      "year": "Phase 1",
+      "type": "Source",
+      "confidence": "élevée",
+      "formula": null,
+      "assumption": null,
+      "displayFR": "≈ 18 mois",
+      "displayZH": "约 18 个月",
+      "displayLongFR": null,
+      "displayLongZH": null,
+      "chart": "timeline",
+      "component": "Timeline",
+      "animation": {
+        "trigger": "viewport",
+        "preset": "timelineReveal",
+        "delayMs": 0
+      },
+      "surfaces": [
+        "06-contenu-calcul",
+        "08-roadmap"
+      ],
+      "sourceLines": [
+        61
+      ],
+      "sourceRef": "src.rimu.calcul",
+      "notes": null
+    },
+    {
+      "id": "kpi.compute_phase1_cards",
+      "nameFR": "Cartes accélératrices — phase 1",
+      "nameZH": "一期加速卡",
+      "valueType": "number",
+      "value": 100,
+      "range": null,
+      "series": null,
+      "unitFR": "cartes",
+      "unitZH": "张",
+      "year": "Phase 1",
+      "type": "Source",
+      "confidence": "élevée",
+      "formula": null,
+      "assumption": null,
+      "displayFR": "≈ 100 cartes",
+      "displayZH": "约 100 张加速卡",
+      "displayLongFR": null,
+      "displayLongZH": null,
+      "chart": "counter",
+      "component": "KpiCounter",
+      "animation": {
+        "trigger": "viewport",
+        "preset": "countUp",
+        "delayMs": 0
+      },
+      "surfaces": [
+        "03-piliers",
+        "06-contenu-calcul",
+        "08-roadmap"
+      ],
+      "sourceLines": [
+        61
+      ],
+      "sourceRef": "src.rimu.calcul",
+      "notes": null
+    },
+    {
+      "id": "kpi.compute_phase1_mw",
+      "nameFR": "Puissance — phase 1 (charge IT)",
+      "nameZH": "一期功率（IT 负载）",
+      "valueType": "number",
+      "value": 1,
+      "range": null,
+      "series": null,
+      "unitFR": "MW",
+      "unitZH": "兆瓦",
+      "year": "Phase 1",
+      "type": "Source",
+      "confidence": "élevée",
+      "formula": null,
+      "assumption": null,
+      "displayFR": "≈ 1 MW",
+      "displayZH": "约 1 兆瓦",
+      "displayLongFR": null,
+      "displayLongZH": null,
+      "chart": "gauge",
+      "component": "Gauge",
+      "animation": {
+        "trigger": "viewport",
+        "preset": "staticReveal",
+        "delayMs": 0
+      },
+      "surfaces": [
+        "03-piliers",
+        "06-contenu-calcul",
+        "08-roadmap"
+      ],
+      "sourceLines": [
+        61
+      ],
+      "sourceRef": "src.rimu.calcul",
+      "notes": "Charge informatique ; distinct du programme 20–50 MW (QA-5)."
+    },
+    {
+      "id": "kpi.compute_phase2_duration_months",
+      "nameFR": "Durée phase 2",
+      "nameZH": "二期时长",
+      "valueType": "number",
+      "value": 36,
+      "range": null,
+      "series": null,
+      "unitFR": "mois",
+      "unitZH": "个月",
+      "year": "Phase 2",
+      "type": "Source",
+      "confidence": "élevée",
+      "formula": null,
+      "assumption": null,
+      "displayFR": "≈ 36 mois",
+      "displayZH": "约 36 个月",
+      "displayLongFR": null,
+      "displayLongZH": null,
+      "chart": "timeline",
+      "component": "Timeline",
+      "animation": {
+        "trigger": "viewport",
+        "preset": "timelineReveal",
+        "delayMs": 0
+      },
+      "surfaces": [
+        "06-contenu-calcul",
+        "08-roadmap"
+      ],
+      "sourceLines": [
+        62
+      ],
+      "sourceRef": "src.rimu.calcul",
+      "notes": null
+    },
+    {
+      "id": "kpi.compute_phase2_mw",
+      "nameFR": "Puissance — phase 2",
+      "nameZH": "二期功率",
+      "valueType": "range",
+      "value": null,
+      "range": [
+        2,
+        3
+      ],
+      "series": null,
+      "unitFR": "MW",
+      "unitZH": "兆瓦",
+      "year": "Phase 2",
+      "type": "Source",
+      "confidence": "élevée",
+      "formula": null,
+      "assumption": null,
+      "displayFR": "2–3 MW",
+      "displayZH": "2–3 兆瓦",
+      "displayLongFR": null,
+      "displayLongZH": null,
+      "chart": "bar",
+      "component": "BarChart",
+      "animation": {
+        "trigger": "viewport",
+        "preset": "barGrow",
+        "delayMs": 0
+      },
+      "surfaces": [
+        "06-contenu-calcul",
+        "08-roadmap"
+      ],
+      "sourceLines": [
+        62
+      ],
+      "sourceRef": "src.rimu.calcul",
+      "notes": null
+    },
+    {
+      "id": "kpi.first_deliverable_months",
+      "nameFR": "Premier livrable — pré-étude de calcul",
+      "nameZH": "首个交付节点",
+      "valueType": "number",
+      "value": 6,
+      "range": null,
+      "series": null,
+      "unitFR": "mois",
+      "unitZH": "个月",
+      "year": "2026–2027",
+      "type": "Source",
+      "confidence": "élevée",
+      "formula": null,
+      "assumption": null,
+      "displayFR": "6 mois",
+      "displayZH": "6 个月",
+      "displayLongFR": null,
+      "displayLongZH": null,
+      "chart": "badge",
+      "component": "TypeBadge",
+      "animation": {
+        "trigger": "viewport",
+        "preset": "staticReveal",
+        "delayMs": 0
+      },
+      "surfaces": [
+        "11-soutiens-etat",
+        "13-next-steps"
+      ],
+      "sourceLines": [
+        108
+      ],
+      "sourceRef": "src.rimu.soutiens",
+      "notes": null
+    },
+    {
+      "id": "kpi.rimu_tabs",
+      "nameFR": "Onglets RIMU",
+      "nameZH": "RIMU 标签页",
+      "valueType": "number",
+      "value": 4,
+      "range": null,
+      "series": null,
+      "unitFR": "onglets",
+      "unitZH": "个",
+      "year": "produit",
+      "type": "Source",
+      "confidence": "élevée",
+      "formula": null,
+      "assumption": null,
+      "displayFR": "4 onglets",
+      "displayZH": "4 个 tab",
+      "displayLongFR": "For You / Abonnements / À proximité / Marché",
+      "displayLongZH": "For You / 订阅 / 附近 / 市场",
+      "chart": "tab-strip",
+      "component": "TabStrip",
+      "animation": {
+        "trigger": "viewport",
+        "preset": "staticReveal",
+        "delayMs": 0
+      },
+      "surfaces": [
+        "05-rimu"
+      ],
+      "sourceLines": [
+        26
+      ],
+      "sourceRef": "src.rimu.rimu.modules",
+      "notes": null
+    },
+    {
+      "id": "kpi.short_video_seconds",
+      "nameFR": "Vidéo courte",
+      "nameZH": "短视频时长",
+      "valueType": "range",
+      "value": null,
+      "range": [
+        15,
+        60
+      ],
+      "series": null,
+      "unitFR": "s",
+      "unitZH": "秒",
+      "year": "produit",
+      "type": "Source",
+      "confidence": "élevée",
+      "formula": null,
+      "assumption": null,
+      "displayFR": "15–60 s",
+      "displayZH": "15–60 秒",
+      "displayLongFR": null,
+      "displayLongZH": null,
+      "chart": "range-chip",
+      "component": "RangeChip",
+      "animation": {
+        "trigger": "viewport",
+        "preset": "staticReveal",
+        "delayMs": 0
+      },
+      "surfaces": [
+        "05-rimu"
+      ],
+      "sourceLines": [
+        27
+      ],
+      "sourceRef": "src.rimu.rimu.modules",
+      "notes": null
+    },
+    {
+      "id": "kpi.medium_video_seconds",
+      "nameFR": "Vidéo moyenne",
+      "nameZH": "中视频时长",
+      "valueType": "number",
+      "value": 180,
+      "range": null,
+      "series": null,
+      "unitFR": "s",
+      "unitZH": "秒",
+      "year": "produit",
+      "type": "Source",
+      "confidence": "élevée",
+      "formula": null,
+      "assumption": null,
+      "displayFR": "3 min",
+      "displayZH": "3 分钟",
+      "displayLongFR": null,
+      "displayLongZH": null,
+      "chart": "range-chip",
+      "component": "RangeChip",
+      "animation": {
+        "trigger": "viewport",
+        "preset": "staticReveal",
+        "delayMs": 0
+      },
+      "surfaces": [
+        "05-rimu"
+      ],
+      "sourceLines": [
+        27
+      ],
+      "sourceRef": "src.rimu.rimu.modules",
+      "notes": null
+    },
+    {
+      "id": "kpi.default_bitrate",
+      "nameFR": "Débit par défaut",
+      "nameZH": "默认码率",
+      "valueType": "object",
+      "value": {
+        "low": "360p",
+        "high": "480p"
+      },
+      "range": null,
+      "series": null,
+      "unitFR": "résolution",
+      "unitZH": "分辨率",
+      "year": "produit",
+      "type": "Source",
+      "confidence": "élevée",
+      "formula": null,
+      "assumption": null,
+      "displayFR": "360p/480p",
+      "displayZH": "360p/480p",
+      "displayLongFR": "Bitrate faible par défaut, pré-cache nocturne",
+      "displayLongZH": "默认低码率，夜间预缓存",
+      "chart": "badge",
+      "component": "TypeBadge",
+      "animation": {
+        "trigger": "viewport",
+        "preset": "staticReveal",
+        "delayMs": 0
+      },
+      "surfaces": [
+        "05-rimu"
+      ],
+      "sourceLines": [
+        27
+      ],
+      "sourceRef": "src.rimu.rimu.modules",
+      "notes": null
+    },
+    {
+      "id": "kpi.content_formats",
+      "nameFR": "Formats de contenu",
+      "nameZH": "内容形态数",
+      "valueType": "number",
+      "value": 3,
+      "range": null,
+      "series": null,
+      "unitFR": "formats",
+      "unitZH": "种",
+      "year": "produit",
+      "type": "Dérivé",
+      "confidence": "moyenne",
+      "formula": "vidéo courte 15–60 s + vidéo moyenne 3 min + notes texte-image = 3",
+      "assumption": null,
+      "displayFR": "3 formats",
+      "displayZH": "3 种形态",
+      "displayLongFR": null,
+      "displayLongZH": null,
+      "chart": "icon-row",
+      "component": "IconRow",
+      "animation": {
+        "trigger": "viewport",
+        "preset": "staticReveal",
+        "delayMs": 0
+      },
+      "surfaces": [
+        "05-rimu"
+      ],
+      "sourceLines": [
+        27
+      ],
+      "sourceRef": "src.rimu.rimu.modules",
+      "notes": null
+    },
+    {
+      "id": "kpi.languages_content",
+      "nameFR": "Langues de contenu",
+      "nameZH": "内容语言数",
+      "valueType": "number",
+      "value": 6,
+      "range": null,
+      "series": null,
+      "unitFR": "langues",
+      "unitZH": "种",
+      "year": "produit",
+      "type": "Dérivé",
+      "confidence": "moyenne",
+      "formula": "hassaniya, peul, soninké, wolof, français, anglais = 6",
+      "assumption": null,
+      "displayFR": "6 langues",
+      "displayZH": "6 种语言",
+      "displayLongFR": "hassaniya, peul, soninké, wolof, français, anglais",
+      "displayLongZH": "哈桑尼亚、富拉、索宁克、沃洛夫、法语、英语",
+      "chart": "icon-row",
+      "component": "IconRow",
+      "animation": {
+        "trigger": "viewport",
+        "preset": "staticReveal",
+        "delayMs": 0
+      },
+      "surfaces": [
+        "04-business-lines",
+        "05-rimu"
+      ],
+      "sourceLines": [
+        8,
+        29
+      ],
+      "sourceRef": "src.rimu.positionnement",
+      "notes": null
+    },
+    {
+      "id": "kpi.daily_views_2031",
+      "nameFR": "Vues quotidiennes — 2031",
+      "nameZH": "2031 年日均播放量",
+      "valueType": "number",
+      "value": 32000000,
+      "range": null,
+      "series": null,
+      "unitFR": "vues/jour",
+      "unitZH": "次/日",
+      "year": "2031",
+      "type": "Dérivé",
+      "confidence": "moyenne",
+      "formula": "DAU × vues/jour ; vues/jour = 40 min × 60 s ÷ 60 s = 40 ; 800 000 × 40 = 32 000 000",
+      "assumption": null,
+      "displayFR": "32 M/jour",
+      "displayZH": "3200 万次/日",
+      "displayLongFR": null,
+      "displayLongZH": null,
+      "chart": "counter",
+      "component": "KpiCounter",
+      "animation": {
+        "trigger": "viewport",
+        "preset": "countUp",
+        "delayMs": 0
+      },
+      "surfaces": [
+        "05-rimu",
+        "07-relations"
+      ],
+      "sourceLines": [
+        58
+      ],
+      "sourceRef": "src.rimu.objectifs",
+      "notes": null
+    },
+    {
+      "id": "kpi.annual_views_2031",
+      "nameFR": "Vues annuelles — 2031",
+      "nameZH": "2031 年播放量",
+      "valueType": "number",
+      "value": 11680000000,
+      "range": null,
+      "series": null,
+      "unitFR": "vues/an",
+      "unitZH": "次/年",
+      "year": "2031",
+      "type": "Dérivé",
+      "confidence": "moyenne",
+      "formula": "32 000 000 × 365 = 11 680 000 000",
+      "assumption": null,
+      "displayFR": "≈ 11,7 Md/an",
+      "displayZH": "约 117 亿次/年",
+      "displayLongFR": null,
+      "displayLongZH": null,
+      "chart": "counter",
+      "component": "KpiCounter",
+      "animation": {
+        "trigger": "viewport",
+        "preset": "countUp",
+        "delayMs": 0
+      },
+      "surfaces": [
+        "05-rimu"
+      ],
+      "sourceLines": [
+        58
+      ],
+      "sourceRef": "src.rimu.objectifs",
+      "notes": null
+    },
+    {
+      "id": "kpi.creators_active_2031",
+      "nameFR": "Créateurs actifs — 2031",
+      "nameZH": "2031 年活跃创作者",
+      "valueType": "number",
+      "value": 50000,
+      "range": null,
+      "series": null,
+      "unitFR": "créateurs",
+      "unitZH": "创作者",
+      "year": "2031",
+      "type": "Hypothèse",
+      "confidence": "à valider",
+      "formula": "MAU × 2 % = 2 500 000 × 0,02",
+      "assumption": "Part de créateurs actifs = 2 % du MAU (hypothèse de travail, à valider)",
+      "displayFR": "50 k",
+      "displayZH": "5 万",
+      "displayLongFR": null,
+      "displayLongZH": null,
+      "chart": "counter",
+      "component": "KpiCounter",
+      "animation": {
+        "trigger": "viewport",
+        "preset": "countUp",
+        "delayMs": 0
+      },
+      "surfaces": [
+        "05-rimu"
+      ],
+      "sourceLines": [
+        32
+      ],
+      "sourceRef": "src.brief",
+      "notes": null
+    },
+    {
+      "id": "kpi.creators_monetized_2031",
+      "nameFR": "Créateurs monétisés — 2031",
+      "nameZH": "2031 年变现创作者",
+      "valueType": "number",
+      "value": 10000,
+      "range": null,
+      "series": null,
+      "unitFR": "créateurs",
+      "unitZH": "创作者",
+      "year": "2031",
+      "type": "Hypothèse",
+      "confidence": "à valider",
+      "formula": "50 000 × 20 %",
+      "assumption": "Part de créateurs monétisés = 20 % (hypothèse de travail)",
+      "displayFR": "10 k",
+      "displayZH": "1 万",
+      "displayLongFR": null,
+      "displayLongZH": null,
+      "chart": "counter",
+      "component": "KpiCounter",
+      "animation": {
+        "trigger": "viewport",
+        "preset": "countUp",
+        "delayMs": 0
+      },
+      "surfaces": [
+        "05-rimu"
+      ],
+      "sourceLines": [
+        32
+      ],
+      "sourceRef": "src.brief",
+      "notes": null
+    },
+    {
+      "id": "kpi.ecommerce_gmv_2031",
+      "nameFR": "GMV e-commerce — 2031",
+      "nameZH": "2031 年电商 GMV",
+      "valueType": "range",
+      "value": null,
+      "range": [
+        200000000,
+        300000000
+      ],
+      "series": null,
+      "unitFR": "USD/an",
+      "unitZH": "美元/年",
+      "year": "2031",
+      "type": "Hypothèse",
+      "confidence": "à valider",
+      "formula": "MAU × panier annuel = 2 500 000 × 80–120 USD",
+      "assumption": "Panier annuel 80–120 USD (hypothèse de travail)",
+      "displayFR": "200–300 M USD",
+      "displayZH": "2–3 亿美元",
+      "displayLongFR": null,
+      "displayLongZH": null,
+      "chart": "counter-range",
+      "component": "KpiCounterRange",
+      "animation": {
+        "trigger": "viewport",
+        "preset": "countUpRange",
+        "delayMs": 0
+      },
+      "surfaces": [
+        "05-rimu",
+        "07-relations"
+      ],
+      "sourceLines": [
+        30
+      ],
+      "sourceRef": "src.brief",
+      "notes": null
+    },
+    {
+      "id": "kpi.payment_flow_2031",
+      "nameFR": "Flux de paiement annuels — 2031",
+      "nameZH": "2031 年年支付流量",
+      "valueType": "range",
+      "value": null,
+      "range": [
+        15000000000,
+        25000000000
+      ],
+      "series": null,
+      "unitFR": "USD/an",
+      "unitZH": "美元/年",
+      "year": "2031",
+      "type": "Dérivé",
+      "confidence": "moyenne",
+      "formula": "Revenus RIMP ÷ taux de commission = 90–140 M ÷ 0,5–0,7 % = 12,9–28 Md USD → fourchette de pilotage retenue 15–25 Md (BRIEF §7.2)",
+      "assumption": null,
+      "displayFR": "15–25 Md USD/an",
+      "displayZH": "150–250 亿美元/年",
+      "displayLongFR": null,
+      "displayLongZH": null,
+      "chart": "counter-range",
+      "component": "KpiCounterRange",
+      "animation": {
+        "trigger": "viewport",
+        "preset": "countUpRange",
+        "delayMs": 0
+      },
+      "surfaces": [
+        "04-business-lines",
+        "07-relations",
+        "09-chiffres-2031",
+        "10-benefices"
+      ],
+      "sourceLines": [
+        74,
+        80
+      ],
+      "sourceRef": "src.brief",
+      "notes": "QA-1 : le « centaines de milliards de dollars » de la source n'est pas repris littéralement."
+    },
+    {
+      "id": "kpi.payment_fee_rate",
+      "nameFR": "Taux de commission mixte",
+      "nameZH": "综合费率",
+      "valueType": "range",
+      "value": null,
+      "range": [
+        0.5,
+        0.7
+      ],
+      "series": null,
+      "unitFR": "%",
+      "unitZH": "%",
+      "year": "hypothèse",
+      "type": "Hypothèse",
+      "confidence": "à valider",
+      "formula": null,
+      "assumption": "Taux mixte marchands + transfrontalier + microfinance + administratif + B2B (hypothèse)",
+      "displayFR": "0,5–0,7 %",
+      "displayZH": "0.5–0.7%",
+      "displayLongFR": null,
+      "displayLongZH": null,
+      "chart": "table",
+      "component": "MethodologyTable",
+      "animation": {
+        "trigger": "viewport",
+        "preset": "staticReveal",
+        "delayMs": 0
+      },
+      "surfaces": [
+        "methodology"
+      ],
+      "sourceLines": [
+        80
+      ],
+      "sourceRef": "src.brief",
+      "notes": null
+    },
+    {
+      "id": "kpi.wallet_penetration_total_pop",
+      "nameFR": "Pénétration portefeuille — population totale",
+      "nameZH": "钱包占全国人口比例",
+      "valueType": "number",
+      "value": 57,
+      "range": null,
+      "series": null,
+      "unitFR": "%",
+      "unitZH": "%",
+      "year": "2031",
+      "type": "Hypothèse",
+      "confidence": "à valider",
+      "formula": "2 800 000 ÷ population ≈ 4,9 M",
+      "assumption": "Population de la Mauritanie ≈ 4,9 M (hypothèse externe, non fournie dans la source) ; à vérifier avant publication",
+      "displayFR": "≈ 57 % (hypothèse)",
+      "displayZH": "约 57%（假设）",
+      "displayLongFR": null,
+      "displayLongZH": null,
+      "chart": "table",
+      "component": "MethodologyTable",
+      "animation": {
+        "trigger": "viewport",
+        "preset": "staticReveal",
+        "delayMs": 0
+      },
+      "surfaces": [
+        "methodology"
+      ],
+      "sourceLines": [
+        73
+      ],
+      "sourceRef": "src.brief",
+      "notes": "QA-2 : ne pas présenter comme « moitié de la population adulte »."
+    }
+  ],
+  "pillars": [
+    {
+      "id": "p.plateforme",
+      "order": 1,
+      "kickerFR": "01 · Point d'entrée",
+      "kickerZH": "01 · 入口",
+      "nameFR": "La plateforme bilatérale",
+      "nameZH": "双边合作平台",
+      "taglineFR": "Le canal officiel unique où les deux États, les entreprises et les bailleurs publient projets, marchandises, besoins de financement et capacités.",
+      "taglineZH": "两国政府、企业与出资方发布项目、商品、融资需求与产能的唯一官方渠道。",
+      "bulletsFR": [
+        "Regroupe les coopérations existantes : mines, énergies nouvelles, infrastructures, transformation agro-halieutique, commerce, finance, formation, santé.",
+        "Trois canaux maîtrisés par l'État : financement de projets, distribution de biens de consommation vers l'Afrique de l'Ouest, monétisation de l'électricité verte.",
+        "Ne remplace pas les mines et pêcheries existantes : elle ajoute un canal."
+      ],
+      "bulletsZH": [
+        "汇聚既有合作：矿业、新能源、基建、农渔加工、贸易、金融、培训、卫生。",
+        "国家掌握的三个渠道：项目融资、面向西非的消费品分销、绿电变现。",
+        "不取代现有矿山与渔场，而是新增一个渠道。"
+      ],
+      "kpiIds": [
+        "kpi.projects_first_wave",
+        "kpi.investment_intentions",
+        "kpi.wholesale_matching"
+      ],
+      "drawerTabs": [
+        "apercu",
+        "fonctionnement",
+        "chiffres",
+        "acteurs",
+        "roadmap",
+        "risques"
+      ],
+      "sourceLines": [
+        6,
+        7,
+        13
+      ]
+    },
+    {
+      "id": "p.rimu",
+      "order": 2,
+      "kickerFR": "02 · Super-application",
+      "kickerZH": "02 · 超级应用",
+      "nameFR": "RIMU",
+      "nameZH": "RIMU",
+      "taglineFR": "Le point d'entrée du système d'exploitation de la vie quotidienne : contenus, biens, emplois et services publics.",
+      "taglineZH": "日常生活操作系统的入口：内容、商品、就业与公共服务。",
+      "bulletsFR": [
+        "Quatre onglets : For You / Abonnements / À proximité / Marché.",
+        "Langues locales : hassaniya, peul, soninké, wolof, plus français et anglais.",
+        "Faible bande passante, protection des mineurs, monétisation des créateurs en ouguiyas."
+      ],
+      "bulletsZH": [
+        "四个 tab：For You / 订阅 / 附近 / 市场。",
+        "本地语言：哈桑尼亚、富拉、索宁克、沃洛夫，另加法语和英语。",
+        "低带宽、未成年人保护、创作者以乌吉亚变现。"
+      ],
+      "kpiIds": [
+        "kpi.mau_2031",
+        "kpi.dau_2031",
+        "kpi.daily_minutes_2031"
+      ],
+      "drawerTabs": [
+        "apercu",
+        "fonctionnement",
+        "chiffres",
+        "acteurs",
+        "roadmap",
+        "risques"
+      ],
+      "sourceLines": [
+        6,
+        8,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "id": "p.calcul",
+      "order": 3,
+      "kickerFR": "03 · Souveraineté",
+      "kickerZH": "03 · 主权",
+      "nameFR": "Le centre national de calcul IA",
+      "nameZH": "国家 AI 算力中心",
+      "taglineFR": "Le socle qui garde les données, les modèles et la modération sur le territoire national.",
+      "taglineZH": "把数据、模型与内容审核留在本国领土的底座。",
+      "bulletsFR": [
+        "Extension du centre Tier III de Nouakchott : cluster GPU + nœuds edge + priorité à l'électricité verte.",
+        "Phase 1 : inférence et modération des deux plateformes (~100 cartes, ~1 MW, ~18 mois).",
+        "Inférence rapatriée ; grand livre et modèles centraux locaux ; entraînement possiblement hybride."
+      ],
+      "bulletsZH": [
+        "扩建努瓦克肖特 Tier III 数据中心：GPU 集群 + 边缘节点 + 优先绿电。",
+        "一期：两平台推理与审核（约 100 张加速卡、约 1 MW、约 18 个月）。",
+        "推理回流本国；账本与核心模型本地；训练可混合。"
+      ],
+      "kpiIds": [
+        "kpi.compute_phase1_cards",
+        "kpi.compute_phase1_mw",
+        "kpi.revenue_compute_2031"
+      ],
+      "drawerTabs": [
+        "apercu",
+        "fonctionnement",
+        "chiffres",
+        "acteurs",
+        "roadmap",
+        "risques"
+      ],
+      "sourceLines": [
+        6,
+        8,
+        13,
+        61,
+        62,
+        63,
+        64
+      ]
+    }
+  ],
+  "businessLines": [
+    {
+      "surfaceIds": [
+        "02-vue-systeme",
+        "04-business-lines"
+      ],
+      "flowIn": {
+        "capital": {
+          "textFR": "Intentions d'investissement et besoins de financement publiés.",
+          "textZH": "投资意向与融资需求发布。",
+          "relationIds": [
+            "rel.capital.plateforme-projets"
+          ]
+        },
+        "marchandises": {
+          "textFR": "Équipements, EPC et intrants industriels côté chinois.",
+          "textZH": "中方设备、EPC 与工业投入品。",
+          "relationIds": []
+        },
+        "paiements": {
+          "textFR": "Règlements bancaires classiques ; RIMP pour petites commandes et transit (hypothèse).",
+          "textZH": "以银行结算为主；小额订单与过境可用 RIMP（假设）。",
+          "relationIds": []
+        },
+        "donnees": {
+          "textFR": "Titres miniers, capacités portuaires, listes de sites et de projets.",
+          "textZH": "矿权、港口产能、场地与项目清单。",
+          "relationIds": [
+            "rel.donnees.calcul-projets"
+          ]
+        },
+        "attention": {
+          "textFR": "Visibilité officielle auprès des investisseurs chinois et institutionnels.",
+          "textZH": "面向中方与国际投资方的官方曝光。",
+          "relationIds": [
+            "rel.attention.plateforme-projets"
+          ]
+        }
+      },
+      "flowOut": {
+        "capital": {
+          "textFR": "Projets bancables et besoins de financement qualifiés.",
+          "textZH": "可融资项目与合格融资需求。",
+          "relationIds": [
+            "rel.capital.projets-plateforme"
+          ]
+        },
+        "marchandises": {
+          "textFR": "Produits miniers, produits transformés, captures certifiées ; électricité verte vers le centre de calcul.",
+          "textZH": "矿产品、加工品、认证渔获；向算力中心供电。",
+          "relationIds": [
+            "rel.marchandises.projets-calcul",
+            "rel.marchandises.projets-plateforme"
+          ]
+        },
+        "paiements": {
+          "textFR": "Droits de douane, frais portuaires, revenus d'entreposage (statistiques séparées).",
+          "textZH": "关税、港口费、仓储收入（单独统计）。",
+          "relationIds": []
+        },
+        "donnees": {
+          "textFR": "Suivi de projets, traçabilité, statistiques douanières séparées.",
+          "textZH": "项目跟踪、可追溯、海关单列统计。",
+          "relationIds": [
+            "rel.donnees.plateforme-calcul"
+          ]
+        },
+        "attention": {
+          "textFR": "Référence pour les acheteurs et bailleurs régionaux.",
+          "textZH": "面向区域买家与出资方的参照。",
+          "relationIds": []
+        }
+      },
+      "risks": [
+        {
+          "riskFR": "Projets bloqués par les processus des minerais en vrac.",
+          "riskZH": "项目被大宗矿产品流程卡住。",
+          "mitigationFR": "Séparer les circuits petites commandes / minerais en vrac ; traitement parallèle ou engagement de délais.",
+          "mitigationZH": "小额订单与大宗矿产品流程分离；并行处理或承诺时限。",
+          "sourceLines": [
+            69,
+            105,
+            108
+          ]
+        },
+        {
+          "riskFR": "Dépendance à un seul prix des minerais.",
+          "riskZH": "依赖单一矿价。",
+          "mitigationFR": "Transformation, traçabilité, accords de long terme et diversification des revenus.",
+          "mitigationZH": "加工、可追溯、长期协议与收入多元化。",
+          "sourceLines": [
+            96
+          ]
+        }
+      ],
+      "tagsZH": [
+        "矿业",
+        "新能源",
+        "基础设施",
+        "农渔加工",
+        "EPC",
+        "融资"
+      ],
+      "id": "b.projets",
+      "order": 1,
+      "nameFR": "Projets & investissements",
+      "nameZH": "项目与投资",
+      "stage": "mature",
+      "stageLabelFR": "Mature",
+      "stageLabelZH": "成熟",
+      "tags": [
+        "mines",
+        "énergies nouvelles",
+        "infrastructures",
+        "transformation agro-halieutique",
+        "EPC",
+        "financement"
+      ],
+      "pillarIds": [
+        "p.plateforme"
+      ],
+      "taglineFR": "Transformer les intentions d'investissement en projets traçables et bancables.",
+      "taglineZH": "把投资意向变成可追溯、可融资的项目。",
+      "definitionFR": "Le canal officiel qui regroupe les coopérations sino-mauritaniennes existantes — mines, énergies nouvelles, infrastructures, transformation agro-halieutique — et publie les projets matures comme les besoins de financement, avec des interfaces réservées à la pré-étude du centre de calcul vert.",
+      "definitionZH": "把中毛既有合作（矿业、新能源、基础设施、农渔加工）汇聚到官方渠道，发布成熟项目与融资需求，并为绿电算力预研预留接口。",
+      "subModules": [
+        {
+          "id": "projets.mines",
+          "nameFR": "Mines & titres miniers",
+          "nameZH": "矿业与矿权",
+          "descFR": "Publication des titres et produits miniers, traçabilité, accords de long terme.",
+          "descZH": "矿权与矿产品发布、可追溯、长期协议。",
+          "sourceLines": [
+            48,
+            96,
+            109
+          ]
+        },
+        {
+          "id": "projets.energies",
+          "nameFR": "Énergies nouvelles & électricité verte",
+          "nameZH": "新能源与绿电",
+          "descFR": "Projets ENR, ligne dédiée au calcul, contrat d'électricité verte.",
+          "descZH": "新能源项目、算力专线、绿电合同。",
+          "sourceLines": [
+            7,
+            64,
+            108
+          ]
+        },
+        {
+          "id": "projets.infrastructures",
+          "nameFR": "Infrastructures & EPC",
+          "nameZH": "基础设施与 EPC",
+          "descFR": "Ports, terrains industriels, EPC, mise en relation équipements/financement.",
+          "descZH": "港口、工业用地、EPC、设备与融资对接。",
+          "sourceLines": [
+            48
+          ]
+        },
+        {
+          "id": "projets.agro",
+          "nameFR": "Transformation agro-halieutique",
+          "nameZH": "农渔加工",
+          "descFR": "Transformation des captures, chaîne du froid, certification.",
+          "descZH": "渔获加工、冷链、认证。",
+          "sourceLines": [
+            7,
+            106,
+            109
+          ]
+        },
+        {
+          "id": "projets.financement",
+          "nameFR": "Financement & due diligence",
+          "nameZH": "融资与尽调",
+          "descFR": "Besoins de financement, lettres de crédit, rehaussement limité.",
+          "descZH": "融资需求、信用证、有限信用增级。",
+          "sourceLines": [
+            47,
+            48,
+            108
+          ]
+        },
+        {
+          "id": "projets.calcul",
+          "nameFR": "Interface pré-étude calcul vert",
+          "nameZH": "绿电算力预研接口",
+          "descFR": "Sélection de site et pré-étude du centre de calcul.",
+          "descZH": "选址与算力中心预研。",
+          "sourceLines": [
+            7,
+            49
+          ]
+        }
+      ],
+      "actorsFR": [
+        "État (ministère chef de file)",
+        "Ministères sectoriels (Mines, Énergie, Pêche, Agriculture)",
+        "Entreprises publiques et privées mauritaniennes",
+        "Partenaires chinois (EPC, équipements, financement)",
+        "Fonds Chine-Afrique, banques, assurance-crédit",
+        "AUREON (opérateur de la plateforme)"
+      ],
+      "actorsZH": [
+        "国家（牵头部委）",
+        "矿业/能源/渔业/农业等部委",
+        "毛方国企与私企",
+        "中方 EPC、设备与融资方",
+        "中非基金、银行、信用保险",
+        "AUREON（平台运营方）"
+      ],
+      "kpiIds": [
+        "kpi.projects_first_wave",
+        "kpi.investment_intentions",
+        "kpi.direct_jobs_short_term"
+      ],
+      "sourceLines": [
+        7,
+        47,
+        48,
+        49,
+        86,
+        96,
+        106,
+        108,
+        109
+      ]
+    },
+    {
+      "surfaceIds": [
+        "02-vue-systeme",
+        "04-business-lines"
+      ],
+      "flowIn": {
+        "capital": {
+          "textFR": "Financement commercial court terme, lettres de crédit, assurance-crédit.",
+          "textZH": "短期贸易融资、信用证、信用保险。",
+          "relationIds": [
+            "rel.paiements.commerce-rimp"
+          ]
+        },
+        "marchandises": {
+          "textFR": "Sourcing auprès des clusters chinois (flux externe).",
+          "textZH": "来自中国产业集群的货源（外部）。",
+          "relationIds": []
+        },
+        "paiements": {
+          "textFR": "Paiements des acheteurs, règlements transfrontaliers.",
+          "textZH": "买方付款与跨境结算。",
+          "relationIds": [
+            "rel.paiements.commerce-rimp"
+          ]
+        },
+        "donnees": {
+          "textFR": "Demandes de devis, prix, MOQ, délais, suivi logistique.",
+          "textZH": "询价、价格、起订量、交期、物流跟踪。",
+          "relationIds": []
+        },
+        "attention": {
+          "textFR": "Audience B2B RIMU et trafic du showroom.",
+          "textZH": "RIMU B2B 受众与展贸中心流量。",
+          "relationIds": [
+            "rel.attention.rimu-commerce"
+          ]
+        }
+      },
+      "flowOut": {
+        "capital": {
+          "textFR": "Commissions de service (modèle à confirmer, non chiffré dans la source).",
+          "textZH": "服务佣金（模式待确认，源文无比例）。",
+          "relationIds": []
+        },
+        "marchandises": {
+          "textFR": "Marchandises réparties vers le hub de biens de consommation.",
+          "textZH": "商品分拨至消费品枢纽。",
+          "relationIds": [
+            "rel.marchandises.commerce-biens"
+          ]
+        },
+        "paiements": {
+          "textFR": "Règlement des fournisseurs (banque / lettre de crédit).",
+          "textZH": "供应商结算（银行/信用证）。",
+          "relationIds": [
+            "rel.paiements.commerce-rimp"
+          ]
+        },
+        "donnees": {
+          "textFR": "Tendances de demande par catégorie (anonymisées).",
+          "textZH": "按品类的需求趋势（脱敏）。",
+          "relationIds": []
+        },
+        "attention": {
+          "textFR": "Leads acheteurs et réachat.",
+          "textZH": "买家线索与复购。",
+          "relationIds": []
+        }
+      },
+      "risks": [
+        {
+          "riskFR": "Blocage par les processus des minerais en vrac.",
+          "riskZH": "被大宗矿产品流程阻塞。",
+          "mitigationFR": "Circuits et règles séparés, guichets dédiés.",
+          "mitigationZH": "独立流程与规则、专窗办理。",
+          "sourceLines": [
+            69,
+            108
+          ]
+        },
+        {
+          "riskFR": "Règles d'entrée, de transit et de distribution non clarifiées.",
+          "riskZH": "入境、过境与分销规则不清。",
+          "mitigationFR": "Clarification unique de l'État sur l'entrée des produits, l'apurement des échantillons et le transit.",
+          "mitigationZH": "国家一次性明确展品入境、样品核销与过境规则。",
+          "sourceLines": [
+            106,
+            109
+          ]
+        }
+      ],
+      "tagsZH": [
+        "中国产业集群",
+        "西非买家",
+        "询价下单",
+        "物流",
+        "清关",
+        "展贸"
+      ],
+      "id": "b.commerce-gros",
+      "order": 2,
+      "nameFR": "Commerce de gros",
+      "nameZH": "批发贸易",
+      "stage": "mature",
+      "stageLabelFR": "Mature",
+      "stageLabelZH": "成熟",
+      "tags": [
+        "clusters chinois",
+        "acheteurs ouest-africains",
+        "devis/commandes",
+        "logistique",
+        "dédouanement",
+        "showroom"
+      ],
+      "pillarIds": [
+        "p.plateforme"
+      ],
+      "taglineFR": "Acheter chinois, livrer ouest-africain : un guichet, des règles écrites.",
+      "taglineZH": "买中国、卖西非：一个窗口、一套成文规则。",
+      "definitionFR": "La mise en relation des acheteurs ouest-africains et des clusters industriels chinois via la plateforme : listes de marchandises, prix, quantités minimales, délais, demandes de devis et de commandes, suivi logistique, règles de dédouanement et de règlement inscrites dans la plateforme.",
+      "definitionZH": "通过平台连接西非买家与中国产业集群：商品清单、价格、起订量、交期、询价/下单、物流跟踪，并把清关与结算规则写进平台。",
+      "subModules": [
+        {
+          "id": "gros.catalogue",
+          "nameFR": "Catalogue & appels d'offres",
+          "nameZH": "目录与询价",
+          "descFR": "Catégories, prix, MOQ, délais, demandes de devis et commandes en ligne.",
+          "descZH": "品类、价格、起订量、交期、在线询价与下单。",
+          "sourceLines": [
+            67
+          ]
+        },
+        {
+          "id": "gros.sourcing",
+          "nameFR": "Sourcing clusters chinois",
+          "nameZH": "中国产业集群采购",
+          "descFR": "Quincaillerie, biens du quotidien, textile, petit électroménager, matériaux, motos et pièces ; sélection climat/voltage/emballage/prix.",
+          "descZH": "五金、日用品、纺织、小家电、建材、摩托及配件；按气候/电压/包装/价格带筛选。",
+          "sourceLines": [
+            68
+          ]
+        },
+        {
+          "id": "gros.logistique",
+          "nameFR": "Logistique & suivi",
+          "nameZH": "物流与跟踪",
+          "descFR": "Transport, stockage, transit, suivi de statut.",
+          "descZH": "运输、仓储、转运、状态跟踪。",
+          "sourceLines": [
+            67
+          ]
+        },
+        {
+          "id": "gros.dedouanement",
+          "nameFR": "Dédouanement & règlement",
+          "nameZH": "清关与结算",
+          "descFR": "Règles de dédouanement et de règlement inscrites dans la plateforme, isolées des minerais en vrac.",
+          "descZH": "清关与结算规则写入平台，与大宗矿产品流程隔离。",
+          "sourceLines": [
+            69,
+            108
+          ]
+        },
+        {
+          "id": "gros.showroom",
+          "nameFR": "Showroom & semaines d'exposition",
+          "nameZH": "展贸中心与展贸周",
+          "descFR": "Showroom permanent ou semaines d'exposition ; invitations aux acheteurs ouest-africains.",
+          "descZH": "常设展贸或展贸周；邀请西非买家。",
+          "sourceLines": [
+            66
+          ]
+        },
+        {
+          "id": "gros.b2b",
+          "nameFR": "Espace B2B acheteurs",
+          "nameZH": "买家 B2B 空间",
+          "descFR": "Demandes de devis, historique de commandes, statut logistique et crédit (hypothèse de模块).",
+          "descZH": "询价、订单历史、物流与信用状态（模块细化假设）。",
+          "sourceLines": [
+            67
+          ]
+        }
+      ],
+      "actorsFR": [
+        "Importateurs et grossistes ouest-africains (Sénégal, Mali, Guinée, Côte d'Ivoire, Gambie)",
+        "Clusters industriels et négociants chinois",
+        "Douanes et autorités portuaires mauritaniennes",
+        "Transitaires et opérateurs logistiques",
+        "Banques et assurance-crédit",
+        "Plateforme bilatérale"
+      ],
+      "actorsZH": [
+        "西非进口商/批发商（塞内加尔、马里、几内亚、科特迪瓦、冈比亚）",
+        "中国产业集群与贸易商",
+        "毛里塔尼亚海关与港务",
+        "货代与物流商",
+        "银行与信用保险",
+        "双边平台"
+      ],
+      "kpiIds": [
+        "kpi.wholesale_matching",
+        "kpi.wa_goods_transit",
+        "kpi.wa_countries"
+      ],
+      "sourceLines": [
+        7,
+        48,
+        66,
+        67,
+        68,
+        69,
+        87,
+        90,
+        101,
+        106,
+        108,
+        109
+      ]
+    },
+    {
+      "surfaceIds": [
+        "02-vue-systeme",
+        "04-business-lines"
+      ],
+      "flowIn": {
+        "capital": {
+          "textFR": "Amorçage du showroom et des premiers échantillons ; financement commercial.",
+          "textZH": "展贸中心与首批样品种子资金；贸易融资。",
+          "relationIds": []
+        },
+        "marchandises": {
+          "textFR": "Biens de consommation, échantillons et équipements chinois.",
+          "textZH": "中国消费品、样品与设备。",
+          "relationIds": [
+            "rel.marchandises.commerce-biens"
+          ]
+        },
+        "paiements": {
+          "textFR": "Paiement des acheteurs via RIMP ou banque.",
+          "textZH": "买方通过 RIMP 或银行付款。",
+          "relationIds": [
+            "rel.paiements.biens-rimp"
+          ]
+        },
+        "donnees": {
+          "textFR": "Catalogues, commandes, logistique, apurement des échantillons.",
+          "textZH": "目录、订单、物流、样品核销。",
+          "relationIds": []
+        },
+        "attention": {
+          "textFR": "Audience RIMU, live commerce et invitations du showroom.",
+          "textZH": "RIMU 受众、直播带货与展贸邀请。",
+          "relationIds": [
+            "rel.attention.rimu-biens"
+          ]
+        }
+      },
+      "flowOut": {
+        "capital": {
+          "textFR": "Redevances de service, stockage et transit (statistiques séparées).",
+          "textZH": "服务费、仓储与过境收入（单列统计）。",
+          "relationIds": []
+        },
+        "marchandises": {
+          "textFR": "Marchandises réparties vers les cinq pays et vendues via RIMU Shop.",
+          "textZH": "商品分拨至五国并通过 RIMU Shop 销售。",
+          "relationIds": [
+            "rel.marchandises.biens-rimu",
+            "rel.marchandises.biens-senegal",
+            "rel.marchandises.biens-mali",
+            "rel.marchandises.biens-guinee",
+            "rel.marchandises.biens-cote-ivoire",
+            "rel.marchandises.biens-gambie"
+          ]
+        },
+        "paiements": {
+          "textFR": "Paiement des fournisseurs, droits de douane et frais portuaires.",
+          "textZH": "供应商货款、关税与港口费。",
+          "relationIds": [
+            "rel.paiements.biens-rimp"
+          ]
+        },
+        "donnees": {
+          "textFR": "Données de demande (anonymisées) pour le sourcing.",
+          "textZH": "需求数据（脱敏）反哺选品。",
+          "relationIds": []
+        },
+        "attention": {
+          "textFR": "Marque et réachat.",
+          "textZH": "品牌曝光与复购。",
+          "relationIds": []
+        }
+      },
+      "risks": [
+        {
+          "riskFR": "Site d'exposition et régime douanier non sécurisés.",
+          "riskZH": "展贸场地与关税制度未落定。",
+          "mitigationFR": "Décision de l'État sur le site, les guichets portuaires et une clarification unique des règles.",
+          "mitigationZH": "国家就场地、港口窗口与规则一次性明确。",
+          "sourceLines": [
+            106,
+            109
+          ]
+        },
+        {
+          "riskFR": "Qualité et conformité des biens de consommation.",
+          "riskZH": "消费品质量与合规。",
+          "mitigationFR": "Contrôle qualité, traçabilité, sélection des fournisseurs.",
+          "mitigationZH": "质量控制、可追溯、供应商筛选。",
+          "sourceLines": [
+            68,
+            109
+          ]
+        }
+      ],
+      "tagsZH": [
+        "展贸中心",
+        "线上专区",
+        "适配采购",
+        "直播带货",
+        "过境",
+        "自由区"
+      ],
+      "id": "b.biens-conso",
+      "order": 3,
+      "nameFR": "Biens de consommation & hub Afrique de l'Ouest",
+      "nameZH": "消费品与西非枢纽",
+      "stage": "pré-étude",
+      "stageLabelFR": "Pré-étude",
+      "stageLabelZH": "预研",
+      "tags": [
+        "showroom",
+        "zone en ligne",
+        "sourcing adapté",
+        "live commerce",
+        "transit",
+        "zone franche"
+      ],
+      "pillarIds": [
+        "p.plateforme",
+        "p.rimu"
+      ],
+      "taglineFR": "Des usines chinoises aux acheteurs ouest-africains : un hub, deux canaux — physique et en ligne.",
+      "taglineZH": "从中国工厂到西非买家：一个枢纽、线上与线下两条渠道。",
+      "definitionFR": "Le hub de distribution de biens de consommation chinois vers l'Afrique de l'Ouest : un showroom permanent ou des semaines d'exposition à Nouakchott ou dans un port désigné, et une zone en ligne dédiée sur la plateforme — descriptions, prix, quantités minimales, délais, devis, suivi logistique — connectée aux onglets « À proximité / Marché » et au live commerce de RIMU.",
+      "definitionZH": "面向西非的中国消费品分拨枢纽：努瓦克肖特或指定港口的常设展贸中心/展贸周 + 平台线上专区（描述、价格、起订量、交期、询价、物流跟踪），并与 RIMU 的「附近/市场」及直播带货打通。",
+      "subModules": [
+        {
+          "id": "conso.showroom",
+          "nameFR": "Showroom permanent / semaines d'exposition",
+          "nameZH": "常设展贸 / 展贸周",
+          "descFR": "Location ou aménagement d'un bâtiment existant ; invitations aux acheteurs des cinq pays.",
+          "descZH": "租赁或改造既有建筑；邀请五国买家。",
+          "sourceLines": [
+            66
+          ]
+        },
+        {
+          "id": "conso.online",
+          "nameFR": "Zone en ligne biens de consommation",
+          "nameZH": "消费品线上专区",
+          "descFR": "Descriptions, prix, MOQ, délais, devis, commandes, suivi logistique.",
+          "descZH": "描述、价格、起订量、交期、询价、下单、物流跟踪。",
+          "sourceLines": [
+            67
+          ]
+        },
+        {
+          "id": "conso.sourcing",
+          "nameFR": "Sourcing adapté",
+          "nameZH": "适配性采购",
+          "descFR": "Sélection selon climat, tension, emballage et gamme de prix ouest-africains.",
+          "descZH": "按西非气候、电压、包装与价格带筛选。",
+          "sourceLines": [
+            68
+          ]
+        },
+        {
+          "id": "conso.rimu",
+          "nameFR": "Connexion RIMU",
+          "nameZH": "与 RIMU 打通",
+          "descFR": "Connexion aux onglets « À proximité / Marché » et au live commerce.",
+          "descZH": "连接「附近/市场」与直播带货。",
+          "sourceLines": [
+            67
+          ]
+        },
+        {
+          "id": "conso.transit",
+          "nameFR": "Transit, zone franche, apurement",
+          "nameZH": "过境、自由区与核销",
+          "descFR": "Guichets portuaires, entreposage, zone franche, apurement des échantillons.",
+          "descZH": "港口窗口、仓储、自由区、样品核销。",
+          "sourceLines": [
+            106
+          ]
+        },
+        {
+          "id": "conso.paiement",
+          "nameFR": "Paiement & règlement",
+          "nameZH": "支付与结算",
+          "descFR": "RIMP, paiement à la livraison ou prépaiement, règlement bancaire.",
+          "descZH": "RIMP、货到付款或预付、银行结算。",
+          "sourceLines": [
+            30,
+            69
+          ]
+        }
+      ],
+      "actorsFR": [
+        "Clusters industriels et négociants chinois",
+        "Importateurs et acheteurs des cinq pays",
+        "Douanes et autorités portuaires",
+        "Opérateurs logistiques et entrepôts",
+        "RIMU / RIMP",
+        "AUREON"
+      ],
+      "actorsZH": [
+        "中国产业集群与贸易商",
+        "五国进口商与买家",
+        "海关与港务",
+        "物流与仓储商",
+        "RIMU / RIMP",
+        "AUREON"
+      ],
+      "kpiIds": [
+        "kpi.consumer_trial_orders_y1",
+        "kpi.wa_goods_transit",
+        "kpi.wa_countries"
+      ],
+      "sourceLines": [
+        7,
+        30,
+        65,
+        66,
+        67,
+        68,
+        69,
+        87,
+        90,
+        101,
+        106,
+        107,
+        108,
+        109
+      ]
+    },
+    {
+      "surfaceIds": [
+        "02-vue-systeme",
+        "04-business-lines"
+      ],
+      "flowIn": {
+        "capital": {
+          "textFR": "Microfinance et financement commercial.",
+          "textZH": "微贷与贸易融资。",
+          "relationIds": []
+        },
+        "marchandises": {
+          "textFR": "Flux de biens réglés (flux inverse du paiement).",
+          "textZH": "被结算的商品流（支付的反向流）。",
+          "relationIds": []
+        },
+        "paiements": {
+          "textFR": "Paiements RIMU Shop, dons, abonnements ; règlements de gros et de détail.",
+          "textZH": "RIMU Shop 支付、打赏、订阅；批发与零售结算。",
+          "relationIds": [
+            "rel.paiements.rimu-rimp",
+            "rel.paiements.commerce-rimp",
+            "rel.paiements.biens-rimp"
+          ]
+        },
+        "donnees": {
+          "textFR": "Transactions, données marchands, signaux de crédit.",
+          "textZH": "交易、商户数据、信用信号。",
+          "relationIds": []
+        },
+        "attention": {
+          "textFR": "Audience RIMU convertie en ouvertures de comptes.",
+          "textZH": "RIMU 受众转化为开户。",
+          "relationIds": [
+            "rel.attention.rimu-rimp"
+          ]
+        }
+      },
+      "flowOut": {
+        "capital": {
+          "textFR": "Crédit et avances (produit à définir).",
+          "textZH": "信贷与垫资（产品待定）。",
+          "relationIds": []
+        },
+        "marchandises": {
+          "textFR": "Instructions de règlement commercial (LC, virements).",
+          "textZH": "贸易结算指令（信用证、汇款）。",
+          "relationIds": []
+        },
+        "paiements": {
+          "textFR": "Retour de paiement vers RIMU ; extension vers Sénégal et Mali.",
+          "textZH": "支付结果回传 RIMU；向塞内加尔、马里扩展。",
+          "relationIds": [
+            "rel.paiements.rimp-rimu",
+            "rel.paiements.rimp-senegal",
+            "rel.paiements.rimp-mali"
+          ]
+        },
+        "donnees": {
+          "textFR": "Scoring et signaux de risque, grand livre local.",
+          "textZH": "评分与风控信号，本地账本。",
+          "relationIds": []
+        },
+        "attention": {
+          "textFR": "Pages de succès de paiement et avantages.",
+          "textZH": "支付成功页与权益（假设）。",
+          "relationIds": []
+        }
+      },
+      "risks": [
+        {
+          "riskFR": "Interopérabilité et résistance des portefeuilles / opérateurs existants.",
+          "riskZH": "钱包互操作与现有运营商阻力。",
+          "mitigationFR": "Calendrier d'interconnexion obligatoire de la Banque centrale ; subventions et salaires de l'État versés en priorité sur les rails interconnectés.",
+          "mitigationZH": "央行强制互操作时间表；国家补贴与工资优先走已互操作通道。",
+          "sourceLines": [
+            111
+          ]
+        },
+        {
+          "riskFR": "Dépendance au cloud et données transfrontalières.",
+          "riskZH": "云依赖与跨境数据。",
+          "mitigationFR": "Grand livre et modèles centraux locaux ; inférence rapatriée.",
+          "mitigationZH": "账本与核心模型本地；推理回流。",
+          "sourceLines": [
+            114
+          ]
+        }
+      ],
+      "tagsZH": [
+        "RIMP",
+        "钱包",
+        "商户 QR",
+        "行政缴费",
+        "跨境",
+        "微贷"
+      ],
+      "id": "b.finance-rimp",
+      "order": 4,
+      "nameFR": "Finance & RIMP",
+      "nameZH": "金融与 RIMP",
+      "stage": "pilote",
+      "stageLabelFR": "Pilote",
+      "stageLabelZH": "试点",
+      "tags": [
+        "RIMP",
+        "portefeuilles",
+        "QR marchands",
+        "paiements administratifs",
+        "transfrontalier",
+        "microfinance"
+      ],
+      "pillarIds": [
+        "p.rimu",
+        "p.plateforme"
+      ],
+      "taglineFR": "Faire passer la valeur du cash au circuit numérique audité.",
+      "taglineZH": "让价值从现金转入可审计的数字回路。",
+      "definitionFR": "Le rail de paiement RIMP, interconnecté aux portefeuilles et opérateurs existants, monétisé par les commissions marchands et transfrontalières, la microfinance, les canaux administratifs et le B2B ; il porte aussi les instruments de financement commercial nécessaires aux flux de biens.",
+      "definitionZH": "RIMP 支付轨道，与既有钱包/运营商互操作，通过商户与跨境佣金、微贷、行政渠道与 B2B 变现；同时承载商品流所需贸易融资工具。",
+      "subModules": [
+        {
+          "id": "rimp.portefeuille",
+          "nameFR": "Portefeuille & comptes RIMP",
+          "nameZH": "钱包与账户",
+          "descFR": "Objectif de 2,8 M de comptes cumulés ; KYC et tenue de compte.",
+          "descZH": "目标 280 万累计账户；KYC 与账户体系。",
+          "sourceLines": [
+            73
+          ]
+        },
+        {
+          "id": "rimp.marchand",
+          "nameFR": "Paiements marchands & QR",
+          "nameZH": "商户收单与 QR",
+          "descFR": "Déploiement national des QR marchands (2029).",
+          "descZH": "2029 年全国商户 QR 部署。",
+          "sourceLines": [
+            56
+          ]
+        },
+        {
+          "id": "rimp.administratif",
+          "nameFR": "Paiements administratifs",
+          "nameZH": "行政缴费",
+          "descFR": "Eau, électricité, paiements municipaux, paiements administratifs prioritaires.",
+          "descZH": "水电、市政、优先行政缴费。",
+          "sourceLines": [
+            41,
+            56
+          ]
+        },
+        {
+          "id": "rimp.transfrontalier",
+          "nameFR": "Transferts transfrontaliers",
+          "nameZH": "跨境汇款",
+          "descFR": "Extension progressive vers le Sénégal, le Mali et les voisins.",
+          "descZH": "逐步扩展至塞内加尔、马里及邻国。",
+          "sourceLines": [
+            80,
+            102
+          ]
+        },
+        {
+          "id": "rimp.credit",
+          "nameFR": "Microfinance & crédit",
+          "nameZH": "微贷与信贷",
+          "descFR": "Pilote de produits de crédit (2030) ; évaluation de crédit des commerçants.",
+          "descZH": "2030 信贷产品试点；商户信用评估。",
+          "sourceLines": [
+            42,
+            57
+          ]
+        },
+        {
+          "id": "rimp.interoperabilite",
+          "nameFR": "Interopérabilité & rails",
+          "nameZH": "互操作与轨道",
+          "descFR": "Calendrier d'interconnexion obligatoire ; subventions et salaires sur rails interconnectés.",
+          "descZH": "强制互操作时间表；补贴与工资走互操作轨道。",
+          "sourceLines": [
+            111
+          ]
+        }
+      ],
+      "actorsFR": [
+        "Banque centrale de Mauritanie",
+        "Banques commerciales",
+        "Opérateurs télécom et portefeuilles existants",
+        "Commerçants et microfinance",
+        "État (subventions et salaires)",
+        "RIMU / AUREON"
+      ],
+      "actorsZH": [
+        "毛里塔尼亚央行",
+        "商业银行",
+        "电信运营商与既有钱包",
+        "商户与小微金融机构",
+        "国家（补贴与工资）",
+        "RIMU / AUREON"
+      ],
+      "kpiIds": [
+        "kpi.wallets_2031",
+        "kpi.revenue_rimp_2031",
+        "kpi.payment_flow_2031"
+      ],
+      "sourceLines": [
+        30,
+        32,
+        41,
+        42,
+        56,
+        57,
+        73,
+        74,
+        80,
+        98,
+        99,
+        102,
+        108,
+        111,
+        114
+      ]
+    },
+    {
+      "surfaceIds": [
+        "02-vue-systeme",
+        "04-business-lines"
+      ],
+      "flowIn": {
+        "capital": {
+          "textFR": "Subventions à la formation et investissements de coopération.",
+          "textZH": "培训补贴与合作投入。",
+          "relationIds": []
+        },
+        "marchandises": {
+          "textFR": "Équipements pédagogiques et de travaux pratiques (hypothèse).",
+          "textZH": "教学与实训设备（假设）。",
+          "relationIds": []
+        },
+        "paiements": {
+          "textFR": "Frais de formation via RIMP (hypothèse : petits montants).",
+          "textZH": "培训费用经 RIMP 支付（假设：小额）。",
+          "relationIds": []
+        },
+        "donnees": {
+          "textFR": "Cursus, banques d'exercices, profils de compétences.",
+          "textZH": "课程、题库、技能画像。",
+          "relationIds": []
+        },
+        "attention": {
+          "textFR": "Audience RIMU pour les contenus de formation.",
+          "textZH": "RIMU 受众触达培训内容。",
+          "relationIds": [
+            "rel.attention.rimu-formation"
+          ]
+        }
+      },
+      "flowOut": {
+        "capital": {
+          "textFR": "Capital humain vers le centre de calcul et les filières.",
+          "textZH": "人力资本输向算力中心与各业务线。",
+          "relationIds": [
+            "rel.capital.formation-calcul"
+          ]
+        },
+        "marchandises": {
+          "textFR": "Compétences certifiées (capital humain).",
+          "textZH": "认证技能（人力资本）。",
+          "relationIds": []
+        },
+        "paiements": {
+          "textFR": "Rémunération des formateurs et créateurs (hypothèse).",
+          "textZH": "讲师与创作者分成（假设）。",
+          "relationIds": []
+        },
+        "donnees": {
+          "textFR": "Données d'employabilité et d'effet formation.",
+          "textZH": "就业匹配与培训效果数据。",
+          "relationIds": []
+        },
+        "attention": {
+          "textFR": "Contenus de formation versus catalogue RIMU.",
+          "textZH": "培训内容进入 RIMU 内容库。",
+          "relationIds": [
+            "rel.attention.formation-rimu"
+          ]
+        }
+      },
+      "risks": [
+        {
+          "riskFR": "Pénurie de talents et continuité du projet.",
+          "riskZH": "人才短缺与项目连续性。",
+          "mitigationFR": "Classes commandées dans les universités, apprentis locaux, revenus créateurs en ouguiyas pour retenir les jeunes.",
+          "mitigationZH": "大学定向班、本地学徒、创作者乌吉亚收入留住年轻人。",
+          "sourceLines": [
+            32,
+            115
+          ]
+        },
+        {
+          "riskFR": "Décalage entre formations et besoins réels des employeurs.",
+          "riskZH": "培训与真实岗位错配。",
+          "mitigationFR": "Concevoir les cursus à partir de la demande des employeurs (hypothèse d'exécution).",
+          "mitigationZH": "按雇主需求设计课程（执行假设）。",
+          "sourceLines": [
+            115
+          ]
+        }
+      ],
+      "tagsZH": [
+        "RIMU 就业",
+        "短训",
+        "课程",
+        "大学",
+        "学徒",
+        "认证"
+      ],
+      "id": "b.formation",
+      "order": 5,
+      "nameFR": "Formation & talents",
+      "nameZH": "培训与人才",
+      "stage": "mature",
+      "stageLabelFR": "Mature",
+      "stageLabelZH": "成熟",
+      "tags": [
+        "RIMU Jobs",
+        "formations courtes",
+        "cursus",
+        "universités",
+        "apprentis",
+        "certification"
+      ],
+      "pillarIds": [
+        "p.rimu",
+        "p.plateforme"
+      ],
+      "taglineFR": "Transformer chaque formation en vidéo courte et chaque compétence en emploi.",
+      "taglineZH": "把每场培训变成短视频，把每项技能变成就业。",
+      "definitionFR": "Transformer les formations professionnelles, les conseils de santé publique, les techniques agricoles et pastorales et les informations gouvernementales en vidéos courtes accessibles, avec RIMU Jobs et des formations courtes ; objectif : 1 000–3 000 personnes formées en première vague et un vivier de talents pour le calcul, les mines, la pêche et l'administration.",
+      "definitionZH": "把职业培训、公共卫生建议、农牧技术、政府信息转成可访问的短视频，配合 RIMU Jobs 与短训；首批培训 1,000–3,000 人，为算力、矿业、渔业与行政输送人才。",
+      "subModules": [
+        {
+          "id": "formation.rimu-jobs",
+          "nameFR": "RIMU Jobs & formation courte",
+          "nameZH": "就业与短训",
+          "descFR": "Offres d'emploi, formations courtes en compétences, contenus de formation.",
+          "descZH": "职位、技能短训、培训内容。",
+          "sourceLines": [
+            31
+          ]
+        },
+        {
+          "id": "formation.videos",
+          "nameFR": "Vidéos de formation professionnelle",
+          "nameZH": "职业培训视频",
+          "descFR": "Formations, techniques agricoles et pastorales, santé publique en vidéos courtes.",
+          "descZH": "培训、农牧技术、公共卫生短视频化。",
+          "sourceLines": [
+            11
+          ]
+        },
+        {
+          "id": "formation.cursus",
+          "nameFR": "Cursus & partenariats chinois",
+          "nameZH": "中方课程与合作",
+          "descFR": "Cursus, enseignants, télémédecine et formation technique.",
+          "descZH": "课程、师资、远程医疗与技术培训。",
+          "sourceLines": [
+            48
+          ]
+        },
+        {
+          "id": "formation.universites",
+          "nameFR": "Classes commandées & apprentis",
+          "nameZH": "大学定向班与学徒",
+          "descFR": "Formation ciblée pour le calcul, l'exploitation et les métiers numériques.",
+          "descZH": "面向算力、运维与数字岗位的定向培养。",
+          "sourceLines": [
+            115
+          ]
+        },
+        {
+          "id": "formation.certification",
+          "nameFR": "Certification des compétences",
+          "nameZH": "技能认证",
+          "descFR": "Certification et mise en relation avec les employeurs (hypothèse de module).",
+          "descZH": "认证体系与雇主对接（模块假设）。",
+          "sourceLines": [
+            11
+          ]
+        }
+      ],
+      "actorsFR": [
+        "Ministère de l'Éducation et de la formation professionnelle",
+        "Universités et centres de formation",
+        "Entreprises employeuses",
+        "Partenaires chinois (cursus, télémédecine)",
+        "RIMU / AUREON",
+        "Centre de calcul (employeur)"
+      ],
+      "actorsZH": [
+        "高等教育与职业培训部",
+        "大学与职校",
+        "雇主企业",
+        "中方课程与远程医疗合作方",
+        "RIMU / AUREON",
+        "算力中心（用人方）"
+      ],
+      "kpiIds": [
+        "kpi.training_people",
+        "kpi.related_jobs_mlt",
+        "kpi.jobs_5y"
+      ],
+      "sourceLines": [
+        11,
+        31,
+        32,
+        48,
+        88,
+        97,
+        107,
+        115
+      ]
+    },
+    {
+      "surfaceIds": [
+        "02-vue-systeme",
+        "04-business-lines"
+      ],
+      "flowIn": {
+        "capital": {
+          "textFR": "Investissement dans les points de télémédecine (hypothèse).",
+          "textZH": "远程医疗点投入（假设）。",
+          "relationIds": []
+        },
+        "marchandises": {
+          "textFR": "Équipements et consommables médicaux (hypothèse).",
+          "textZH": "医疗设备与耗材（假设）。",
+          "relationIds": []
+        },
+        "paiements": {
+          "textFR": "Paiement des consultations via RIMP (hypothèse) et financement public.",
+          "textZH": "诊疗支付经 RIMP（假设）与公共财政。",
+          "relationIds": []
+        },
+        "donnees": {
+          "textFR": "Support IA aux consultations, transcription, alertes.",
+          "textZH": "AI 会诊支持、转写、预警。",
+          "relationIds": [
+            "rel.donnees.calcul-sante"
+          ]
+        },
+        "attention": {
+          "textFR": "Audience RIMU pour la prévention.",
+          "textZH": "RIMU 受众触达预防内容。",
+          "relationIds": [
+            "rel.attention.rimu-sante"
+          ]
+        }
+      },
+      "flowOut": {
+        "capital": {
+          "textFR": "Gain d'efficacité de santé publique (qualitatif).",
+          "textZH": "公共卫生效率收益（定性）。",
+          "relationIds": []
+        },
+        "marchandises": {
+          "textFR": "Service (pas de flux physique).",
+          "textZH": "服务型（无实体流）。",
+          "relationIds": []
+        },
+        "paiements": {
+          "textFR": "Règlement des médecins et établissements (hypothèse).",
+          "textZH": "医生与机构结算（假设）。",
+          "relationIds": []
+        },
+        "donnees": {
+          "textFR": "Données de santé conservées sur le territoire, statistiques anonymisées.",
+          "textZH": "健康数据留存境内，仅脱敏统计。",
+          "relationIds": []
+        },
+        "attention": {
+          "textFR": "Contenus de santé certifiés vers RIMU.",
+          "textZH": "认证健康内容进入 RIMU。",
+          "relationIds": [
+            "rel.attention.sante-rimu"
+          ]
+        }
+      },
+      "risks": [
+        {
+          "riskFR": "Souveraineté et confidentialité des données de santé.",
+          "riskZH": "健康数据主权与隐私。",
+          "mitigationFR": "Stockage local, inférence rapatriée, anonymisation des statistiques.",
+          "mitigationZH": "本地存储、推理回流、统计脱敏。",
+          "sourceLines": [
+            99,
+            114
+          ]
+        },
+        {
+          "riskFR": "Connectivité et électricité instables dans les points éloignés.",
+          "riskZH": "偏远点电力与网络不稳。",
+          "mitigationFR": "Alimentation 2N + diesel + photovoltaïque + batteries ; contenus à faible bande passante.",
+          "mitigationZH": "2N + 柴油 + 光伏 + 电池；低带宽内容。",
+          "sourceLines": [
+            27,
+            113
+          ]
+        }
+      ],
+      "tagsZH": [
+        "远程医疗",
+        "8–15 个点",
+        "公共卫生",
+        "预警",
+        "认证内容",
+        "健康数据"
+      ],
+      "id": "b.sante",
+      "order": 6,
+      "nameFR": "Santé & télémédecine",
+      "nameZH": "卫生与远程医疗",
+      "stage": "pilote",
+      "stageLabelFR": "Pilote",
+      "stageLabelZH": "试点",
+      "tags": [
+        "télémédecine",
+        "8–15 points",
+        "santé publique",
+        "alertes",
+        "contenus certifiés",
+        "données de santé"
+      ],
+      "pillarIds": [
+        "p.plateforme",
+        "p.rimu",
+        "p.calcul"
+      ],
+      "taglineFR": "Un spécialiste à distance, une prévention dans chaque poche.",
+      "taglineZH": "专家远程可达，预防装进每个人的口袋。",
+      "definitionFR": "L'ouverture de 8–15 points de télémédecine en première vague, appuyés par les capacités chinoises et par l'IA — support aux consultations à distance, alertes sanitaires et météo — avec diffusion de contenus de santé publique certifiés via RIMU.",
+      "definitionZH": "首批开设 8–15 个远程医疗点，依托中方能力与 AI 支持（远程会诊辅助、卫生与气象预警），并通过 RIMU 传播认证公共卫生内容。",
+      "subModules": [
+        {
+          "id": "sante.points",
+          "nameFR": "Points de télémédecine",
+          "nameZH": "远程医疗点",
+          "descFR": "8–15 points, équipements et connectivité.",
+          "descZH": "8–15 个点、设备与网络。",
+          "sourceLines": [
+            88
+          ]
+        },
+        {
+          "id": "sante.consultation",
+          "nameFR": "Consultations à distance",
+          "nameZH": "远程会诊",
+          "descFR": "Mise en relation médecins chinois / mauritaniens ; support IA (transcription, aide au triage).",
+          "descZH": "中毛医生对接；AI 辅助（转写、分诊支持）。",
+          "sourceLines": [
+            41,
+            48
+          ]
+        },
+        {
+          "id": "sante.contenus",
+          "nameFR": "Contenus de santé publique",
+          "nameZH": "公共卫生内容",
+          "descFR": "Prévention, mère-enfant, nutrition en vidéos courtes.",
+          "descZH": "预防、母婴、营养短视频。",
+          "sourceLines": [
+            11
+          ]
+        },
+        {
+          "id": "sante.comptes",
+          "nameFR": "Comptes vérifiés Santé",
+          "nameZH": "认证卫生机构号",
+          "descFR": "Hôpitaux et ministère certifiés sur RIMU.",
+          "descZH": "医院与卫生部在 RIMU 认证。",
+          "sourceLines": [
+            31
+          ]
+        },
+        {
+          "id": "sante.alertes",
+          "nameFR": "Alertes sanitaires & météo",
+          "nameZH": "卫生与气象预警",
+          "descFR": "Tempêtes de sable, épidémies, événements extrêmes.",
+          "descZH": "沙尘暴、疫情、极端天气。",
+          "sourceLines": [
+            41
+          ]
+        },
+        {
+          "id": "sante.formation",
+          "nameFR": "Formation médicale continue",
+          "nameZH": "继续医学教育",
+          "descFR": "Formation courte des personnels de santé (hypothèse de module).",
+          "descZH": "基层医护短训（模块假设）。",
+          "sourceLines": [
+            11
+          ]
+        }
+      ],
+      "actorsFR": [
+        "Ministère de la Santé",
+        "Hôpitaux et centres de santé",
+        "Médecins chinois et mauritaniens",
+        "RIMU / AUREON",
+        "Centre de calcul (support IA)",
+        "Opérateurs télécom"
+      ],
+      "actorsZH": [
+        "卫生部",
+        "医院与基层卫生点",
+        "中毛医生",
+        "RIMU / AUREON",
+        "算力中心（AI 支持）",
+        "电信运营商"
+      ],
+      "kpiIds": [
+        "kpi.telemedicine_points",
+        "kpi.languages_content",
+        "kpi.mau_2031"
+      ],
+      "sourceLines": [
+        11,
+        31,
+        41,
+        48,
+        88,
+        99,
+        113,
+        114
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "id": "rel.capital.plateforme-projets",
+      "from": "p.plateforme",
+      "to": "b.projets",
+      "flow": "capital",
+      "direction": "forward",
+      "labelFR": "Canalisation du financement vers les projets",
+      "labelZH": "项目融资引导",
+      "detailFR": "La plateforme publie les besoins de financement et met en relation les bailleurs.",
+      "detailZH": "平台发布融资需求并对接出资方。",
+      "strength": 2,
+      "animation": {
+        "particleSpeed": "medium",
+        "dashed": false
+      },
+      "kpiIds": [
+        "kpi.investment_intentions"
+      ],
+      "sourceLines": [
+        7,
+        47
+      ]
+    },
+    {
+      "id": "rel.capital.projets-plateforme",
+      "from": "b.projets",
+      "to": "p.plateforme",
+      "flow": "capital",
+      "direction": "forward",
+      "labelFR": "Intentions d'investissement et projets bancables",
+      "labelZH": "投资意向与可融资项目",
+      "detailFR": "5–8 projets de première vague ; 800 M–1,2 Md USD d'intentions.",
+      "detailZH": "首批 5–8 个项目；8–12 亿美元投资意向。",
+      "strength": 2,
+      "animation": {
+        "particleSpeed": "medium",
+        "dashed": false
+      },
+      "kpiIds": [
+        "kpi.projects_first_wave",
+        "kpi.investment_intentions"
+      ],
+      "sourceLines": [
+        86
+      ]
+    },
+    {
+      "id": "rel.capital.plateforme-calcul",
+      "from": "p.plateforme",
+      "to": "p.calcul",
+      "flow": "capital",
+      "direction": "forward",
+      "labelFR": "Pré-étude et montage du centre de calcul vert",
+      "labelZH": "绿电算力预研与组建",
+      "detailFR": "Sélection de site et pré-étude en parallèle des six activités.",
+      "detailZH": "六类活动并行期间同步选址与预研。",
+      "strength": 2,
+      "animation": {
+        "particleSpeed": "medium",
+        "dashed": false
+      },
+      "kpiIds": [
+        "kpi.first_deliverable_months"
+      ],
+      "sourceLines": [
+        49,
+        108
+      ]
+    },
+    {
+      "id": "rel.capital.formation-calcul",
+      "from": "b.formation",
+      "to": "p.calcul",
+      "flow": "capital",
+      "direction": "forward",
+      "labelFR": "Capital humain : vivier de talents pour le centre",
+      "labelZH": "人力资本：算力人才池",
+      "detailFR": "Classes commandées et apprentis pour l'exploitation du centre (convention de modélisation : capital humain classé en capital).",
+      "detailZH": "为算力中心定向培养与学徒（建模约定：人力资本归入资本流）。",
+      "strength": 2,
+      "animation": {
+        "particleSpeed": "medium",
+        "dashed": false
+      },
+      "kpiIds": [],
+      "sourceLines": [
+        115
+      ]
+    },
+    {
+      "id": "rel.marchandises.commerce-biens",
+      "from": "b.commerce-gros",
+      "to": "b.biens-conso",
+      "flow": "marchandises",
+      "direction": "forward",
+      "labelFR": "Sourcing en gros vers le hub de distribution",
+      "labelZH": "批发货源进入分拨枢纽",
+      "detailFR": "Les marchandises sélectionnées alimentent le hub et la zone en ligne.",
+      "detailZH": "选定的商品进入枢纽与线上专区。",
+      "strength": 2,
+      "animation": {
+        "particleSpeed": "medium",
+        "dashed": false
+      },
+      "kpiIds": [],
+      "sourceLines": [
+        67,
+        68
+      ]
+    },
+    {
+      "id": "rel.marchandises.biens-rimu",
+      "from": "b.biens-conso",
+      "to": "p.rimu",
+      "flow": "marchandises",
+      "direction": "forward",
+      "labelFR": "Catalogue Marché / RIMU Shop",
+      "labelZH": "市场/RIMU Shop 商品目录",
+      "detailFR": "Les biens de consommation sont vendus via « À proximité / Marché » et le live commerce.",
+      "detailZH": "消费品经「附近/市场」与直播带货销售。",
+      "strength": 2,
+      "animation": {
+        "particleSpeed": "medium",
+        "dashed": false
+      },
+      "kpiIds": [
+        "kpi.ecommerce_gmv_2031"
+      ],
+      "sourceLines": [
+        30,
+        67
+      ]
+    },
+    {
+      "id": "rel.marchandises.projets-calcul",
+      "from": "b.projets",
+      "to": "p.calcul",
+      "flow": "marchandises",
+      "direction": "forward",
+      "labelFR": "Électricité verte dédiée au centre",
+      "labelZH": "面向算力中心的绿电",
+      "detailFR": "Capacité nouvelle et ligne dédiée, sans empiéter sur la consommation résidentielle (énergie classée en marchandises par convention).",
+      "detailZH": "新增容量与专线，不挤占居民用电（约定：能源归入货物类流）。",
+      "strength": 2,
+      "animation": {
+        "particleSpeed": "medium",
+        "dashed": false
+      },
+      "kpiIds": [
+        "kpi.compute_green_program_mw"
+      ],
+      "sourceLines": [
+        64,
+        91,
+        113
+      ]
+    },
+    {
+      "id": "rel.marchandises.projets-plateforme",
+      "from": "b.projets",
+      "to": "p.plateforme",
+      "flow": "marchandises",
+      "direction": "forward",
+      "labelFR": "Produits miniers et captures certifiées listés",
+      "labelZH": "矿产品与认证渔获上架",
+      "detailFR": "Les produits sont publiés sur la plateforme pour les acheteurs.",
+      "detailZH": "产品在平台向买家发布。",
+      "strength": 2,
+      "animation": {
+        "particleSpeed": "medium",
+        "dashed": false
+      },
+      "kpiIds": [],
+      "sourceLines": [
+        48
+      ]
+    },
+    {
+      "id": "rel.marchandises.biens-senegal",
+      "from": "b.biens-conso",
+      "to": "r.senegal",
+      "flow": "marchandises",
+      "direction": "forward",
+      "labelFR": "Biens chinois via Nouakchott vers le Sénégal",
+      "labelZH": "经努瓦克肖特输往塞内加尔",
+      "detailFR": null,
+      "detailZH": null,
+      "strength": 2,
+      "animation": {
+        "particleSpeed": "medium",
+        "dashed": false
+      },
+      "kpiIds": [
+        "kpi.wa_goods_transit"
+      ],
+      "sourceLines": [
+        66,
+        90,
+        101
+      ]
+    },
+    {
+      "id": "rel.marchandises.biens-mali",
+      "from": "b.biens-conso",
+      "to": "r.mali",
+      "flow": "marchandises",
+      "direction": "forward",
+      "labelFR": "Biens chinois via Nouakchott vers le Mali",
+      "labelZH": "经努瓦克肖特输往马里",
+      "detailFR": null,
+      "detailZH": null,
+      "strength": 2,
+      "animation": {
+        "particleSpeed": "medium",
+        "dashed": false
+      },
+      "kpiIds": [
+        "kpi.wa_goods_transit"
+      ],
+      "sourceLines": [
+        66,
+        90,
+        101
+      ]
+    },
+    {
+      "id": "rel.marchandises.biens-guinee",
+      "from": "b.biens-conso",
+      "to": "r.guinee",
+      "flow": "marchandises",
+      "direction": "forward",
+      "labelFR": "Biens chinois via Nouakchott vers la Guinée",
+      "labelZH": "经努瓦克肖特输往几内亚",
+      "detailFR": null,
+      "detailZH": null,
+      "strength": 2,
+      "animation": {
+        "particleSpeed": "medium",
+        "dashed": false
+      },
+      "kpiIds": [
+        "kpi.wa_goods_transit"
+      ],
+      "sourceLines": [
+        66,
+        90,
+        101
+      ]
+    },
+    {
+      "id": "rel.marchandises.biens-cote-ivoire",
+      "from": "b.biens-conso",
+      "to": "r.cote-ivoire",
+      "flow": "marchandises",
+      "direction": "forward",
+      "labelFR": "Biens chinois via Nouakchott vers la Côte d'Ivoire",
+      "labelZH": "经努瓦克肖特输往科特迪瓦",
+      "detailFR": null,
+      "detailZH": null,
+      "strength": 2,
+      "animation": {
+        "particleSpeed": "medium",
+        "dashed": false
+      },
+      "kpiIds": [
+        "kpi.wa_goods_transit"
+      ],
+      "sourceLines": [
+        66,
+        90,
+        101
+      ]
+    },
+    {
+      "id": "rel.marchandises.biens-gambie",
+      "from": "b.biens-conso",
+      "to": "r.gambie",
+      "flow": "marchandises",
+      "direction": "forward",
+      "labelFR": "Biens chinois via Nouakchott vers la Gambie",
+      "labelZH": "经努瓦克肖特输往冈比亚",
+      "detailFR": null,
+      "detailZH": null,
+      "strength": 2,
+      "animation": {
+        "particleSpeed": "medium",
+        "dashed": false
+      },
+      "kpiIds": [
+        "kpi.wa_goods_transit"
+      ],
+      "sourceLines": [
+        66,
+        90,
+        101
+      ]
+    },
+    {
+      "id": "rel.paiements.rimu-rimp",
+      "from": "p.rimu",
+      "to": "b.finance-rimp",
+      "flow": "paiements",
+      "direction": "forward",
+      "labelFR": "Paiements générés par RIMU",
+      "labelZH": "RIMU 产生的支付",
+      "detailFR": "Shop, dons en live, abonnements ; encaissement via RIMP.",
+      "detailZH": "Shop、直播打赏、订阅；经 RIMP 收单。",
+      "strength": 2,
+      "animation": {
+        "particleSpeed": "medium",
+        "dashed": false
+      },
+      "kpiIds": [
+        "kpi.payment_flow_2031"
+      ],
+      "sourceLines": [
+        30,
+        32
+      ]
+    },
+    {
+      "id": "rel.paiements.rimp-rimu",
+      "from": "b.finance-rimp",
+      "to": "p.rimu",
+      "flow": "paiements",
+      "direction": "forward",
+      "labelFR": "Rails RIMP vers RIMU",
+      "labelZH": "RIMP 支付轨道回传 RIMU",
+      "detailFR": "Résultat de paiement, prépaiement, paiement à la livraison.",
+      "detailZH": "支付结果、预付、货到付款。",
+      "strength": 2,
+      "animation": {
+        "particleSpeed": "medium",
+        "dashed": false
+      },
+      "kpiIds": [],
+      "sourceLines": [
+        30
+      ]
+    },
+    {
+      "id": "rel.paiements.commerce-rimp",
+      "from": "b.commerce-gros",
+      "to": "b.finance-rimp",
+      "flow": "paiements",
+      "direction": "forward",
+      "labelFR": "Règlement commercial, lettres de crédit",
+      "labelZH": "贸易结算与信用证",
+      "detailFR": "Flux séparés pour les petites commandes afin d'éviter le blocage par les minerais en vrac.",
+      "detailZH": "小额订单独立结算，避免被大宗矿产品流程卡住。",
+      "strength": 2,
+      "animation": {
+        "particleSpeed": "medium",
+        "dashed": false
+      },
+      "kpiIds": [],
+      "sourceLines": [
+        108
+      ]
+    },
+    {
+      "id": "rel.paiements.biens-rimp",
+      "from": "b.biens-conso",
+      "to": "b.finance-rimp",
+      "flow": "paiements",
+      "direction": "forward",
+      "labelFR": "Paiement des commandes et échantillons",
+      "labelZH": "订单与样品付款",
+      "detailFR": "Prépaiement ou paiement à la livraison, transit et droits.",
+      "detailZH": "预付或货到付款、过境与关税。",
+      "strength": 2,
+      "animation": {
+        "particleSpeed": "medium",
+        "dashed": false
+      },
+      "kpiIds": [],
+      "sourceLines": [
+        30,
+        69,
+        107
+      ]
+    },
+    {
+      "id": "rel.paiements.rimp-senegal",
+      "from": "b.finance-rimp",
+      "to": "r.senegal",
+      "flow": "paiements",
+      "direction": "forward",
+      "labelFR": "Extension RIMP — Sénégal",
+      "labelZH": "RIMP 扩展至塞内加尔",
+      "detailFR": null,
+      "detailZH": null,
+      "strength": 2,
+      "animation": {
+        "particleSpeed": "medium",
+        "dashed": false
+      },
+      "kpiIds": [
+        "kpi.payment_flow_2031"
+      ],
+      "sourceLines": [
+        102
+      ]
+    },
+    {
+      "id": "rel.paiements.rimp-mali",
+      "from": "b.finance-rimp",
+      "to": "r.mali",
+      "flow": "paiements",
+      "direction": "forward",
+      "labelFR": "Extension RIMP — Mali",
+      "labelZH": "RIMP 扩展至马里",
+      "detailFR": null,
+      "detailZH": null,
+      "strength": 2,
+      "animation": {
+        "particleSpeed": "medium",
+        "dashed": false
+      },
+      "kpiIds": [
+        "kpi.payment_flow_2031"
+      ],
+      "sourceLines": [
+        102
+      ]
+    },
+    {
+      "id": "rel.donnees.rimu-calcul",
+      "from": "p.rimu",
+      "to": "p.calcul",
+      "flow": "donnees",
+      "direction": "forward",
+      "labelFR": "Données locales pour l'entraînement et l'inférence",
+      "labelZH": "本地数据用于训练与推理",
+      "detailFR": "Contenus, interactions, signaux de modération ; entraînement possiblement hybride.",
+      "detailZH": "内容、互动、审核信号；训练可混合。",
+      "strength": 2,
+      "animation": {
+        "particleSpeed": "medium",
+        "dashed": false
+      },
+      "kpiIds": [],
+      "sourceLines": [
+        38,
+        114
+      ]
+    },
+    {
+      "id": "rel.donnees.calcul-rimu",
+      "from": "p.calcul",
+      "to": "p.rimu",
+      "flow": "donnees",
+      "direction": "forward",
+      "labelFR": "Recommandation, modération, sous-titres",
+      "labelZH": "推荐、审核与字幕",
+      "detailFR": "Modèles multilingues et transcription au service de RIMU.",
+      "detailZH": "多语模型与转写服务 RIMU。",
+      "strength": 2,
+      "animation": {
+        "particleSpeed": "medium",
+        "dashed": false
+      },
+      "kpiIds": [
+        "kpi.daily_views_2031"
+      ],
+      "sourceLines": [
+        34,
+        40
+      ]
+    },
+    {
+      "id": "rel.donnees.plateforme-calcul",
+      "from": "p.plateforme",
+      "to": "p.calcul",
+      "flow": "donnees",
+      "direction": "forward",
+      "labelFR": "Données sectorielles (mines, ports, pêche)",
+      "labelZH": "行业数据（矿业、港口、渔业）",
+      "detailFR": null,
+      "detailZH": null,
+      "strength": 2,
+      "animation": {
+        "particleSpeed": "medium",
+        "dashed": false
+      },
+      "kpiIds": [],
+      "sourceLines": [
+        42
+      ]
+    },
+    {
+      "id": "rel.donnees.calcul-plateforme",
+      "from": "p.calcul",
+      "to": "p.plateforme",
+      "flow": "donnees",
+      "direction": "forward",
+      "labelFR": "Modèles sectoriels et contrôle des risques",
+      "labelZH": "行业模型与风控",
+      "detailFR": "Le centre sert les deux plateformes (modération, contrôle des risques).",
+      "detailZH": "算力中心服务两个平台（审核、风控）。",
+      "strength": 2,
+      "animation": {
+        "particleSpeed": "medium",
+        "dashed": false
+      },
+      "kpiIds": [],
+      "sourceLines": [
+        22,
+        61
+      ]
+    },
+    {
+      "id": "rel.donnees.calcul-projets",
+      "from": "p.calcul",
+      "to": "b.projets",
+      "flow": "donnees",
+      "direction": "forward",
+      "labelFR": "Modèles sectoriels pêche / mines / agriculture",
+      "labelZH": "渔业/矿业/农业行业模型",
+      "detailFR": null,
+      "detailZH": null,
+      "strength": 2,
+      "animation": {
+        "particleSpeed": "medium",
+        "dashed": false
+      },
+      "kpiIds": [],
+      "sourceLines": [
+        22,
+        42
+      ]
+    },
+    {
+      "id": "rel.donnees.calcul-sante",
+      "from": "p.calcul",
+      "to": "b.sante",
+      "flow": "donnees",
+      "direction": "forward",
+      "labelFR": "Support IA aux consultations à distance",
+      "labelZH": "远程会诊 AI 支持",
+      "detailFR": "Transcription, aide au triage, alertes.",
+      "detailZH": "转写、分诊辅助、预警。",
+      "strength": 2,
+      "animation": {
+        "particleSpeed": "medium",
+        "dashed": false
+      },
+      "kpiIds": [],
+      "sourceLines": [
+        41
+      ]
+    },
+    {
+      "id": "rel.attention.rimu-biens",
+      "from": "p.rimu",
+      "to": "b.biens-conso",
+      "flow": "attention",
+      "direction": "forward",
+      "labelFR": "Audience vers live commerce et Marché",
+      "labelZH": "受众导向直播带货与市场",
+      "detailFR": null,
+      "detailZH": null,
+      "strength": 2,
+      "animation": {
+        "particleSpeed": "medium",
+        "dashed": false
+      },
+      "kpiIds": [
+        "kpi.daily_views_2031"
+      ],
+      "sourceLines": [
+        30,
+        67
+      ]
+    },
+    {
+      "id": "rel.attention.rimu-commerce",
+      "from": "p.rimu",
+      "to": "b.commerce-gros",
+      "flow": "attention",
+      "direction": "forward",
+      "labelFR": "Audience B2B vers demandes de devis",
+      "labelZH": "B2B 受众导向询价",
+      "detailFR": null,
+      "detailZH": null,
+      "strength": 2,
+      "animation": {
+        "particleSpeed": "medium",
+        "dashed": false
+      },
+      "kpiIds": [],
+      "sourceLines": [
+        67
+      ]
+    },
+    {
+      "id": "rel.attention.plateforme-projets",
+      "from": "p.plateforme",
+      "to": "b.projets",
+      "flow": "attention",
+      "direction": "forward",
+      "labelFR": "Vitrine officielle des projets",
+      "labelZH": "项目官方展示",
+      "detailFR": null,
+      "detailZH": null,
+      "strength": 2,
+      "animation": {
+        "particleSpeed": "medium",
+        "dashed": false
+      },
+      "kpiIds": [],
+      "sourceLines": [
+        7
+      ]
+    },
+    {
+      "id": "rel.attention.formation-rimu",
+      "from": "b.formation",
+      "to": "p.rimu",
+      "flow": "attention",
+      "direction": "forward",
+      "labelFR": "Formations transformées en vidéos courtes",
+      "labelZH": "培训转化为短视频",
+      "detailFR": null,
+      "detailZH": null,
+      "strength": 2,
+      "animation": {
+        "particleSpeed": "medium",
+        "dashed": false
+      },
+      "kpiIds": [],
+      "sourceLines": [
+        11,
+        31
+      ]
+    },
+    {
+      "id": "rel.attention.rimu-formation",
+      "from": "p.rimu",
+      "to": "b.formation",
+      "flow": "attention",
+      "direction": "forward",
+      "labelFR": "Audience vers inscriptions et offres d'emploi",
+      "labelZH": "受众导向报名与职位",
+      "detailFR": null,
+      "detailZH": null,
+      "strength": 2,
+      "animation": {
+        "particleSpeed": "medium",
+        "dashed": false
+      },
+      "kpiIds": [],
+      "sourceLines": [
+        31
+      ]
+    },
+    {
+      "id": "rel.attention.rimu-sante",
+      "from": "p.rimu",
+      "to": "b.sante",
+      "flow": "attention",
+      "direction": "forward",
+      "labelFR": "Canal de diffusion santé publique",
+      "labelZH": "公共卫生传播渠道",
+      "detailFR": null,
+      "detailZH": null,
+      "strength": 2,
+      "animation": {
+        "particleSpeed": "medium",
+        "dashed": false
+      },
+      "kpiIds": [],
+      "sourceLines": [
+        11,
+        41
+      ]
+    },
+    {
+      "id": "rel.attention.sante-rimu",
+      "from": "b.sante",
+      "to": "p.rimu",
+      "flow": "attention",
+      "direction": "forward",
+      "labelFR": "Contenus de santé certifiés",
+      "labelZH": "认证健康内容",
+      "detailFR": null,
+      "detailZH": null,
+      "strength": 2,
+      "animation": {
+        "particleSpeed": "medium",
+        "dashed": false
+      },
+      "kpiIds": [],
+      "sourceLines": [
+        11
+      ]
+    },
+    {
+      "id": "rel.attention.rimu-rimp",
+      "from": "p.rimu",
+      "to": "b.finance-rimp",
+      "flow": "attention",
+      "direction": "forward",
+      "labelFR": "Audience convertie en comptes RIMP",
+      "labelZH": "受众转化为 RIMP 账户",
+      "detailFR": null,
+      "detailZH": null,
+      "strength": 2,
+      "animation": {
+        "particleSpeed": "medium",
+        "dashed": false
+      },
+      "kpiIds": [
+        "kpi.wallets_2031"
+      ],
+      "sourceLines": [
+        32,
+        73
+      ]
+    },
+    {
+      "id": "rel.attention.rimu-senegal",
+      "from": "p.rimu",
+      "to": "r.senegal",
+      "flow": "attention",
+      "direction": "forward",
+      "labelFR": "Diffusion des contenus AR/FR",
+      "labelZH": "阿语/法语内容扩散",
+      "detailFR": null,
+      "detailZH": null,
+      "strength": 2,
+      "animation": {
+        "particleSpeed": "medium",
+        "dashed": false
+      },
+      "kpiIds": [],
+      "sourceLines": [
+        102
+      ]
+    },
+    {
+      "id": "rel.attention.rimu-cote-ivoire",
+      "from": "p.rimu",
+      "to": "r.cote-ivoire",
+      "flow": "attention",
+      "direction": "forward",
+      "labelFR": "Diffusion des contenus francophones",
+      "labelZH": "法语内容扩散",
+      "detailFR": null,
+      "detailZH": null,
+      "strength": 2,
+      "animation": {
+        "particleSpeed": "medium",
+        "dashed": false
+      },
+      "kpiIds": [],
+      "sourceLines": [
+        102
+      ]
+    }
+  ],
+  "regions": [
+    {
+      "id": "r.nouakchott",
+      "nameFR": "Nouakchott (hub)",
+      "nameZH": "努瓦克肖特（枢纽）",
+      "role": "hub",
+      "mapTone": "gold",
+      "flowKinds": [
+        "marchandises",
+        "paiements",
+        "donnees"
+      ],
+      "copyFR": "Nouakchott devient un point d'arrêt régulier pour les acheteurs ouest-africains : stockage, douane, transit et paiement restent sur le territoire.",
+      "copyZH": "努瓦克肖特成为西非买家的固定停留点：仓储、关税、过境与支付留在本国。",
+      "sourceLines": [
+        93,
+        101
+      ]
+    },
+    {
+      "id": "r.senegal",
+      "nameFR": "Sénégal",
+      "nameZH": "塞内加尔",
+      "role": "destination",
+      "mapTone": "ivory",
+      "flowKinds": [
+        "marchandises",
+        "paiements",
+        "attention"
+      ],
+      "copyFR": "Marchandises, paiements RIMP et contenus francophones.",
+      "copyZH": "货物、RIMP 支付与法语内容。",
+      "relationIds": [
+        "rel.marchandises.biens-senegal",
+        "rel.paiements.rimp-senegal",
+        "rel.attention.rimu-senegal"
+      ],
+      "sourceLines": [
+        66,
+        101,
+        102
+      ]
+    },
+    {
+      "id": "r.mali",
+      "nameFR": "Mali",
+      "nameZH": "马里",
+      "role": "destination",
+      "mapTone": "ivory",
+      "flowKinds": [
+        "marchandises",
+        "paiements"
+      ],
+      "copyFR": "Marchandises et extension progressive des paiements RIMP.",
+      "copyZH": "货物与 RIMP 支付的逐步扩展。",
+      "relationIds": [
+        "rel.marchandises.biens-mali",
+        "rel.paiements.rimp-mali"
+      ],
+      "sourceLines": [
+        66,
+        101,
+        102
+      ]
+    },
+    {
+      "id": "r.guinee",
+      "nameFR": "Guinée",
+      "nameZH": "几内亚",
+      "role": "destination",
+      "mapTone": "ivory",
+      "flowKinds": [
+        "marchandises"
+      ],
+      "copyFR": "Acheteurs de biens de consommation via le hub.",
+      "copyZH": "经枢纽采购消费品。",
+      "relationIds": [
+        "rel.marchandises.biens-guinee"
+      ],
+      "sourceLines": [
+        66,
+        101
+      ]
+    },
+    {
+      "id": "r.cote-ivoire",
+      "nameFR": "Côte d'Ivoire",
+      "nameZH": "科特迪瓦",
+      "role": "destination",
+      "mapTone": "ivory",
+      "flowKinds": [
+        "marchandises",
+        "attention"
+      ],
+      "copyFR": "Marchandises et contenus francophones de RIMU.",
+      "copyZH": "货物与 RIMU 法语内容。",
+      "relationIds": [
+        "rel.marchandises.biens-cote-ivoire",
+        "rel.attention.rimu-cote-ivoire"
+      ],
+      "sourceLines": [
+        66,
+        101,
+        102
+      ]
+    },
+    {
+      "id": "r.gambie",
+      "nameFR": "Gambie",
+      "nameZH": "冈比亚",
+      "role": "destination",
+      "mapTone": "ivory",
+      "flowKinds": [
+        "marchandises"
+      ],
+      "copyFR": "Acheteurs de biens de consommation via le hub.",
+      "copyZH": "经枢纽采购消费品。",
+      "relationIds": [
+        "rel.marchandises.biens-gambie"
+      ],
+      "sourceLines": [
+        66,
+        101
+      ]
+    }
+  ],
+  "rimuModules": [
+    {
+      "id": "rimu.live",
+      "nameFR": "Live",
+      "nameZH": "直播",
+      "descFR": "Mariages, marchés, débarquements de pêche, conférences religieuses certifiées, live commerce.",
+      "descZH": "婚礼、集市、渔获上岸、认证宗教讲座、直播带货。",
+      "sourceLines": [
+        28
+      ]
+    },
+    {
+      "id": "rimu.studio",
+      "nameFR": "Studio créateurs",
+      "nameZH": "创作者工作室",
+      "descFR": "Bibliothèque de droits musicaux locaux, modèles, transcription et sous-titres automatiques AR/FR/hassaniya/EN.",
+      "descZH": "本地音乐版权库、模板、自动转写与字幕（阿/法/哈桑尼亚/英）。",
+      "sourceLines": [
+        29
+      ]
+    },
+    {
+      "id": "rimu.creation",
+      "nameFR": "Économie des créateurs",
+      "nameZH": "创作者经济",
+      "descFR": "Publicité, dons en live et commerce ; revenus en ouguiyas dans le circuit national.",
+      "descZH": "广告、直播打赏与电商；乌吉亚收入留在本国回路。",
+      "kpiIds": [
+        "kpi.creators_active_2031",
+        "kpi.creators_monetized_2031"
+      ],
+      "sourceLines": [
+        32
+      ]
+    },
+    {
+      "id": "rimu.shop",
+      "nameFR": "RIMU Shop + RIMP",
+      "nameZH": "商店 + RIMP",
+      "descFR": "Catalogue, commande, paiement à la livraison ou prépaiement via RIMP.",
+      "descZH": "目录、下单、货到付款或经 RIMP 预付。",
+      "kpiIds": [
+        "kpi.ecommerce_gmv_2031"
+      ],
+      "sourceLines": [
+        30
+      ]
+    },
+    {
+      "id": "rimu.jobs",
+      "nameFR": "RIMU Jobs & formation",
+      "nameZH": "就业与培训",
+      "descFR": "Offres d'emploi, formations courtes en compétences, contenus de formation professionnelle.",
+      "descZH": "职位、技能短训、职业培训内容。",
+      "sourceLines": [
+        31
+      ]
+    },
+    {
+      "id": "rimu.verifie",
+      "nameFR": "Comptes vérifiés administratifs",
+      "nameZH": "认证政务号",
+      "descFR": "Éducation, Santé, paiements municipaux, alertes météo et tempêtes de sable.",
+      "descZH": "教育、卫生、市政缴费、天气与沙尘暴预警。",
+      "sourceLines": [
+        31
+      ]
+    },
+    {
+      "id": "rimu.mineurs",
+      "nameFR": "Protection des mineurs",
+      "nameZH": "未成年人保护",
+      "descFR": "Désactivation par défaut : recommandation personnalisée, défilement infini, dons en live, messages privés avec des inconnus.",
+      "descZH": "默认关闭个性化推荐、无限滚动、直播打赏、陌生人私信。",
+      "sourceLines": [
+        36
+      ]
+    },
+    {
+      "id": "rimu.souverainete",
+      "nameFR": "Souveraineté des contenus",
+      "nameZH": "内容主权",
+      "descFR": "Vérification, modération et recommandation sous contrôle mauritanien ; priorisation transparente et signalement, sans censure arbitraire.",
+      "descZH": "验证、审核与推荐由毛里塔尼亚掌控；透明优先与举报机制，无任意审查。",
+      "sourceLines": [
+        10,
+        112
+      ]
+    }
+  ],
+  "aiUseCases": [
+    {
+      "id": "ai.content",
+      "nameFR": "Production de contenu RIMU",
+      "nameZH": "内容生产",
+      "items": [
+        {
+          "id": "ai.contenu.soustitres",
+          "nameFR": "Sous-titres, transcription, traduction multilingue",
+          "nameZH": "自动字幕、转写与多语翻译",
+          "descFR": "AR/FR/EN ; sous-titres automatiques.",
+          "descZH": "阿/法/英；自动字幕。",
+          "sourceLines": [
+            40
+          ]
+        },
+        {
+          "id": "ai.contenu.formation",
+          "nameFR": "Assistance aux vidéos de formation et contenus religieux certifiés",
+          "nameZH": "培训与认证宗教内容视频辅助",
+          "descFR": "Préparation de vidéos de formation, compétences techniques, contenus certifiés.",
+          "descZH": "培训、技术技能、认证内容视频制作辅助。",
+          "sourceLines": [
+            40
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ai.quotidien",
+      "nameFR": "Services du quotidien",
+      "nameZH": "日常服务",
+      "items": [
+        {
+          "id": "ai.quotidien.sante",
+          "nameFR": "Support aux consultations médicales à distance",
+          "nameZH": "远程医疗会诊支持",
+          "descFR": "Aide à la consultation, transcription.",
+          "descZH": "会诊辅助与转写。",
+          "sourceLines": [
+            41
+          ]
+        },
+        {
+          "id": "ai.quotidien.alertes",
+          "nameFR": "Alertes tempête de sable et rappels de paiement",
+          "nameZH": "沙尘暴预警与缴费提醒",
+          "descFR": "Alertes précoces ; rappels eau et électricité.",
+          "descZH": "提前预警；水电缴费提醒。",
+          "sourceLines": [
+            41
+          ]
+        },
+        {
+          "id": "ai.quotidien.prix",
+          "nameFR": "Information sur les prix du poisson et des produits agricoles",
+          "nameZH": "鱼价与农产品价格信息",
+          "descFR": "Vidéos d'information sur les marchés.",
+          "descZH": "市场行情信息视频。",
+          "sourceLines": [
+            41
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ai.pro",
+      "nameFR": "Usages professionnels et administratifs",
+      "nameZH": "行业与行政",
+      "items": [
+        {
+          "id": "ai.pro.mines",
+          "nameFR": "Maintenance des machines et débarquements de pêche",
+          "nameZH": "设备维护与渔获上岸登记",
+          "descFR": "Rappels d'entretien (mines, ports) ; enregistrement des débarquements.",
+          "descZH": "矿山/港口维护提醒；渔获上岸登记。",
+          "sourceLines": [
+            42
+          ]
+        },
+        {
+          "id": "ai.pro.commercants",
+          "nameFR": "Encaissement et évaluation de crédit des commerçants",
+          "nameZH": "商户收单与信用评估",
+          "descFR": "Aide à l'encaissement et au scoring.",
+          "descZH": "收单辅助与信用评分。",
+          "sourceLines": [
+            42
+          ]
+        },
+        {
+          "id": "ai.pro.etat",
+          "nameFR": "Envoi automatisé d'informations gouvernementales",
+          "nameZH": "政府信息自动推送",
+          "descFR": "Diffusion ciblée d'informations publiques.",
+          "descZH": "公共信息定向发布。",
+          "sourceLines": [
+            42
+          ]
+        }
+      ]
+    }
+  ],
+  "layers": [
+    {
+      "id": "layer.experience",
+      "order": 1,
+      "nameFR": "Couche expérience",
+      "nameZH": "体验层",
+      "compositionFR": "Application RIMU / web léger / mode faible bande passante ; point d'entrée projets/biens/formation de la plateforme bilatérale",
+      "compositionZH": "RIMU 应用 / 轻量网页 / 低带宽模式；双边平台的项目/商品/培训入口",
+      "valueFR": "Couverture smartphones et feature phones ; point d'entrée unifié",
+      "valueZH": "覆盖智能机与功能机；统一中毛合作入口",
+      "sourceLines": [
+        20
+      ]
+    },
+    {
+      "id": "layer.middleware",
+      "order": 2,
+      "nameFR": "Couche middleware",
+      "nameZH": "中间件层",
+      "compositionFR": "Comptes et identité numérique, middleware contenu, middleware paiement (RIMP), middleware risque, middleware commerçants",
+      "compositionZH": "账户与数字身份、内容中间件、支付中间件（RIMP）、风控中间件、商户中间件",
+      "valueFR": "Une construction, réutilisation multi-applications",
+      "valueZH": "一次建设、多应用复用",
+      "sourceLines": [
+        21
+      ]
+    },
+    {
+      "id": "layer.intelligent",
+      "order": 3,
+      "nameFR": "Couche intelligente",
+      "nameZH": "智能层",
+      "compositionFR": "Recommandation, sécurité de contenu multilingue, transcription vocale, modèles sectoriels (pêche/mines/agriculture)",
+      "compositionZH": "推荐、多语内容安全、语音转写、行业模型（渔业/矿业/农业）",
+      "valueFR": "Transformer la puissance de calcul en décisions quotidiennes",
+      "valueZH": "把算力变成日常决策与内容生产工具",
+      "sourceLines": [
+        22
+      ]
+    },
+    {
+      "id": "layer.infrastructure",
+      "order": 4,
+      "nameFR": "Couche infrastructure",
+      "nameZH": "基础设施层",
+      "compositionFR": "Extension du centre Tier III de Nouakchott + cluster GPU + nœuds edge + priorité électricité verte",
+      "compositionZH": "扩建努瓦克肖特 Tier III + GPU 集群 + 边缘节点 + 优先绿电",
+      "valueFR": "Souveraineté numérique, faible latence, monétisation de l'énergie",
+      "valueZH": "数字主权、低时延、能源变现",
+      "sourceLines": [
+        23
+      ]
+    }
+  ],
+  "roadmap": {
+    "period": "2026–2031",
+    "noteFR": "Durées relatives à la source ; le démarrage du calcul est une hypothèse de séquencement (2026-H2), non une date contractuelle.",
+    "noteZH": "时长取自源文件；算力启动时间为排期假设（2026 下半年），非合同日期。",
+    "tracks": [
+      {
+        "id": "track.bilateral",
+        "nameFR": "Plateforme bilatérale",
+        "nameZH": "双边平台",
+        "colorToken": "gold",
+        "milestones": [
+          {
+            "id": "bi.1",
+            "order": 1,
+            "period": "2026",
+            "titleFR": "Lancement officiel",
+            "titleZH": "正式启动",
+            "descriptionFR": "L'État désigne un ministère chef de file et un point de contact de chaque côté ; administrations et entreprises publient projets, marchandises, biens de consommation et besoins de financement.",
+            "descriptionZH": "国家指定牵头部委与双方联络人；政府与企业发布项目、商品、消费品与融资需求。",
+            "deliverablesFR": [
+              "Ministère chef de file et points de contact",
+              "Premières listes de projets et de marchandises"
+            ],
+            "deliverablesZH": [
+              "牵头部委与联络人",
+              "首批项目与商品清单"
+            ],
+            "kpiIds": [
+              "kpi.projects_first_wave"
+            ],
+            "sourceLines": [
+              47
+            ]
+          },
+          {
+            "id": "bi.2",
+            "order": 2,
+            "period": "2026–2027",
+            "titleFR": "Mise en correspondance des ressources",
+            "titleZH": "资源匹配",
+            "descriptionFR": "La partie mauritanienne fournit titres et produits miniers, ports et terrains industriels, sites d'exposition, hôpitaux et lieux de formation ; la partie chinoise met en relation commandes, équipements, EPC, financements, cursus et télémédecine.",
+            "descriptionZH": "毛方提供矿权与矿产品、港口与工业用地、展贸场地、医院与培训场所；中方对接订单、设备、EPC、融资、课程与远程医疗。",
+            "deliverablesFR": [
+              "Listes de capacités mauritaniennes",
+              "Mise en relation commandes / équipements / financements"
+            ],
+            "deliverablesZH": [
+              "毛方能力清单",
+              "订单/设备/融资对接"
+            ],
+            "kpiIds": [
+              "kpi.wholesale_matching",
+              "kpi.investment_intentions"
+            ],
+            "sourceLines": [
+              48
+            ]
+          },
+          {
+            "id": "bi.3",
+            "order": 3,
+            "period": "2027",
+            "titleFR": "Avancement simultané des six catégories + pré-étude du calcul",
+            "titleZH": "六类活动并行 + 算力预研",
+            "descriptionFR": "Projets, commerce de gros, biens de consommation vers l'Afrique de l'Ouest, finance, formation et santé avancent en parallèle ; sélection de site et pré-étude du calcul vert.",
+            "descriptionZH": "项目、批发、面向西非的消费品、金融、培训、卫生并行推进；同步选址与绿电算力预研。",
+            "deliverablesFR": [
+              "5–8 projets en phase substantielle",
+              "Lancement de la pré-étude de calcul"
+            ],
+            "deliverablesZH": [
+              "5–8 个项目进入实质阶段",
+              "启动算力预研"
+            ],
+            "kpiIds": [
+              "kpi.projects_first_wave",
+              "kpi.consumer_trial_orders_y1",
+              "kpi.first_deliverable_months"
+            ],
+            "sourceLines": [
+              49,
+              86,
+              87
+            ]
+          }
+        ]
+      },
+      {
+        "id": "track.rimu",
+        "nameFR": "RIMU + contenu IA",
+        "nameZH": "RIMU + 内容 AI",
+        "colorToken": "signal-green",
+        "milestones": [
+          {
+            "id": "rimu.2027",
+            "year": 2027,
+            "mau": 250000,
+            "dau": 80000,
+            "minutes": 28,
+            "titleFR": "Invitation ; pré-installation / forfaits sans data ; phase 1 du calcul en service",
+            "titleZH": "邀请制；预装与免流量包；算力一期投运",
+            "descriptionFR": "Lancement en invitation avec les opérateurs ; mise en service de la phase 1 du centre de calcul.",
+            "descriptionZH": "与运营商以邀请制上线；算力一期投运。",
+            "kpiIds": [
+              "kpi.series.mau",
+              "kpi.series.dau",
+              "kpi.series.minutes",
+              "kpi.compute_phase1_mw"
+            ],
+            "sourceLines": [
+              54,
+              61
+            ]
+          },
+          {
+            "id": "rimu.2028",
+            "year": 2028,
+            "mau": 700000,
+            "dau": 200000,
+            "minutes": 32,
+            "titleFR": "Ouverture publique ; lancement du fonds créateurs",
+            "titleZH": "公开上线；创作者基金启动",
+            "descriptionFR": "Ouverture au public et fonds dédié aux créateurs.",
+            "descriptionZH": "向公众开放并设立创作者基金。",
+            "kpiIds": [
+              "kpi.series.mau",
+              "kpi.creators_active_2031"
+            ],
+            "sourceLines": [
+              55
+            ]
+          },
+          {
+            "id": "rimu.2029",
+            "year": 2029,
+            "mau": 1200000,
+            "dau": 360000,
+            "minutes": 36,
+            "titleFR": "Paiements administratifs prioritaires ; QR marchands national",
+            "titleZH": "优先行政缴费；全国商户 QR",
+            "descriptionFR": "Paiements administratifs prioritaires et déploiement national des QR commerçants.",
+            "descriptionZH": "优先行政缴费与全国商户 QR 部署。",
+            "kpiIds": [
+              "kpi.series.mau",
+              "kpi.payment_flow_2031"
+            ],
+            "sourceLines": [
+              56
+            ]
+          },
+          {
+            "id": "rimu.2030",
+            "year": 2030,
+            "mau": 1800000,
+            "dau": 550000,
+            "minutes": 38,
+            "titleFR": "Pilote de produits de crédit",
+            "titleZH": "信贷产品试点",
+            "descriptionFR": "Pilote de produits de crédit adossés aux données de paiement.",
+            "descriptionZH": "基于支付数据的信贷产品试点。",
+            "kpiIds": [
+              "kpi.series.mau",
+              "kpi.revenue_rimp_2031"
+            ],
+            "sourceLines": [
+              57
+            ]
+          },
+          {
+            "id": "rimu.2031",
+            "year": 2031,
+            "mau": 2500000,
+            "dau": 800000,
+            "minutes": 40,
+            "titleFR": "≈ 60 %+ des internautes ; packs de contenu vers la zone francophone",
+            "titleZH": "约占网民 60%+；内容包扩展至西非法语区",
+            "descriptionFR": "Extension des packs de contenu vers la zone francophone d'Afrique de l'Ouest.",
+            "descriptionZH": "内容包扩展至西非法语区。",
+            "kpiIds": [
+              "kpi.mau_2031",
+              "kpi.netizen_share_2031",
+              "kpi.revenue_total_2031"
+            ],
+            "sourceLines": [
+              58
+            ]
+          }
+        ]
+      },
+      {
+        "id": "track.calcul",
+        "nameFR": "Calcul vert",
+        "nameZH": "绿色算力",
+        "colorToken": "gold",
+        "milestones": [
+          {
+            "id": "calcul.phase1",
+            "phase": 1,
+            "durationMonths": 18,
+            "cards": 100,
+            "powerMW": 1,
+            "assumedStart": "2026-H2",
+            "titleFR": "Phase 1 — inférence et modération des deux plateformes",
+            "titleZH": "一期——两平台推理与审核",
+            "descriptionFR": "Priorité à l'inférence ; ~100 cartes accélératrices ; service de modération et de contrôle des risques ; puissance ≈1 MW (charge IT).",
+            "descriptionZH": "优先推理；约 100 张加速卡；审核与风控服务；功率约 1 MW（IT 负载）。",
+            "kpiIds": [
+              "kpi.compute_phase1_duration_months",
+              "kpi.compute_phase1_cards",
+              "kpi.compute_phase1_mw"
+            ],
+            "sourceLines": [
+              61,
+              64
+            ]
+          },
+          {
+            "id": "calcul.phase2",
+            "phase": 2,
+            "durationMonths": 36,
+            "cards": null,
+            "powerMW": [
+              2,
+              3
+            ],
+            "assumedStart": "2028",
+            "titleFR": "Phase 2 — séparation entraînement / inférence",
+            "titleZH": "二期——训练/推理分离",
+            "descriptionFR": "Puissance 2–3 MW ; ouverture éventuelle d'interfaces d'inférence régionales ouest-africaines.",
+            "descriptionZH": "功率 2–3 MW；视情况开放西非区域推理接口。",
+            "kpiIds": [
+              "kpi.compute_phase2_duration_months",
+              "kpi.compute_phase2_mw"
+            ],
+            "sourceLines": [
+              62
+            ]
+          },
+          {
+            "id": "calcul.phase3",
+            "phase": 3,
+            "durationMonths": null,
+            "cards": null,
+            "powerMW": null,
+            "assumedStart": "non daté",
+            "titleFR": "Phase 3 — extension modulaire",
+            "titleZH": "三期——模块化扩建",
+            "descriptionFR": "Extension modulaire supplémentaire, liée à un contrat d'électricité verte et à un accord national sur l'électricité.",
+            "descriptionZH": "模块化扩建，绑定绿电合同与国家电力协议。",
+            "kpiIds": [
+              "kpi.compute_green_program_mw"
+            ],
+            "sourceLines": [
+              63,
+              91
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "risks": [
+    {
+      "id": "risk.interop",
+      "order": 1,
+      "titleFR": "Interopérabilité et résistance des portefeuilles / opérateurs existants",
+      "titleZH": "钱包互操作与现有运营商阻力",
+      "riskFR": "Canaux fermés, commissions opaques, adoption lente.",
+      "riskZH": "通道不开放、费率不透明、普及缓慢。",
+      "guaranteesFR": [
+        "Calendrier d'interconnexion obligatoire de la Banque centrale.",
+        "Subventions et salaires de l'État versés en priorité sur les rails interconnectés."
+      ],
+      "guaranteesZH": [
+        "央行强制互操作时间表。",
+        "国家补贴与工资优先走已互操作通道。"
+      ],
+      "sourceLines": [
+        111
+      ]
+    },
+    {
+      "id": "risk.contenu",
+      "order": 2,
+      "titleFR": "Contenus religieux / tribaux et protection des mineurs",
+      "titleZH": "宗教/部落内容与未成年人保护",
+      "riskFR": "Contenus controversés, pression communautaire, exposition des mineurs.",
+      "riskZH": "争议内容、社群压力、未成年人暴露。",
+      "guaranteesFR": [
+        "Conseil religieux.",
+        "Restrictions strictes par défaut au niveau produit.",
+        "Retrait rapide.",
+        "Règles de modération et de recommandation mauritaniennes."
+      ],
+      "guaranteesZH": [
+        "宗教顾问机制。",
+        "产品层默认严格限制。",
+        "快速下架。",
+        "毛里塔尼亚审核与推荐规则。"
+      ],
+      "sourceLines": [
+        112
+      ]
+    },
+    {
+      "id": "risk.energie",
+      "order": 3,
+      "titleFR": "Électricité, sable et fluctuations du réseau",
+      "titleZH": "电力、沙尘与电网波动",
+      "riskFR": "Coupures, surchauffe, ensablement des équipements.",
+      "riskZH": "断电、过热、设备积沙。",
+      "guaranteesFR": [
+        "Alimentation 2N + diesel + photovoltaïque + batteries, liée à un contrat d'électricité verte.",
+        "Capacité nouvelle et ligne dédiée, sans empiéter sur la consommation résidentielle."
+      ],
+      "guaranteesZH": [
+        "2N + 柴油 + 光伏 + 电池，绑定绿电合同。",
+        "新增容量与专线，不挤占居民用电。"
+      ],
+      "sourceLines": [
+        64,
+        113
+      ]
+    },
+    {
+      "id": "risk.donnees",
+      "order": 4,
+      "titleFR": "Données transfrontalières et dépendance au cloud",
+      "titleZH": "跨境数据与云依赖",
+      "riskFR": "Pression de fournisseurs étrangers, localisation incertaine, modèles non auditables.",
+      "riskZH": "外国供应商压力、位置不明、模型不可审计。",
+      "guaranteesFR": [
+        "Grand livre et modèles centraux locaux.",
+        "Entraînement possiblement hybride, mais inférence rapatriée.",
+        "Données de commandes maintenues sur le territoire national."
+      ],
+      "guaranteesZH": [
+        "账本与核心模型本地。",
+        "训练可混合，但推理回流本国。",
+        "订单数据留在本国。"
+      ],
+      "sourceLines": [
+        109,
+        114
+      ]
+    },
+    {
+      "id": "risk.talents",
+      "order": 5,
+      "titleFR": "Talents et continuité du projet",
+      "titleZH": "人才与项目连续性",
+      "riskFR": "Pénurie d'ingénieurs, départs, rupture de la maintenance.",
+      "riskZH": "工程师短缺、人员流失、运维中断。",
+      "guaranteesFR": [
+        "Classes commandées dans les universités.",
+        "Apprentis locaux.",
+        "Obligations législatives d'interopérabilité des données et des paiements."
+      ],
+      "guaranteesZH": [
+        "大学定向班。",
+        "本地学徒。",
+        "以立法确立数据与支付互操作义务。"
+      ],
+      "sourceLines": [
+        115
+      ]
+    }
+  ],
+  "stateSupports": [
+    {
+      "id": "support.organisation",
+      "order": 1,
+      "titleFR": "Organisation et politiques",
+      "titleZH": "组织与政策",
+      "askFR": "Désigner un ministère chef de file, un point de contact, et des correspondants dans les fenêtres clés.",
+      "askZH": "指定牵头部委、联络人，以及关键窗口的对接人。",
+      "detailsFR": [
+        "Correspondants : Investissement, Mines, Énergie, Douanes, Finances / Banque centrale, Affaires étrangères, Santé.",
+        "Traitement parallèle ou engagement de délais pour les projets prioritaires.",
+        "Inscrire le centre d'exposition, la distribution en transit et la pré-étude du calcul vert dans un langage politique communicable.",
+        "Autorisation claire du ministère de la Transformation numérique ; coordination données / contenus / interministérialité."
+      ],
+      "detailsZH": [
+        "对接人：投资、矿业、能源、海关、财政/央行、外交、卫生。",
+        "优先项目并行处理或承诺时限。",
+        "把展贸中心、过境分拨与绿电算力预研写入可对外的政策表述。",
+        "数字转型部明确授权；协调数据、内容与跨部门。"
+      ],
+      "firstSixMonthsFR": "Liste des correspondants et lettre d'autorisation.",
+      "firstSixMonthsZH": "联络人名单与授权函。",
+      "sourceLines": [
+        105
+      ]
+    },
+    {
+      "id": "support.sites",
+      "order": 2,
+      "titleFR": "Sites, terrains et listes de projets",
+      "titleZH": "场地、土地与项目清单",
+      "askFR": "Établir les premières listes de négociation selon cinq catégories industrielles ; sécuriser le site d'exposition.",
+      "askZH": "按五类产业建立首批谈判清单；落实展贸场地。",
+      "detailsFR": [
+        "Showroom permanent ou semaines d'exposition à Nouakchott ou dans un port désigné (location ou aménagement d'un bâtiment existant).",
+        "Guichets portuaires pour entreposage, zone franche ou apurement des importations temporaires d'échantillons.",
+        "Terrains industriels pour énergies nouvelles, transformation, chaîne du froid et pré-étude du calcul."
+      ],
+      "detailsZH": [
+        "在努瓦克肖特或指定港口设常设展贸中心/展贸周（租赁或改造既有建筑）。",
+        "港口窗口用于仓储、自由区或样品临时进口核销。",
+        "为新能源、加工、冷链与算力预研预留工业用地。"
+      ],
+      "firstSixMonthsFR": "Premières listes de projets et site du showroom identifié.",
+      "firstSixMonthsZH": "首批项目清单与展贸场地候选。",
+      "sourceLines": [
+        106
+      ]
+    },
+    {
+      "id": "support.financement",
+      "order": 3,
+      "titleFR": "Financement et budget",
+      "titleZH": "资金与预算",
+      "askFR": "Fonds d'amorçage limités et statistiques séparées des droits de douane, frais portuaires et revenus d'entreposage.",
+      "askZH": "有限种子资金；关税、港口费与仓储收入单独统计。",
+      "detailsFR": [
+        "Amorçage : aménagement du showroom, entrée des premiers échantillons, ouverture des formations, pilotes de télémédecine.",
+        "Accompagnement limité pour les projets prioritaires après due diligence : avantage de loyer foncier, exonération limitée de taxes locales, subvention à la formation ou petite contrepartie d'amorçage.",
+        "Statistiques séparées des droits de douane, frais portuaires et revenus d'entreposage."
+      ],
+      "detailsZH": [
+        "种子资金：展贸中心装修、首批样品进口、培训开班、远程医疗试点。",
+        "优先项目通过尽调后有限支持：地租优惠、地方税费有限豁免、培训补贴或小额启动配套。",
+        "关税、港口费与仓储收入单独统计。"
+      ],
+      "firstSixMonthsFR": "Budget d'amorçage et convention de statistiques séparées.",
+      "firstSixMonthsZH": "种子预算与单列统计约定。",
+      "sourceLines": [
+        107
+      ]
+    },
+    {
+      "id": "support.finance",
+      "order": 4,
+      "titleFR": "Finance et règlements",
+      "titleZH": "金融与规则",
+      "askFR": "Maintenir le dialogue avec la Banque centrale et les banques ; séparer le financement des petites commandes de celui des minerais en vrac.",
+      "askZH": "保持与央行及银行的对话；把小额订单融资与大宗矿产品融资分开。",
+      "detailsFR": [
+        "Dialogue : Finances / Banque centrale, banques d'import-export, fonds Chine-Afrique, assurance-crédit, banques commerciales.",
+        "Protocoles à moyen-long terme et assurance-crédit pour les exportations minières et halieutiques ; lettres de crédit, virements et financement commercial court terme séparés pour les petites commandes.",
+        "Lettres de confort ou rehaussement de crédit limité pour les projets prioritaires.",
+        "Finaliser dans les six mois une première version de la pré-étude de calcul et clarifier la ligne dédiée d'électricité verte et le mécanisme tarifaire."
+      ],
+      "detailsZH": [
+        "对话：财政/央行、进出口银行、中非基金、信用保险、商业银行。",
+        "矿业与渔业出口的中长期协议与信用保险；小额订单单独使用信用证、汇款与短期贸易融资。",
+        "优先项目可给安慰函或有限信用增级。",
+        "六个月内完成算力预研第一版，明确绿电专线与电价机制。"
+      ],
+      "firstSixMonthsFR": "Version 1 de la pré-étude de calcul ; ligne verte et tarif clarifiés.",
+      "firstSixMonthsZH": "算力预研第一版；绿电专线与电价明确。",
+      "sourceLines": [
+        108
+      ]
+    },
+    {
+      "id": "support.diplomatie",
+      "order": 5,
+      "titleFR": "Diplomatie, douanes et règles de données",
+      "titleZH": "外交、海关与数据规则",
+      "askFR": "Inviter les acheteurs ouest-africains et clarifier une fois pour toutes les règles d'entrée, d'apurement, de transit et de distribution.",
+      "askZH": "邀请西非买家；一次性厘清入境、核销、过境与分销规则。",
+      "detailsFR": [
+        "Invitations aux chambres de commerce et importateurs d'Afrique de l'Ouest et des pays voisins pour « voir les produits chinois en Mauritanie ».",
+        "Clarification unique : entrée des produits d'exposition, apurement des échantillons, transit et distribution à l'importation.",
+        "Discussion : traçabilité des produits miniers, certification des captures, contrôle qualité des biens de consommation, données de commandes sur le territoire national."
+      ],
+      "detailsZH": [
+        "邀请西非及邻国商会与进口商「来毛里塔尼亚看中国商品」。",
+        "一次性明确：展品入境、样品核销、过境与进口分销。",
+        "讨论：矿产品可追溯、渔获认证、消费品质量控制、订单数据留在本国。"
+      ],
+      "firstSixMonthsFR": "Invitations envoyées et note de règles unique.",
+      "firstSixMonthsZH": "买家邀请与统一规则说明。",
+      "sourceLines": [
+        109
+      ]
+    }
+  ],
+  "transformations": [
+    {
+      "id": "trans.export",
+      "dimensionFR": "Exportations",
+      "dimensionZH": "出口结构",
+      "beforeFR": "Minerais bruts et captures non transformées.",
+      "beforeZH": "原矿与未加工渔获。",
+      "afterFR": "Produits transformés, traçables, accords de long terme, hub commercial ouest-africain, services numériques exportables.",
+      "afterZH": "加工、可追溯产品、长期协议、西非商业枢纽、可出口数字服务。",
+      "sourceLines": [
+        96
+      ]
+    },
+    {
+      "id": "trans.revenus",
+      "dimensionFR": "Revenus",
+      "dimensionZH": "收入结构",
+      "beforeFR": "Dépendance à un seul prix des minerais.",
+      "beforeZH": "依赖单一矿价。",
+      "afterFR": "Stockage, douane, transit, paiement et services numériques.",
+      "afterZH": "仓储、关税、过境、支付与数字服务。",
+      "sourceLines": [
+        93,
+        96
+      ]
+    },
+    {
+      "id": "trans.finance",
+      "dimensionFR": "Finance",
+      "dimensionZH": "金融",
+      "beforeFR": "Cash difficile à auditer.",
+      "beforeZH": "现金难以审计。",
+      "afterFR": "Comptes numériques adultes de moins de 20 % à environ 50 % ; subventions et salaires sur circuit traçable.",
+      "afterZH": "成年人数字账户从 <20% 到约 50%；补贴与工资走可追溯回路。",
+      "sourceLines": [
+        98
+      ]
+    },
+    {
+      "id": "trans.attention",
+      "dimensionFR": "Attention",
+      "dimensionZH": "注意力",
+      "beforeFR": "Plateformes étrangères.",
+      "beforeZH": "外国平台。",
+      "afterFR": "Règles mauritaniennes, contenus en langues locales (hassaniya, peul, soninké, wolof).",
+      "afterZH": "毛里塔尼亚规则，本地语言内容（哈桑尼亚、富拉、索宁克、沃洛夫）。",
+      "sourceLines": [
+        10,
+        99
+      ]
+    },
+    {
+      "id": "trans.donnees",
+      "dimensionFR": "Données",
+      "dimensionZH": "数据",
+      "beforeFR": "Modèles et poids à l'étranger.",
+      "beforeZH": "模型与权重在境外。",
+      "afterFR": "Données, clés, poids des modèles et grand livre des paiements conservés sur le territoire.",
+      "afterZH": "数据、密钥、模型权重与支付账本留在本国。",
+      "sourceLines": [
+        99,
+        114
+      ]
+    }
+  ],
+  "qa": [
+    {
+      "id": "QA-1",
+      "severity": "haute",
+      "topicFR": "Flux de paiement « centaines de milliards de dollars » vs revenus RIMP",
+      "topicZH": "支付流量与 RIMP 收入不自洽",
+      "sourceLines": [
+        74,
+        80
+      ],
+      "conflictFR": "La source parle de « centaines de milliards de dollars » de flux annuels, alors que 90–140 M USD de revenus RIMP impliquent 13–28 Md USD de flux (taux 0,5–0,7 %).",
+      "conflictZH": "源文年支付流量写作「数千亿美元」，而 0.9–1.4 亿美元收入按 0.5–0.7% 费率只对应 130–280 亿美元。",
+      "recommendedFR": "Afficher 15–25 Md USD/an (150–250 milliards USD), type Dérivé, taux de commission 0,5–0,7 %.",
+      "recommendedZH": "统一显示 150–250 亿美元/年，标注派生与费率假设。",
+      "uiRuleFR": "Ne pas reprendre « centaines de milliards de dollars » ; expliquer l'écart dans Méthodologie (interprétation possible : ouguiyas).",
+      "uiRuleZH": "不得原文照抄「数千亿美元」；方法学说明差异（可能原意为乌吉亚）。",
+      "affectedKpiIds": [
+        "kpi.payment_flow_2031",
+        "kpi.payment_fee_rate"
+      ]
+    },
+    {
+      "id": "QA-2",
+      "severity": "haute",
+      "topicFR": "2,8 M portefeuilles ≈ moitié de la population adulte",
+      "topicZH": "280 万钱包与成年人口口径冲突",
+      "sourceLines": [
+        73,
+        98
+      ],
+      "conflictFR": "2,8 M comptes présentés comme « environ la moitié de la population adulte », alors que les comptes numériques adultes passent de <20 % à ≈50 % : les deux ne peuvent pas décrire la même population sans contradiction.",
+      "conflictZH": "280 万钱包被写成「约成年人口一半」，而成年人数字账户 2031 年才约 50%，两者不能并列互证。",
+      "recommendedFR": "2,8 M = comptes cumulés (multi-comptes inclus) ; l'indicateur « ≈50 % des adultes » reste séparé ; retirer « moitié de la population adulte ».",
+      "recommendedZH": "280 万按累计账户（含多账户）表述；成年人约 50% 作为独立指标；删除「成年人口一半」。",
+      "uiRuleFR": "Afficher « 2,8 M comptes » + badge Source ; ne pas convertir en % des adultes ; option méthodologique : ≈57 % de la population totale (hypothèse externe à valider).",
+      "uiRuleZH": "显示「280 万账户」+来源徽章；不换算成年人口比例；方法学可注「约占全国人口 57%（外部假设待核）」。",
+      "affectedKpiIds": [
+        "kpi.wallets_2031",
+        "kpi.adult_accounts_2031",
+        "kpi.wallet_penetration_total_pop"
+      ]
+    },
+    {
+      "id": "QA-3",
+      "severity": "haute",
+      "topicFR": "Trois chiffres d'emploi non stratifiés",
+      "topicZH": "就业三组数字口径未分层",
+      "sourceLines": [
+        88,
+        91,
+        97
+      ],
+      "conflictFR": "2 000–4 000 (court terme), 8 000–15 000 (connexes MLT) et 30 000–40 000 (5 ans) sont présentés sans horizons ni périmètres ; juxtaposés ils se contredisent.",
+      "conflictZH": "2000–4000（短期）、8000–1.5 万（中长期关联）、3–4 万（五年）未标时间与口径，并列会互相打脸。",
+      "recommendedFR": "Trois couches étiquetées : vague 1 / connexes MLT / cumul direct + écosystème 5 ans ; mention « ne pas additionner ».",
+      "recommendedZH": "三层标注：首波 / 中长期关联 / 五年直接+生态累计；注明不可相加。",
+      "uiRuleFR": "Barres imbriquées ou cartes séparées ; jamais de somme ; tooltip avec horizon.",
+      "uiRuleZH": "嵌套条或独立卡片；禁止求和；tooltip 标时间口径。",
+      "affectedKpiIds": [
+        "kpi.direct_jobs_short_term",
+        "kpi.related_jobs_mlt",
+        "kpi.jobs_5y"
+      ]
+    },
+    {
+      "id": "QA-4",
+      "severity": "moyenne",
+      "topicFR": "« 60 %+ des internautes » et MAU 2,5 M : dépendance circulaire",
+      "topicZH": "「网民 60%+」与 MAU 的循环依赖",
+      "sourceLines": [
+        58,
+        72
+      ],
+      "conflictFR": "2,5 M MAU et « 60 %+ des internautes » impliquent 4,2 M internautes, eux-mêmes dérivés de ces deux chiffres : base circulaire.",
+      "conflictZH": "250 万 MAU 与「网民 60%+」隐含 420 万网民，而该数又由这两个数字反推，属循环论证。",
+      "recommendedFR": "Afficher « ≈60 % des internautes de 2031 » ; base 4,2 M en Méthodologie uniquement, marquée Dérivé/Hypothèse.",
+      "recommendedZH": "显示「2031 年约 60% 网民」；420 万仅放方法学，标注派生/假设。",
+      "uiRuleFR": "Ne pas afficher 4,2 M comme chiffre officiel ; lier explicitement les deux valeurs à la même année et au même périmètre.",
+      "uiRuleZH": "不把 420 万作为官方数字；明确同年同口径。",
+      "affectedKpiIds": [
+        "kpi.netizen_share_2031",
+        "kpi.internet_users_2031"
+      ]
+    },
+    {
+      "id": "QA-5",
+      "severity": "haute",
+      "topicFR": "Deux « phase 1 » du calcul : ≈1 MW vs 20–50 MW",
+      "topicZH": "算力两个「一期」功率口径",
+      "sourceLines": [
+        61,
+        91
+      ],
+      "conflictFR": "Phase 1 = ≈1 MW (L61) et « première phase de calcul vert » = 20–50 MW (L91) : facteur 20–50.",
+      "conflictZH": "L61 一期约 1 MW，L91「绿电算力一期」20–50 MW，相差 20–50 倍。",
+      "recommendedFR": "Distinguer « Phase 1 — charge informatique ≈1 MW / ≈100 cartes » et « programme d'électricité verte 20–50 MW (capacité site, horizon post-phase 1) ».",
+      "recommendedZH": "区分「一期 IT 负载约 1 MW / 约 100 卡」与「绿电项目 20–50 MW（站点容量，后一期视野）」。",
+      "uiRuleFR": "Cartes séparées ; ne jamais mettre les deux MW dans la même ligne ; tooltip méthodologique.",
+      "uiRuleZH": "分开展示；不得并排同一行；方法学 tooltip。",
+      "affectedKpiIds": [
+        "kpi.compute_phase1_mw",
+        "kpi.compute_green_program_mw"
+      ]
+    },
+    {
+      "id": "QA-6",
+      "severity": "moyenne",
+      "topicFR": "Somme des revenus 230 M ≠ total 220 M",
+      "topicZH": "收入分项相加 230≠220",
+      "sourceLines": [
+        79,
+        80,
+        81,
+        82
+      ],
+      "conflictFR": "Bornes hautes 50+140+40 = 230 M USD, alors que le total annoncé est 150–220 M USD.",
+      "conflictZH": "三项上限相加 2.3 亿美元，总数却是 1.5–2.2 亿美元。",
+      "recommendedFR": "Conserver 150–220 M USD (Source) comme total ; afficher les fourchettes par composante ; donut sur milieux 40/115/35 M avec mention explicite.",
+      "recommendedZH": "总数以 150–220 M USD 为准；分项各自显示区间；环图用中点 0.4/1.15/0.35 亿并注明。",
+      "uiRuleFR": "Le graphique ne doit pas additionner les bornes ; hover indique « fourchettes non strictement additives ».",
+      "uiRuleZH": "图表不得对区间上限求和；hover 注明区间不可严格相加。",
+      "affectedKpiIds": [
+        "kpi.revenue_total_2031",
+        "kpi.revenue_rimu_2031",
+        "kpi.revenue_rimp_2031",
+        "kpi.revenue_compute_2031",
+        "kpi.revenue_mix_midpoint"
+      ]
+    },
+    {
+      "id": "QA-7",
+      "severity": "basse",
+      "topicFR": "Revenus calcul 2031 vs revenus de service long terme",
+      "topicZH": "算力 2031 收入与长期服务收入口径重叠",
+      "sourceLines": [
+        81,
+        91
+      ],
+      "conflictFR": "30–40 M USD (2031) et « plusieurs dizaines à ~100 M USD/an » (après phase 1) peuvent désigner la même activité à des horizons différents.",
+      "conflictZH": "2031 年 0.3–0.4 亿美元与绿电一期后「数千万至 1 亿美元/年」可能是同一业务不同时点。",
+      "recommendedFR": "2031 : 30–40 M USD uniquement ; « plusieurs dizaines à ~100 M » = potentiel LT non daté, hors total 2031.",
+      "recommendedZH": "2031 只显示 0.3–0.4 亿美元；「数千万至 1 亿」为未标日期的长期潜力，不计入 2031 总数。",
+      "uiRuleFR": "Séparer les deux emplacements (09 vs 10) ; ne pas additionner ; préciser « horizon non daté ».",
+      "uiRuleZH": "两处分开展示；不相加；注明「时间未定」。",
+      "affectedKpiIds": [
+        "kpi.revenue_compute_2031",
+        "kpi.compute_services_revenue_lt"
+      ]
+    }
+  ],
+  "assumptions": [
+    {
+      "id": "AS-1",
+      "statementFR": "Population de la Mauritanie ≈ 4,9 M (hypothèse externe).",
+      "statementZH": "毛里塔尼亚人口约 490 万（外部假设）。",
+      "rationaleFR": "Utilisée uniquement pour la pénétration portefeuille en Méthodologie ; non fournie par la source.",
+      "rationaleZH": "仅用于方法学中的钱包人口渗透；源文件未提供。",
+      "affectedKpiIds": [
+        "kpi.wallet_penetration_total_pop"
+      ],
+      "status": "à valider"
+    },
+    {
+      "id": "AS-2",
+      "statementFR": "Taux de commission mixte 0,5–0,7 %.",
+      "statementZH": "综合费率 0.5–0.7%。",
+      "rationaleFR": "Paramètre de la formule de flux de paiement (BRIEF §7.2).",
+      "rationaleZH": "支付流量公式参数（BRIEF §7.2）。",
+      "affectedKpiIds": [
+        "kpi.payment_flow_2031",
+        "kpi.payment_fee_rate"
+      ],
+      "status": "à valider"
+    },
+    {
+      "id": "AS-3",
+      "statementFR": "Panier annuel e-commerce 80–120 USD.",
+      "statementZH": "电商年客单价 80–120 美元。",
+      "rationaleFR": "Hypothèse de la formule GMV (BRIEF §7.2).",
+      "rationaleZH": "GMV 公式假设（BRIEF §7.2）。",
+      "affectedKpiIds": [
+        "kpi.ecommerce_gmv_2031"
+      ],
+      "status": "à valider"
+    },
+    {
+      "id": "AS-4",
+      "statementFR": "Créateurs actifs = 2 % du MAU ; 20 % monétisés.",
+      "statementZH": "活跃创作者占 MAU 2%，其中 20% 变现。",
+      "rationaleFR": "Hypothèses de travail (BRIEF §7.2).",
+      "rationaleZH": "工作假设（BRIEF §7.2）。",
+      "affectedKpiIds": [
+        "kpi.creators_active_2031",
+        "kpi.creators_monetized_2031"
+      ],
+      "status": "à valider"
+    },
+    {
+      "id": "AS-5",
+      "statementFR": "Démarrage du centre de calcul : 2026-H2.",
+      "statementZH": "算力中心 2026 下半年启动。",
+      "rationaleFR": "La source donne des durées (~18/36 mois) mais pas de date de départ ; hypothèse de séquencement.",
+      "rationaleZH": "源文仅给时长（约 18/36 个月），未给启动日期；属排期假设。",
+      "affectedKpiIds": [
+        "kpi.compute_phase1_duration_months",
+        "kpi.compute_phase2_duration_months"
+      ],
+      "status": "à valider"
+    },
+    {
+      "id": "AS-6",
+      "statementFR": "Séquence 30 / 60 / 90 / 180 jours (bloc 13).",
+      "statementZH": "30/60/90/180 天行动序列（区块 13）。",
+      "rationaleFR": "Proposition de séquencement dérivée des soutiens demandés (L105–109), non sourcée.",
+      "rationaleZH": "由五项支持（L105–109）推导的排期提案，非源文数据。",
+      "affectedKpiIds": [
+        "kpi.first_deliverable_months"
+      ],
+      "status": "proposition"
+    },
+    {
+      "id": "AS-7",
+      "statementFR": "Flux de paiement unifié 15–25 Md USD/an.",
+      "statementZH": "支付流量统一为 150–250 亿美元/年。",
+      "rationaleFR": "Recommandation BRIEF §7.2 / §7.3-1, remplace « centaines de milliards de dollars ».",
+      "rationaleZH": "BRIEF §7.2/§7.3-1 推荐，取代源文「数千亿美元」表述。",
+      "affectedKpiIds": [
+        "kpi.payment_flow_2031"
+      ],
+      "status": "recommandé"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src.rimu.full",
+      "file": "rimu_source_text.txt",
+      "lines": [
+        1,
+        117
+      ],
+      "labelFR": "Document de référence — plateforme de coopération numérique sino-mauritanienne (texte intégral)",
+      "labelZH": "参考文件——中毛数字合作平台（法语全文）",
+      "type": "primaire"
+    },
+    {
+      "id": "src.rimu.positionnement",
+      "file": "rimu_source_text.txt",
+      "lines": [
+        6,
+        14
+      ],
+      "labelFR": "I. Positionnement global et logique stratégique",
+      "labelZH": "I. 总体定位与战略逻辑",
+      "type": "primaire"
+    },
+    {
+      "id": "src.rimu.architecture",
+      "file": "rimu_source_text.txt",
+      "lines": [
+        16,
+        24
+      ],
+      "labelFR": "II. Architecture en quatre couches",
+      "labelZH": "II. 四层架构",
+      "type": "primaire"
+    },
+    {
+      "id": "src.rimu.rimu.modules",
+      "file": "rimu_source_text.txt",
+      "lines": [
+        26,
+        32
+      ],
+      "labelFR": "Modules principaux du produit RIMU",
+      "labelZH": "RIMU 主要模块",
+      "type": "primaire"
+    },
+    {
+      "id": "src.rimu.rimu.ai",
+      "file": "rimu_source_text.txt",
+      "lines": [
+        34,
+        43
+      ],
+      "labelFR": "Capacités de contenu IA et cas d'usage",
+      "labelZH": "内容 AI 能力与用例",
+      "type": "primaire"
+    },
+    {
+      "id": "src.rimu.roadmap",
+      "file": "rimu_source_text.txt",
+      "lines": [
+        45,
+        64
+      ],
+      "labelFR": "III. Parcours de mise en œuvre, rythme quinquennal et phases du calcul",
+      "labelZH": "III. 实施路径、五年节奏与算力三期",
+      "type": "primaire"
+    },
+    {
+      "id": "src.rimu.conso",
+      "file": "rimu_source_text.txt",
+      "lines": [
+        65,
+        69
+      ],
+      "labelFR": "Synergie biens de consommation ouest-africains et contenu",
+      "labelZH": "西非消费品与内容协同",
+      "type": "primaire"
+    },
+    {
+      "id": "src.rimu.objectifs",
+      "file": "rimu_source_text.txt",
+      "lines": [
+        70,
+        74
+      ],
+      "labelFR": "IV. Objectifs quantifiés — utilisateurs et échelle 2031",
+      "labelZH": "IV. 量化目标——2031 用户与规模",
+      "type": "primaire"
+    },
+    {
+      "id": "src.rimu.revenus",
+      "file": "rimu_source_text.txt",
+      "lines": [
+        75,
+        83
+      ],
+      "labelFR": "Ordre de grandeur des revenus 2031",
+      "labelZH": "2031 收入量级",
+      "type": "primaire"
+    },
+    {
+      "id": "src.rimu.benefices",
+      "file": "rimu_source_text.txt",
+      "lines": [
+        84,
+        99
+      ],
+      "labelFR": "Bénéfices pour la Mauritanie (court, moyen, long terme) et transformation structurelle",
+      "labelZH": "毛里塔尼亚短中长期收益与结构性转型",
+      "type": "primaire"
+    },
+    {
+      "id": "src.rimu.afrique",
+      "file": "rimu_source_text.txt",
+      "lines": [
+        100,
+        102
+      ],
+      "labelFR": "Bénéfices pour l'Afrique de l'Ouest et positionnement régional",
+      "labelZH": "西非区域收益与区域定位",
+      "type": "primaire"
+    },
+    {
+      "id": "src.rimu.soutiens",
+      "file": "rimu_source_text.txt",
+      "lines": [
+        103,
+        109
+      ],
+      "labelFR": "V. Soutiens de principe requis de l'État",
+      "labelZH": "V. 五项国家支持",
+      "type": "primaire"
+    },
+    {
+      "id": "src.rimu.risques",
+      "file": "rimu_source_text.txt",
+      "lines": [
+        110,
+        117
+      ],
+      "labelFR": "VI. Points de risques et de garanties",
+      "labelZH": "VI. 风险与保障",
+      "type": "primaire"
+    },
+    {
+      "id": "src.brief",
+      "file": "web/spec/BRIEF.md",
+      "lines": [
+        "§7.1",
+        "§7.2",
+        "§7.3",
+        "§10-T1"
+      ],
+      "labelFR": "BRIEF — base de données et règles de dérivation",
+      "labelZH": "BRIEF——数据基线与派生规则",
+      "type": "secondaire"
+    },
+    {
+      "id": "src.readme",
+      "file": "README.md",
+      "lines": [
+        "§2",
+        "§3",
+        "§8"
+      ],
+      "labelFR": "README — identité de marque et coordonnées",
+      "labelZH": "README——品牌与联系方式",
+      "type": "secondaire"
+    },
+    {
+      "id": "src.presentation",
+      "file": "presentation/index.html",
+      "lines": [
+        "CSS 1–100"
+      ],
+      "labelFR": "Présentation — langage visuel et variables de marque",
+      "labelZH": "方案册网页——视觉语言与品牌变量",
+      "type": "secondaire"
+    }
+  ]
+}
